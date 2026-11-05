@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- Template for the 1200x630 share image. Rendered by scripts/make-og-image.sh; not served. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Penguin share image</title>
+<style>
+  @font-face {
+    font-family: "Nunito";
+    src: url("../../public/assets/fonts/nunito-latin-wght.woff2") format("woff2");
+    font-weight: 200 1000;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    position: relative;
+    font-family: "Nunito", sans-serif;
+    color: #1c2440;
+    background: linear-gradient(180deg, #8ce0ed 0%, #ccf5f7 100%);
+  }
+  .copy { position: absolute; top: 74px; left: 72px; width: 600px; }
+  .wordmark { font-size: 164px; font-weight: 900; line-height: 0.85; letter-spacing: -0.05em; }
+  .tagline { margin-top: 26px; font-size: 46px; font-weight: 900; line-height: 1.08; letter-spacing: -0.01em; }
+  .sub { margin-top: 20px; font-size: 26px; font-weight: 700; line-height: 1.3; opacity: 0.85; }
+  .footer { position: absolute; left: 72px; bottom: 56px; display: flex; align-items: center; gap: 18px; }
+  .badge {
+    padding: 12px 22px; border-radius: 16px; background: #0f1429; color: #fff5e0;
+    font-size: 22px; font-weight: 900; transform: rotate(-2deg);
+    box-shadow: 0 8px 0 rgba(15, 20, 41, 0.15);
+  }
+  .domain { font-size: 24px; font-weight: 800; opacity: 0.8; }
+  .art { position: absolute; right: 40px; bottom: 34px; width: 470px; }
+  .art img { display: block; width: 100%; position: relative; }
+  .floe { position: absolute; left: 10%; right: 10%; bottom: -16px; height: 40px; border-radius: 50%; background: #fff; }
+  .speech {
+    position: absolute; top: -66px; left: 50%; transform: translateX(-50%) rotate(-3deg);
+    padding: 14px 22px; border-radius: 22px; background: #fff; white-space: nowrap;
+    font-size: 26px; font-weight: 900; box-shadow: 0 8px 0 rgba(15, 20, 41, 0.12);
+  }
+  .speech::after {
+    content: ""; position: absolute; left: 50%; bottom: -13px; margin-left: -13px;
+    border: 13px solid transparent; border-top-color: #fff; border-bottom: 0;
+  }
+</style>
+</head>
+<body>
+  <div class="copy">
+    <div class="wordmark">Penguin</div>
+    <p class="tagline">The pedometer for people who hate pedometers.</p>
+    <p class="sub">Walk more. He gets stronger, louder, and more insufferable.</p>
+  </div>
+  <div class="footer">
+    <span class="badge">Coming soon to the App Store</span>
+    <span class="domain">penguinathletics.com</span>
+  </div>
+  <div class="art">
+    <div class="floe"></div>
+    <p class="speech">One walk from the Olympics.</p>
+    <img src="../../public/assets/img/hero-poster-640.webp" alt="">
+  </div>
+</body>
+</html>

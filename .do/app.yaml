@@ -1,12 +1,12 @@
 # DigitalOcean App Platform spec for the Penguin website.
 # Create the app in the control panel (Create App -> GitHub -> this repo) and paste this
 # into the App Spec editor, or run: doctl apps create --spec .do/app.yaml
-# Replace {{GITHUB_REPO}} with owner/name first, e.g. kevinfremon/penguin-website.
+# Replace lightbulbmomentlabs/penguin-athletics with owner/name first, e.g. kevinfremon/penguin-website.
 name: penguin-website
 static_sites:
   - name: web
     github:
-      repo: "{{GITHUB_REPO}}"
+      repo: "lightbulbmomentlabs/penguin-athletics"
       branch: main
       deploy_on_push: true
     source_dir: public

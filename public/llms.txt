@@ -1,0 +1,20 @@
+# Penguin
+
+> Penguin is a funny pedometer and step counter app for iPhone, published by Lightbulb Moment Labs, Inc. Your daily steps from Apple Health power a smug, overconfident cartoon penguin. It's "the pedometer for people who hate pedometers." Coming soon to the App Store.
+
+Key facts:
+- Platform: iPhone (iOS). Counts steps from Apple Health, so it works with just a phone or with an Apple Watch.
+- Reads step count only. Step history stays on the device. No accounts, ads, analytics, or tracking.
+- The penguin's form and attitude react to your steps. He stays round at every stage; progress shows up as swagger.
+- Daily step goal with rest days that never cost progress ("Aura").
+- The Locker: unlockable outfits. Optional Penguin Plus adds cosmetic outfits only, never extra progress.
+- Expeditions: an endless map of landmarks unlocked by steps.
+- Waddles: small friend groups that share goal progress through iCloud and can send pokes.
+- Pricing has not been announced.
+- Contact: hello@penguinathletics.com
+
+## Pages
+- [Home](https://penguinathletics.com/): what the app does, the outfit try-on, FAQ
+- [Privacy Policy](https://penguinathletics.com/privacy/): exactly what data the app uses and shares
+- [Terms of Service](https://penguinathletics.com/terms/)
+- [Support](https://penguinathletics.com/support/): troubleshooting and contact

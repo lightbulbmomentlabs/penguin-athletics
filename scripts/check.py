@@ -6,6 +6,7 @@
   python3 scripts/check.py --launch           also fail on unfilled {{PLACEHOLDERS}}
 """
 import argparse
+import json
 import os
 import re
 import sys
@@ -19,7 +20,8 @@ HOME_FULL_SCROLL_WARN = 1200 * 1024
 EXTERNAL = re.compile(r"^\s*(https?:)?//", re.I)
 PLACEHOLDER = re.compile(r"\{\{[A-Z0-9_]+\}\}")
 CSS_URL = re.compile(r"url\(\s*['\"]?([^'\")]+)")
-BANNED_TAGS = {"script", "iframe", "embed", "object", "audio", "form", "base"}
+SITE_URL = "https://penguinathletics.com"  # absolute URLs here must map to files in public/
+BANNED_TAGS = {"iframe", "embed", "object", "audio", "form", "base"}
 
 
 class Page(HTMLParser):
@@ -38,6 +40,11 @@ class Page(HTMLParser):
         self.ids = set()
         self.label_fors = []
         self.videos = []  # (video attrs, [source attrs])
+        self.scripts = []  # (attrs, text); only JSON-LD is allowed
+        self.metas = {}  # property/name -> content
+        self.summaries = []
+        self._in_script = None
+        self._in_summary = None
 
     def handle_starttag(self, tag, attrs):
         a = {k: (v or "") for k, v in attrs}
@@ -46,6 +53,12 @@ class Page(HTMLParser):
         self.handlers += [f"<{tag} {k}>" for k in a if k.startswith("on")]
         if tag in BANNED_TAGS:
             self.banned.append(tag)
+        if tag == "script":
+            self._in_script = [a, ""]
+        if tag == "summary":
+            self._in_summary = ""
+        if tag == "meta" and (a.get("property") or a.get("name")):
+            self.metas[a.get("property") or a.get("name")] = a.get("content", "")
         if tag == "html":
             self.lang = a.get("lang")
         elif tag == "title":
@@ -70,10 +83,20 @@ class Page(HTMLParser):
     def handle_endtag(self, tag):
         if tag == "title":
             self._in_title = False
+        if tag == "script" and self._in_script:
+            self.scripts.append(tuple(self._in_script))
+            self._in_script = None
+        if tag == "summary" and self._in_summary is not None:
+            self.summaries.append(" ".join(self._in_summary.split()))
+            self._in_summary = None
 
     def handle_data(self, data):
         if self._in_title:
             self.title += data
+        if self._in_script:
+            self._in_script[1] += data
+        if self._in_summary is not None:
+            self._in_summary += data
 
 
 def resolve(url, base):
@@ -115,6 +138,13 @@ def urls_of(img):
     if img.get("src"):
         urls.append(img["src"])
     return urls
+
+
+def site_path(url):
+    """For an absolute URL on SITE_URL, the root-relative path; otherwise None."""
+    if url == SITE_URL or url.startswith(SITE_URL + "/"):
+        return url[len(SITE_URL):] or "/"
+    return None
 
 
 def video_urls(video, sources):
@@ -197,6 +227,43 @@ def check_page(rel, errors, warnings, launch):
         errors.append(f"{rel}: needs exactly one <h1>, found {page.h1}")
     for tag in page.banned:
         errors.append(f"{rel}: <{tag}> is not allowed (no JS, no embeds)")
+    graph = []
+    for attrs, text in page.scripts:
+        if attrs.get("type") != "application/ld+json" or attrs.get("src"):
+            errors.append(f"{rel}: <script> is not allowed (only inline application/ld+json)")
+            continue
+        try:
+            data = json.loads(text)
+        except ValueError as e:
+            errors.append(f"{rel}: structured data is not valid JSON ({e})")
+            continue
+        if data.get("@context") != "https://schema.org":
+            errors.append(f"{rel}: structured data needs @context https://schema.org")
+        graph += data.get("@graph", [data])
+    for node in graph:
+        if node.get("@type") == "FAQPage":
+            for q in node.get("mainEntity", []):
+                if " ".join(q.get("name", "").split()) not in page.summaries:
+                    errors.append(f"{rel}: FAQ structured data question not on the page: {q.get('name', '')[:60]}")
+    indexable = "noindex" not in page.metas.get("robots", "")
+    if indexable:
+        canon = [l.get("href", "") for l in page.links if "canonical" in l.get("rel", "")]
+        if len(canon) != 1:
+            errors.append(f"{rel}: needs exactly one canonical link")
+        if not graph:
+            errors.append(f"{rel}: missing JSON-LD structured data")
+        for key in ("og:title", "og:description", "og:url", "og:image", "twitter:card"):
+            if not page.metas.get(key):
+                errors.append(f"{rel}: missing {key}")
+    for key in ("og:image", "twitter:image", "og:url"):
+        u = page.metas.get(key)
+        if not u:
+            continue
+        sp = site_path(u)
+        if sp is None:
+            errors.append(f"{rel}: {key} must be an absolute {SITE_URL} URL, got {u}")
+        elif not exists_exact(resolve(sp, path)):
+            errors.append(f"{rel}: {key} points at a missing file {u}")
     for handler in page.handlers:
         errors.append(f"{rel}: inline JS handler {handler}")
     for target in page.label_fors:
@@ -236,6 +303,11 @@ def check_page(rel, errors, warnings, launch):
 
     for link in page.links:
         href = link.get("href", "")
+        if "canonical" in link.get("rel", ""):
+            sp = site_path(href)
+            if sp is None or not exists_exact(resolve(sp, path)):
+                errors.append(f"{rel}: canonical must be an existing {SITE_URL} page, got {href}")
+            continue
         if EXTERNAL.match(href):
             errors.append(f"{rel}: external <link> {href}")
             continue
@@ -269,6 +341,19 @@ def check_page(rel, errors, warnings, launch):
 
     if rel == "index.html":
         report_weight(path, raw, page, errors, warnings)
+
+
+def check_crawl_files(errors):
+    robots, sitemap = SITE / "robots.txt", SITE / "sitemap.xml"
+    if not robots.exists() or f"Sitemap: {SITE_URL}/sitemap.xml" not in robots.read_text(encoding="utf-8"):
+        errors.append("robots.txt: missing, or doesn't point at the sitemap")
+    if not sitemap.exists():
+        errors.append("sitemap.xml: missing")
+        return
+    for loc in re.findall(r"<loc>(.*?)</loc>", sitemap.read_text(encoding="utf-8")):
+        sp = site_path(loc)
+        if sp is None or not exists_exact(resolve(sp, sitemap)):
+            errors.append(f"sitemap.xml: {loc} is not a page on the site")
 
 
 def check_app_yaml(errors, warnings, launch):
@@ -307,6 +392,7 @@ def main():
     for rel in pages:
         check_page(rel, errors, warnings, args.launch)
     check_app_yaml(errors, warnings, args.launch)
+    check_crawl_files(errors)
     check_assets(errors)
 
     for w in warnings:

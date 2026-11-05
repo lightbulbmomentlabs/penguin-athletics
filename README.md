@@ -14,16 +14,26 @@ Then open http://localhost:8000. Before committing, run the checks:
 
     python3 scripts/check.py
 
+## Search, sharing, and AI crawlers
+
+Every page has a canonical URL, keywords, Open Graph and Twitter card tags, and JSON-LD
+structured data (Organization, WebSite, MobileApplication, FAQPage on the home page,
+WebPage plus breadcrumbs on the others). `public/robots.txt`, `public/sitemap.xml`, and
+`public/llms.txt` help search engines and AI crawlers. The site URL is
+`https://penguinathletics.com`; it's also `SITE_URL` in `scripts/check.py`.
+
+- **Share image:** `public/assets/og-image.jpg` (1200x630), rendered from `scripts/og/og.html`.
+  Edit that file, then run `scripts/make-og-image.sh` (needs Google Chrome).
+- **FAQ:** if you change a FAQ question on the home page, update the matching `FAQPage`
+  entry in its JSON-LD. `scripts/check.py` fails if they drift apart.
+- **Sitemap:** add new pages to `public/sitemap.xml` and bump `lastmod` when pages change.
+
 ## Rename the app
 
-The site calls the app "Penguin." When the final name is picked, replace it in:
-- every `<title>` and the `.logo` link text in each page in `public/`
-- the `.wordmark` heading in `public/index.html`
-- the `og:title` tag in `public/index.html`
-- "the Penguin app" in `public/privacy/index.html` and `public/terms/index.html`
-- "Settings › Privacy & Security › Health › Penguin" and "turn on Penguin" in the privacy and support pages (these must match the app's display name)
-
-Find them all with: `grep -rn "Penguin" public --include=*.html`
+The site calls the app "Penguin" (site name "Penguin Athletics"). If that changes, update
+titles, the `.logo` text, the `.wordmark`, the JSON-LD `name` fields, `llms.txt`, and the
+Health/Motion settings paths in the privacy and support pages (they must match the app's
+display name). Find them with: `grep -rn "Penguin" public`
 
 ## Images
 
@@ -40,12 +50,14 @@ The spec is in `.do/app.yaml`. Only `public/` is served. Pushing to `main` redep
 
 ## Launch checklist
 
-1. Replace `{{SUPPORT_EMAIL}}`, `{{PUBLISHER_NAME}}`, `{{GOVERNING_LAW}}` in `public/`, `{{SITE_URL}}` (in `public/index.html`), and `{{GITHUB_REPO}}` in `.do/app.yaml`.
-2. `python3 scripts/check.py --launch` passes.
+Done: publisher, contact email, governing law, domain, and GitHub repo are filled in, and
+`python3 scripts/check.py --launch` passes.
+
+1. Create the app in DigitalOcean App Platform from `.do/app.yaml`, then add the custom domain `penguinathletics.com` (and `www`) and point DNS at it.
+2. Set up the `hello@penguinathletics.com` mailbox or forwarding.
 3. Have someone qualified review the privacy policy and terms.
-4. Add the custom domain in App Platform. Set `{{SITE_URL}}` to that domain (e.g. https://example.com, no trailing slash).
-5. In App Store Connect, set the Privacy Policy URL to `https://<domain>/privacy/` and the Support URL to `https://<domain>/support/`. Keep Apple's standard EULA (our terms add to it). Link the terms from the app description or the app's Settings.
-6. Once the listing is live, turn both the hero and footer "Coming soon" badges in `public/index.html` into real App Store links, using Apple's official badge artwork per Apple's marketing guidelines.
-7. Update the “Last updated” dates in `public/privacy/index.html` and `public/terms/index.html`.
-9. Check the home page's roast wall and the privacy policy's Notifications section against the shipped app (walking reminders, caps, quiet hours).
-8. Re-check the privacy policy against the app whenever Waddles, notifications, purchases, or Health access change.
+4. In App Store Connect, set the Privacy Policy URL to `https://penguinathletics.com/privacy/` and the Support URL to `https://penguinathletics.com/support/`. Keep Apple's standard EULA (our terms add to it). Link the terms from the app description or the app's Settings.
+5. Submit `https://penguinathletics.com/sitemap.xml` in Google Search Console and Bing Webmaster Tools.
+6. Once the listing is live, turn both "Coming soon" badges in `public/index.html` into real App Store links using Apple's official badge artwork, and add `offers` and the App Store URL to the `MobileApplication` JSON-LD.
+7. Check the home page's roast wall and the privacy policy's Notifications section against the shipped app (walking reminders, caps, quiet hours).
+8. Update the “Last updated” dates in the privacy policy and terms whenever they change, and re-check the privacy policy whenever Waddles, notifications, purchases, or Health access change.

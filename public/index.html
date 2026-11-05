@@ -45,9 +45,13 @@
       </div>
       <div class="hero-art">
         <p class="speech">One walk from the Olympics. Probably.</p>
-        <img src="/assets/img/waddler-smug-480.webp"
-             srcset="/assets/img/waddler-smug-480.webp 480w, /assets/img/waddler-smug-800.webp 800w"
-             sizes="(min-width: 800px) 440px, min(70vw, 280px)" width="800" height="800" fetchpriority="high"
+        <!-- [html-validate-disable-next no-autoplay -- muted, silent idle loop; swapped for a still when motion is reduced] -->
+        <video class="hero-video" autoplay muted loop playsinline disablepictureinpicture
+               width="640" height="640" poster="/assets/img/hero-poster-640.webp" aria-hidden="true">
+          <source src="/assets/video/hero-idle.mov" type='video/quicktime; codecs="hvc1"'>
+          <source src="/assets/video/hero-idle.webm" type="video/webm">
+        </video>
+        <img class="hero-still" src="/assets/img/hero-poster-640.webp" width="640" height="640" loading="lazy"
              alt="A round, smug penguin in a coral headband and sunglasses, one flipper on his hip.">
       </div>
     </div>
@@ -309,7 +313,7 @@
       <a href="/terms/">Terms of Service</a>
       <a href="/support/">Support</a>
     </nav>
-    <p class="fine">© 2026 {{PUBLISHER_NAME}}. Not affiliated with any actual penguins.</p>
+    <p class="fine">© 2026 Lightbulb Moment Labs, Inc. Not affiliated with any actual penguins.</p>
   </div>
 </footer>
 </body>

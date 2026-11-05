@@ -109,7 +109,9 @@ p { margin: 0 0 1em; }
 .tagline { max-width: 18ch; font-size: clamp(1.35rem, 4.5vw, 2rem); font-weight: 900; line-height: 1.15; }
 .hero-sub { max-width: 34ch; font-size: 1.15rem; }
 .hero-art { position: relative; justify-self: center; width: min(100%, 440px); }
-.hero-art img { transform-origin: 50% 100%; animation: bob 3.2s ease-in-out infinite; }
+.hero-video, .hero-still { display: block; width: 100%; height: auto; }
+/* The still only shows (and only downloads, being lazy) when motion is reduced. */
+.hero-still { display: none; }
 .hero-art::after {
   content: ""; display: block; width: 80%; height: 28px; margin: -18px auto 0;
   border-radius: 50%; background: #fff;
@@ -353,4 +355,6 @@ p { margin: 0 0 1em; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .feed { height: auto; -webkit-mask-image: none; mask-image: none; }
   .feed-track > [aria-hidden="true"] { display: none; }
+  .hero-video { display: none; }
+  .hero-still { display: block; }
 }

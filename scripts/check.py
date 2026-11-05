@@ -19,7 +19,7 @@ HOME_FULL_SCROLL_WARN = 1200 * 1024
 EXTERNAL = re.compile(r"^\s*(https?:)?//", re.I)
 PLACEHOLDER = re.compile(r"\{\{[A-Z0-9_]+\}\}")
 CSS_URL = re.compile(r"url\(\s*['\"]?([^'\")]+)")
-BANNED_TAGS = {"script", "iframe", "embed", "object", "video", "audio", "form", "base"}
+BANNED_TAGS = {"script", "iframe", "embed", "object", "audio", "form", "base"}
 
 
 class Page(HTMLParser):
@@ -37,6 +37,7 @@ class Page(HTMLParser):
         self.links = []
         self.ids = set()
         self.label_fors = []
+        self.videos = []  # (video attrs, [source attrs])
 
     def handle_starttag(self, tag, attrs):
         a = {k: (v or "") for k, v in attrs}
@@ -61,6 +62,10 @@ class Page(HTMLParser):
             self.links.append(a)
         elif tag == "label" and "for" in a:
             self.label_fors.append(a["for"])
+        elif tag == "video":
+            self.videos.append((a, []))
+        elif tag == "source" and self.videos:
+            self.videos[-1][1].append(a)
 
     def handle_endtag(self, tag):
         if tag == "title":
@@ -112,6 +117,11 @@ def urls_of(img):
     return urls
 
 
+def video_urls(video, sources):
+    """Every URL a <video> may load: its poster and each <source>."""
+    return [u for u in [video.get("poster", ""), video.get("src", "")] + [s.get("src", "") for s in sources] if u]
+
+
 def file_key(url, base):
     """Resolved path of an existing, exact-case site file, or None."""
     f = resolve(url, base)
@@ -145,6 +155,13 @@ def report_weight(path, raw, page, errors, warnings):
             continue
         biggest = max(files, key=lambda f: f.stat().st_size)
         eager[biggest] = eager.get(biggest, False) or img.get("loading") != "lazy"
+    for video, sources in page.videos:  # autoplay loads now; count the biggest source plus the poster
+        poster = file_key(video.get("poster", ""), path) if video.get("poster") else None
+        if poster:
+            eager[poster] = True
+        files = [f for f in (file_key(s.get("src", ""), path) for s in sources) if f]
+        if files:
+            eager[max(files, key=lambda f: f.stat().st_size)] = True
     lazy = 0
     for f, is_eager in eager.items():
         if is_eager:
@@ -153,8 +170,8 @@ def report_weight(path, raw, page, errors, warnings):
             lazy += f.stat().st_size
     full = first + lazy
     print(f"Home page: first load {first / 1024:.0f} KB, full scroll {full / 1024:.0f} KB "
-          "(worst case: largest image of every srcset, and the woff2 font, which Apple "
-          "devices skip in favor of the system rounded font)")
+          "(worst case: largest image of every srcset, the larger hero video, and the woff2 "
+          "font, which Safari skips in favor of the system rounded font)")
     if first > HOME_FIRST_LOAD_BUDGET:
         errors.append(f"index.html: first load {first // 1024} KB is over the 600 KB budget")
     if full > HOME_FULL_SCROLL_WARN:
@@ -203,6 +220,20 @@ def check_page(rel, errors, warnings, launch):
             if target and not exists_exact(target):
                 errors.append(f"{rel}: missing image {u}")
 
+    for video, sources in page.videos:
+        for need in ("muted", "playsinline"):
+            if need not in video:
+                errors.append(f"{rel}: <video> needs {need} (autoplay rules)")
+        if not video.get("width") or not video.get("height"):
+            errors.append(f"{rel}: <video> missing width/height")
+        for u in video_urls(video, sources):
+            if EXTERNAL.match(u):
+                errors.append(f"{rel}: external video {u}")
+                continue
+            target = resolve(u, path)
+            if target and not exists_exact(target):
+                errors.append(f"{rel}: missing video file {u}")
+
     for link in page.links:
         href = link.get("href", "")
         if EXTERNAL.match(href):
@@ -227,6 +258,8 @@ def check_page(rel, errors, warnings, launch):
         urls = list(page.anchors) + [l.get("href", "") for l in page.links]
         for img in page.imgs:
             urls += urls_of(img)
+        for video, sources in page.videos:
+            urls += video_urls(video, sources)
         for u in urls:
             if u and not u.startswith(("/", "#", "mailto:", "tel:", "data:")) and not EXTERNAL.match(u):
                 errors.append(f"{rel}: internal URL must be root-absolute: {u}")

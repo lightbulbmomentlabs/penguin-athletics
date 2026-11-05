@@ -56,6 +56,22 @@ sips -z 630 630 "$ART/app-icon-source.png" --out "$tmp/og-square.png" >/dev/null
 sips -p 630 1200 --padColor 8CE0ED "$tmp/og-square.png" --out "$tmp/og-image.png" >/dev/null
 sips -s format jpeg -s formatOptions 82 "$tmp/og-image.png" --out public/assets/og-image.jpg >/dev/null
 
+# Hero idle loop: key out the green screen (same recipe as the app's scripts/key-idle-clip.sh)
+command -v ffmpeg >/dev/null || { echo "Install ffmpeg first: brew install ffmpeg"; exit 1; }
+CLIP="$APP_REPO/Art/clips/idle-waddler-smug-green.mp4"
+VID="public/assets/video"
+mkdir -p "$VID"
+KEY="chromakey=0x00FF00:0.30:0.08,despill=type=green:mix=0.6:expand=0.2,format=rgba,lutrgb=a='if(lt(val\\,24)\\,0\\,val)'"
+# WebM (VP9 with alpha) for Chrome, Firefox and Edge
+ffmpeg -v error -y -i "$CLIP" -vf "$KEY" -c:v libvpx-vp9 -pix_fmt yuva420p -b:v 0 -crf 34 -row-mt 1 -an "$VID/hero-idle.webm"
+# HEVC with alpha for Safari, which can't show WebM transparency
+ffmpeg -v error -y -i "$CLIP" -vf "$KEY,premultiply=inplace=1,format=bgra" \
+  -c:v hevc_videotoolbox -alpha_quality 0.5 -q:v 60 -tag:v hvc1 -an "$VID/hero-idle.mov"
+# First frame: the video poster and the still shown when motion is reduced
+ffmpeg -v error -y -i "$CLIP" -vf "$KEY" -frames:v 1 "$tmp/hero-poster.png"
+cwebp -quiet -q 78 -alpha_q 80 -m 6 "$tmp/hero-poster.png" -o "$OUT/hero-poster-640.webp"
+echo "Hero video: $(du -h "$VID/hero-idle.webm" | cut -f1) webm, $(du -h "$VID/hero-idle.mov" | cut -f1) mov"
+
 echo "Generated $(ls "$OUT" | wc -l | tr -d ' ') WebP files:"
 du -ch "$OUT"/*.webp | tail -1
 echo "Largest:"

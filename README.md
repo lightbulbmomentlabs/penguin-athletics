@@ -31,7 +31,7 @@ Art comes from the app repo. Regenerate after art changes (the script can be run
 
     scripts/optimize-images.sh "../Pedometer Penguin"
 
-Needs `brew install webp`. Keep the home page's first load under 600 KB (`scripts/check.py` enforces it).
+Needs `brew install webp ffmpeg`. It also builds the hero's moving penguin: the app's `idle-waddler-smug-green.mp4` with the green screen removed, as `public/assets/video/hero-idle.webm` (Chrome, Firefox) and `hero-idle.mov` (Safari, HEVC with transparency). Keep the home page's first load under 600 KB (`scripts/check.py` enforces it).
 
 ## Hosting
 

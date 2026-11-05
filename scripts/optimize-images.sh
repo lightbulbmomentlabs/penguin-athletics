@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+# Turns chosen app art into small WebP files for the site.
+# Usage: scripts/optimize-images.sh [path-to-Pedometer-Penguin-repo]
+# Needs cwebp (brew install webp) and macOS sips. Run from the website repo root.
+set -euo pipefail
+
+APP_REPO="${1:-../Pedometer Penguin}"
+ART="$APP_REPO/Art"
+XC="$APP_REPO/App/Assets.xcassets"
+OUT="public/assets/img"
+mkdir -p "$OUT"
+command -v cwebp >/dev/null || { echo "Install cwebp first: brew install webp"; exit 1; }
+
+# webp <source.png> <output-name> <width>...   -> $OUT/<output-name>-<width>.webp
+webp() {
+  local src="$1" name="$2"; shift 2
+  [[ -f "$src" ]] || { echo "Missing source: $src"; exit 1; }
+  local srcw
+  srcw=$(sips -g pixelWidth "$src" | awk '/pixelWidth/ {print $2}')
+  for w in "$@"; do
+    (( w <= srcw )) || { echo "Refusing to upscale $src ($srcw px) to $w px"; exit 1; }
+    cwebp -quiet -q 78 -alpha_q 80 -m 6 -resize "$w" 0 "$src" -o "$OUT/$name-$w.webp"
+  done
+}
+
+# Hero (also the locker's default pose and the "classified" athlete silhouette)
+webp "$ART/penguin/penguin-waddler-smug.png" waddler-smug 480 800
+
+# Glow-up, how-it-works, 404
+for pose in couch-slumped couch-shocked couch-resting waddler-hyped waddler-neutral waddler-celebrating; do
+  webp "$ART/penguin/penguin-$pose.png" "$pose" 320 640
+done
+
+# Locker: outfit poses + item icons
+for item in crown gold-chain cowboy-hat party-hat heart-shades cape bucket-hat halo; do
+  webp "$XC/penguin-waddler-smug-$item.imageset/penguin-waddler-smug-$item.png" "fit-$item" 360 720
+  webp "$ART/items/item-$item.png" "item-$item" 96 192
+done
+
+# Expedition landmarks
+for spot in couch-border fridge krill-shack runway afterparty podium; do
+  webp "$ART/landmarks/landmark-$spot-source.png" "landmark-$spot" 320 640
+done
+
+# Small app icon for the header logo and notification cards
+webp "$ART/app-icon-source.png" icon 80
+
+# PNG icons for browsers and link previews
+tmp=$(mktemp -d)
+sips -z 32 32 "$ART/app-icon-source.png" --out public/assets/favicon-32.png >/dev/null
+sips -z 180 180 "$ART/app-icon-source.png" --out public/assets/apple-touch-icon.png >/dev/null
+sips -z 630 630 "$ART/app-icon-source.png" --out "$tmp/og-square.png" >/dev/null
+sips -p 630 1200 --padColor 8CE0ED "$tmp/og-square.png" --out public/assets/og-image.png >/dev/null
+rm -rf "$tmp"
+
+echo "Generated $(ls "$OUT" | wc -l | tr -d ' ') WebP files:"
+du -ch "$OUT"/*.webp | tail -1
+echo "Largest:"
+ls -lS "$OUT" | sed -n 2,6p

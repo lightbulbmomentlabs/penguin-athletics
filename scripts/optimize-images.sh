@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 # Turns chosen app art into small WebP files for the site.
 # Usage: scripts/optimize-images.sh [path-to-Pedometer-Penguin-repo]
-# Needs cwebp (brew install webp) and macOS sips. Run from the website repo root.
+# Needs cwebp (brew install webp) and macOS sips. Works from any directory.
 set -euo pipefail
 
-APP_REPO="${1:-../Pedometer Penguin}"
+APP_REPO="$(cd "${1:-$(dirname "$0")/../../Pedometer Penguin}" && pwd)"
+cd "$(dirname "$0")/.."
 ART="$APP_REPO/Art"
 XC="$APP_REPO/App/Assets.xcassets"
 OUT="public/assets/img"
@@ -17,6 +18,7 @@ webp() {
   [[ -f "$src" ]] || { echo "Missing source: $src"; exit 1; }
   local srcw
   srcw=$(sips -g pixelWidth "$src" | awk '/pixelWidth/ {print $2}')
+  [[ -n "$srcw" ]] || { echo "Can't read width of $src"; exit 1; }
   for w in "$@"; do
     (( w <= srcw )) || { echo "Refusing to upscale $src ($srcw px) to $w px"; exit 1; }
     cwebp -quiet -q 78 -alpha_q 80 -m 6 -resize "$w" 0 "$src" -o "$OUT/$name-$w.webp"
@@ -47,11 +49,11 @@ webp "$ART/app-icon-source.png" icon 80
 
 # PNG icons for browsers and link previews
 tmp=$(mktemp -d)
+trap 'rm -rf "$tmp"' EXIT
 sips -z 32 32 "$ART/app-icon-source.png" --out public/assets/favicon-32.png >/dev/null
 sips -z 180 180 "$ART/app-icon-source.png" --out public/assets/apple-touch-icon.png >/dev/null
 sips -z 630 630 "$ART/app-icon-source.png" --out "$tmp/og-square.png" >/dev/null
 sips -p 630 1200 --padColor 8CE0ED "$tmp/og-square.png" --out public/assets/og-image.png >/dev/null
-rm -rf "$tmp"
 
 echo "Generated $(ls "$OUT" | wc -l | tr -d ' ') WebP files:"
 du -ch "$OUT"/*.webp | tail -1

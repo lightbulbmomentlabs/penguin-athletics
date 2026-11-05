@@ -6,6 +6,7 @@
   python3 scripts/check.py --launch           also fail on unfilled {{PLACEHOLDERS}}
 """
 import argparse
+import os
 import re
 import sys
 from html.parser import HTMLParser
@@ -16,9 +17,9 @@ PAGES = ["index.html", "404.html", "privacy/index.html", "terms/index.html", "su
 HOME_FIRST_LOAD_BUDGET = 600 * 1024  # bytes, from the spec
 HOME_FULL_SCROLL_WARN = 1200 * 1024
 EXTERNAL = re.compile(r"^\s*(https?:)?//", re.I)
-PLACEHOLDER = re.compile(r"\{\{[A-Z_]+\}\}")
+PLACEHOLDER = re.compile(r"\{\{[A-Z0-9_]+\}\}")
 CSS_URL = re.compile(r"url\(\s*['\"]?([^'\")]+)")
-BANNED_TAGS = {"script", "iframe", "embed", "object", "video", "audio"}
+BANNED_TAGS = {"script", "iframe", "embed", "object", "video", "audio", "form", "base"}
 
 
 class Page(HTMLParser):
@@ -81,36 +82,79 @@ def resolve(url, base):
     return target
 
 
-def candidates(img):
+def exists_exact(path):
+    """True if path is a file inside public/ and every component matches case exactly.
+
+    macOS is case-insensitive but the deploy host is Linux, so Img/A.png must not
+    pass for img/a.png. Anything that resolves outside public/ counts as missing.
+    """
+    path = Path(os.path.abspath(path))
+    if not path.exists():
+        return False
+    try:
+        path.resolve().relative_to(SITE.resolve())
+        parts = path.relative_to(SITE).parts
+    except ValueError:
+        return False
+    here = SITE
+    for part in parts:
+        if part not in os.listdir(here):
+            return False
+        here = here / part
+    return True
+
+
+def urls_of(img):
+    """Every URL an <img> may load: all srcset entries plus the fallback src."""
     urls = [c.strip().split()[0] for c in img.get("srcset", "").split(",") if c.strip()]
-    return urls or ([img["src"]] if img.get("src") else [])
+    if img.get("src"):
+        urls.append(img["src"])
+    return urls
 
 
-def size(url, base):
+def file_key(url, base):
+    """Resolved path of an existing, exact-case site file, or None."""
     f = resolve(url, base)
-    return f.stat().st_size if f and f.exists() else 0
+    return Path(os.path.abspath(f)) if f and exists_exact(f) else None
+
+
+def css_urls(text):
+    """url() targets in CSS that point at files (no #fragments, no data:)."""
+    out = (u.strip() for u in CSS_URL.findall(text))
+    return [u for u in out if u and not u.startswith(("#", "data:"))]
 
 
 def report_weight(path, raw, page, errors, warnings):
     first = len(raw.encode("utf-8"))
+    sheets, assets = set(), set()
     for link in page.links:
         if "stylesheet" in link.get("rel", ""):
-            first += size(link["href"], path)
-    lazy, seen = 0, set()
+            f = file_key(link.get("href", ""), path)
+            if f and f not in sheets:
+                sheets.add(f)
+                first += f.stat().st_size
+                for u in css_urls(f.read_text(encoding="utf-8")):
+                    a = file_key(u, f)
+                    if a and a not in assets:
+                        assets.add(a)
+                        first += a.stat().st_size
+    eager = {}  # file -> True if any occurrence is not lazy
     for img in page.imgs:
-        urls = candidates(img)
-        key = tuple(urls)
-        if key in seen:
+        files = [f for f in (file_key(u, path) for u in urls_of(img)) if f]
+        if not files:
             continue
-        seen.add(key)
-        biggest = max((size(u, path) for u in urls), default=0)
-        if img.get("loading") == "lazy":
-            lazy += biggest
+        biggest = max(files, key=lambda f: f.stat().st_size)
+        eager[biggest] = eager.get(biggest, False) or img.get("loading") != "lazy"
+    lazy = 0
+    for f, is_eager in eager.items():
+        if is_eager:
+            first += f.stat().st_size
         else:
-            first += biggest
+            lazy += f.stat().st_size
     full = first + lazy
     print(f"Home page: first load {first / 1024:.0f} KB, full scroll {full / 1024:.0f} KB "
-          "(worst case: largest image of every srcset)")
+          "(worst case: largest image of every srcset, and the woff2 font, which Apple "
+          "devices skip in favor of the system rounded font)")
     if first > HOME_FIRST_LOAD_BUDGET:
         errors.append(f"index.html: first load {first // 1024} KB is over the 600 KB budget")
     if full > HOME_FULL_SCROLL_WARN:
@@ -119,7 +163,7 @@ def report_weight(path, raw, page, errors, warnings):
 
 def check_page(rel, errors, warnings, launch):
     path = SITE / rel
-    if not path.exists():
+    if not exists_exact(path):
         errors.append(f"{rel}: page is missing")
         return
     raw = path.read_text(encoding="utf-8")
@@ -141,7 +185,7 @@ def check_page(rel, errors, warnings, launch):
     for target in page.label_fors:
         if target not in page.ids:
             errors.append(f'{rel}: <label for="{target}"> has no matching id')
-    for u in CSS_URL.findall(raw):
+    for u in css_urls(raw):
         if EXTERNAL.match(u):
             errors.append(f"{rel}: external url() {u}")
 
@@ -151,25 +195,41 @@ def check_page(rel, errors, warnings, launch):
             errors.append(f"{rel}: <img {name}> missing alt")
         if not img.get("width") or not img.get("height"):
             errors.append(f"{rel}: <img {name}> missing width/height")
-        for u in candidates(img):
+        for u in urls_of(img):
             if EXTERNAL.match(u):
                 errors.append(f"{rel}: external image {u}")
-            elif not resolve(u, path).exists():
+                continue
+            target = resolve(u, path)
+            if target and not exists_exact(target):
                 errors.append(f"{rel}: missing image {u}")
 
     for link in page.links:
         href = link.get("href", "")
         if EXTERNAL.match(href):
             errors.append(f"{rel}: external <link> {href}")
-        elif href and not resolve(href, path).exists():
+            continue
+        target = resolve(href, path) if href else None
+        if target and not exists_exact(target):
             errors.append(f"{rel}: missing <link> target {href}")
 
     for href in page.anchors:
-        if href.startswith(("mailto:", "tel:", "#")) or EXTERNAL.match(href):
+        if href.startswith("#"):
+            if len(href) > 1 and href[1:] not in page.ids:
+                errors.append(f"{rel}: broken in-page anchor {href}")
+            continue
+        if href.startswith(("mailto:", "tel:")) or EXTERNAL.match(href):
             continue
         target = resolve(href, path)
-        if target and not target.exists():
+        if target and not exists_exact(target):
             errors.append(f"{rel}: broken link {href}")
+
+    if rel == "404.html":  # served at any depth, so internal URLs must start with /
+        urls = list(page.anchors) + [l.get("href", "") for l in page.links]
+        for img in page.imgs:
+            urls += urls_of(img)
+        for u in urls:
+            if u and not u.startswith(("/", "#", "mailto:", "tel:", "data:")) and not EXTERNAL.match(u):
+                errors.append(f"{rel}: internal URL must be root-absolute: {u}")
 
     for ph in sorted(set(PLACEHOLDER.findall(raw))):
         (errors if launch else warnings).append(f"{rel}: unfilled {ph}")
@@ -183,12 +243,12 @@ def check_assets(errors):
         text = css.read_text(encoding="utf-8")
         if "@import" in text:
             errors.append(f"{css.name}: @import adds a request; put everything in one file")
-        for u in CSS_URL.findall(text):
-            if u.startswith("data:"):
-                continue
+        for u in css_urls(text):
             if EXTERNAL.match(u):
                 errors.append(f"{css.name}: external url() {u}")
-            elif not resolve(u, css).exists():
+                continue
+            target = resolve(u, css)
+            if target and not exists_exact(target):
                 errors.append(f"{css.name}: missing file {u}")
     for js in SITE.rglob("*.js"):
         errors.append(f"{js.relative_to(SITE)}: no JavaScript files allowed")
@@ -201,7 +261,10 @@ def main():
     args = parser.parse_args()
 
     errors, warnings = [], []
-    for rel in args.only or PAGES:
+    pages = args.only or PAGES + sorted(
+        p.relative_to(SITE).as_posix() for p in SITE.rglob("*.html")
+        if p.relative_to(SITE).as_posix() not in PAGES)
+    for rel in pages:
         check_page(rel, errors, warnings, args.launch)
     check_assets(errors)
 

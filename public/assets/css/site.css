@@ -43,7 +43,7 @@ body {
 }
 img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; text-decoration-thickness: 2px; text-underline-offset: 3px; }
-a:focus-visible, summary:focus-visible, .trail:focus-visible {
+a:focus-visible, summary:focus-visible, .trail:focus-visible, .feed:focus-visible {
   outline: 3px solid currentColor;
   outline-offset: 3px;
   border-radius: 8px;
@@ -173,14 +173,14 @@ p { margin: 0 0 1em; }
 }
 .locker-pose {
   position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: 50% 100%;
-  opacity: 0; transform: scale(0.92);
-  transition: opacity 0.2s ease, transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  opacity: 0; transform: scale(0.92); visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), visibility 0.2s;
 }
 .locker-caption {
   position: absolute; bottom: 0; left: 50%; width: max-content; max-width: 100%;
   padding: 8px 14px; border-radius: 14px; background: var(--cream); color: var(--navy);
-  font-weight: 800; text-align: center; opacity: 0; transform: translate(-50%, 8px);
-  transition: opacity 0.2s, transform 0.2s;
+  font-weight: 800; text-align: center; opacity: 0; transform: translate(-50%, 8px); visibility: hidden;
+  transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
 }
 .locker-picker { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 .locker-picker label {
@@ -213,7 +213,7 @@ p { margin: 0 0 1em; }
 #fit-heart-shades:checked ~ .locker-grid .pose-heart-shades,
 #fit-cape:checked ~ .locker-grid .pose-cape,
 #fit-bucket-hat:checked ~ .locker-grid .pose-bucket-hat,
-#fit-halo:checked ~ .locker-grid .pose-halo { opacity: 1; transform: none; }
+#fit-halo:checked ~ .locker-grid .pose-halo { opacity: 1; transform: none; visibility: visible; }
 
 #fit-none:checked ~ .locker-grid .cap-none,
 #fit-crown:checked ~ .locker-grid .cap-crown,
@@ -223,7 +223,7 @@ p { margin: 0 0 1em; }
 #fit-heart-shades:checked ~ .locker-grid .cap-heart-shades,
 #fit-cape:checked ~ .locker-grid .cap-cape,
 #fit-bucket-hat:checked ~ .locker-grid .cap-bucket-hat,
-#fit-halo:checked ~ .locker-grid .cap-halo { opacity: 1; transform: translate(-50%, 0); }
+#fit-halo:checked ~ .locker-grid .cap-halo { opacity: 1; transform: translate(-50%, 0); visibility: visible; }
 
 /* Which item button looks selected */
 #fit-none:checked ~ .locker-grid [for="fit-none"],
@@ -274,7 +274,7 @@ p { margin: 0 0 1em; }
   mask-image: linear-gradient(transparent, #000 15%, #000 85%, transparent);
 }
 .feed-track { display: flow-root; margin: 0; padding: 0; list-style: none; animation: feed 30s linear infinite; }
-.feed:hover .feed-track, .feed:focus-within .feed-track { animation-play-state: paused; }
+.feed:hover .feed-track, .feed:focus-within .feed-track, .feed:focus .feed-track { animation-play-state: paused; }
 .notif {
   display: grid; grid-template-columns: 40px 1fr; gap: 2px 12px; margin-bottom: 12px;
   padding: 12px 14px; border-radius: 20px; background: rgba(255, 255, 255, 0.94);
@@ -319,7 +319,7 @@ p { margin: 0 0 1em; }
 
 /* ---------- 404 ---------- */
 .lost {
-  display: grid; place-items: center; min-height: 75vh; padding-block: 48px;
+  display: grid; place-items: center; min-height: 100vh; min-height: 100svh; padding-block: 48px;
   background: linear-gradient(180deg, var(--dusk-1), var(--dusk-2)); text-align: center;
 }
 .lost img { width: min(70vw, 320px); margin: 0 auto 16px; }

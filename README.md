@@ -40,10 +40,11 @@ The spec is in `.do/app.yaml`. Only `public/` is served. Pushing to `main` redep
 
 ## Launch checklist
 
-1. Replace `{{SUPPORT_EMAIL}}`, `{{PUBLISHER_NAME}}`, `{{GOVERNING_LAW}}` in `public/`, and `{{GITHUB_REPO}}` in `.do/app.yaml`.
+1. Replace `{{SUPPORT_EMAIL}}`, `{{PUBLISHER_NAME}}`, `{{GOVERNING_LAW}}` in `public/`, `{{SITE_URL}}` (in `public/index.html`), and `{{GITHUB_REPO}}` in `.do/app.yaml`.
 2. `python3 scripts/check.py --launch` passes.
 3. Have someone qualified review the privacy policy and terms.
-4. Add the custom domain in App Platform. Make `og:image` in `public/index.html` an absolute URL on that domain.
+4. Add the custom domain in App Platform. Set `{{SITE_URL}}` to that domain (e.g. https://example.com, no trailing slash).
 5. In App Store Connect, set the Privacy Policy URL to `https://<domain>/privacy/` and the Support URL to `https://<domain>/support/`. Keep Apple's standard EULA (our terms add to it). Link the terms from the app description or the app's Settings.
-6. Swap the "Coming soon" badge for a real App Store link once the listing is live.
-7. Re-check the privacy policy against the app whenever Waddles, notifications, purchases, or Health access change.
+6. Once the listing is live, turn both the hero and footer "Coming soon" badges in `public/index.html` into real App Store links, using Apple's official badge artwork per Apple's marketing guidelines.
+7. Update the “Last updated” dates in `public/privacy/index.html` and `public/terms/index.html`.
+8. Re-check the privacy policy against the app whenever Waddles, notifications, purchases, or Health access change.

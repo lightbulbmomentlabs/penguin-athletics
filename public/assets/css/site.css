@@ -273,6 +273,7 @@ p { margin: 0 0 1em; }
   -webkit-mask-image: linear-gradient(transparent, #000 15%, #000 85%, transparent);
   mask-image: linear-gradient(transparent, #000 15%, #000 85%, transparent);
 }
+.feed:focus-visible { mask-image: none; -webkit-mask-image: none; }
 .feed-track { display: flow-root; margin: 0; padding: 0; list-style: none; animation: feed 30s linear infinite; }
 .feed:hover .feed-track, .feed:focus-within .feed-track, .feed:focus .feed-track { animation-play-state: paused; }
 .notif {

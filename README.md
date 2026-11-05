@@ -47,4 +47,5 @@ The spec is in `.do/app.yaml`. Only `public/` is served. Pushing to `main` redep
 5. In App Store Connect, set the Privacy Policy URL to `https://<domain>/privacy/` and the Support URL to `https://<domain>/support/`. Keep Apple's standard EULA (our terms add to it). Link the terms from the app description or the app's Settings.
 6. Once the listing is live, turn both the hero and footer "Coming soon" badges in `public/index.html` into real App Store links, using Apple's official badge artwork per Apple's marketing guidelines.
 7. Update the “Last updated” dates in `public/privacy/index.html` and `public/terms/index.html`.
+9. Check the home page's roast wall and the privacy policy's Notifications section against the shipped app (walking reminders, caps, quiet hours).
 8. Re-check the privacy policy against the app whenever Waddles, notifications, purchases, or Health access change.

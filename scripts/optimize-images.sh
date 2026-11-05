@@ -53,7 +53,8 @@ trap 'rm -rf "$tmp"' EXIT
 sips -z 32 32 "$ART/app-icon-source.png" --out public/assets/favicon-32.png >/dev/null
 sips -z 180 180 "$ART/app-icon-source.png" --out public/assets/apple-touch-icon.png >/dev/null
 sips -z 630 630 "$ART/app-icon-source.png" --out "$tmp/og-square.png" >/dev/null
-sips -p 630 1200 --padColor 8CE0ED "$tmp/og-square.png" --out public/assets/og-image.png >/dev/null
+sips -p 630 1200 --padColor 8CE0ED "$tmp/og-square.png" --out "$tmp/og-image.png" >/dev/null
+sips -s format jpeg -s formatOptions 82 "$tmp/og-image.png" --out public/assets/og-image.jpg >/dev/null
 
 echo "Generated $(ls "$OUT" | wc -l | tr -d ' ') WebP files:"
 du -ch "$OUT"/*.webp | tail -1

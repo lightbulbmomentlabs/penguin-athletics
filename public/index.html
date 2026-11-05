@@ -13,9 +13,9 @@
   <meta property="og:title" content="Penguin · The pedometer for people who hate pedometers">
   <meta property="og:description" content="Your steps give this penguin his swagger.">
   <meta property="og:url" content="{{SITE_URL}}/">
-  <meta property="og:image" content="{{SITE_URL}}/assets/og-image.png">
+  <meta property="og:image" content="{{SITE_URL}}/assets/og-image.jpg">
   <meta property="og:image:alt" content="The Penguin app icon">
-  <meta name="twitter:image" content="{{SITE_URL}}/assets/og-image.png">
+  <meta name="twitter:image" content="{{SITE_URL}}/assets/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
@@ -47,7 +47,7 @@
         <p class="speech">One walk from the Olympics. Probably.</p>
         <img src="/assets/img/waddler-smug-480.webp"
              srcset="/assets/img/waddler-smug-480.webp 480w, /assets/img/waddler-smug-800.webp 800w"
-             sizes="(min-width: 800px) 440px, 80vw" width="800" height="800" fetchpriority="high"
+             sizes="(min-width: 800px) 440px, min(70vw, 280px)" width="800" height="800" fetchpriority="high"
              alt="A round, smug penguin in a coral headband and sunglasses, one flipper on his hip.">
       </div>
     </div>
@@ -187,27 +187,27 @@
       <ul class="trail" tabindex="0" aria-label="Landmarks on the expedition. Scrolls sideways.">
         <li>
           <img src="/assets/img/landmark-couch-border-320.webp" srcset="/assets/img/landmark-couch-border-320.webp 320w, /assets/img/landmark-couch-border-640.webp 640w" sizes="260px" width="640" height="640" loading="lazy" alt="">
-          <div class="card-body"><p class="miles">2,500 steps in</p><h3>Couch Customs</h3><p>Declared nothing. Smuggled out three crumbs and my dignity.</p></div>
+          <div class="card-body"><p class="miles">The Fridge Run · 2,500 steps</p><h3>Couch Customs</h3><p>Declared nothing. Smuggled out three crumbs and my dignity.</p></div>
         </li>
         <li>
           <img src="/assets/img/landmark-fridge-320.webp" srcset="/assets/img/landmark-fridge-320.webp 320w, /assets/img/landmark-fridge-640.webp 640w" sizes="260px" width="640" height="640" loading="lazy" alt="">
-          <div class="card-body"><p class="miles">15,000 steps in</p><h3>The Fridge (Final Boss)</h3><p>Opened the fridge. Stared for 40 seconds. Closed it. Growth.</p></div>
+          <div class="card-body"><p class="miles">The Fridge Run · 15,000 steps</p><h3>The Fridge (Final Boss)</h3><p>Opened the fridge. Stared for 40 seconds. Closed it. Growth.</p></div>
         </li>
         <li>
           <img src="/assets/img/landmark-krill-shack-320.webp" srcset="/assets/img/landmark-krill-shack-320.webp 320w, /assets/img/landmark-krill-shack-640.webp 640w" sizes="260px" width="640" height="640" loading="lazy" alt="">
-          <div class="card-body"><p class="miles">25,000 steps in</p><h3>The Krill Shack</h3><p>One star on Yelp. Would waddle here again.</p></div>
+          <div class="card-body"><p class="miles">Hot Bird Summer · 25,000 steps</p><h3>The Krill Shack</h3><p>One star on Yelp. Would waddle here again.</p></div>
         </li>
         <li>
           <img src="/assets/img/landmark-runway-320.webp" srcset="/assets/img/landmark-runway-320.webp 320w, /assets/img/landmark-runway-640.webp 640w" sizes="260px" width="640" height="640" loading="lazy" alt="">
-          <div class="card-body"><p class="miles">140,000 steps in</p><h3>The Runway (It's Ice)</h3><p>Ate it on the runway. Called it avant-garde. They clapped.</p></div>
+          <div class="card-body"><p class="miles">Penguin Fashion Week · 140,000 steps</p><h3>The Runway (It's Ice)</h3><p>Ate it on the runway. Called it avant-garde. They clapped.</p></div>
         </li>
         <li>
           <img src="/assets/img/landmark-afterparty-320.webp" srcset="/assets/img/landmark-afterparty-320.webp 320w, /assets/img/landmark-afterparty-640.webp 640w" sizes="260px" width="640" height="640" loading="lazy" alt="">
-          <div class="card-body"><p class="miles">200,000 steps in</p><h3>Afterparty Glacier</h3><p>Left the afterparty at 9pm. Elite recovery. No regrets.</p></div>
+          <div class="card-body"><p class="miles">Penguin Fashion Week · 200,000 steps</p><h3>Afterparty Glacier</h3><p>Left the afterparty at 9pm. Elite recovery. No regrets.</p></div>
         </li>
         <li>
           <img src="/assets/img/landmark-podium-320.webp" srcset="/assets/img/landmark-podium-320.webp 320w, /assets/img/landmark-podium-640.webp 640w" sizes="260px" width="640" height="640" loading="lazy" alt="">
-          <div class="card-body"><p class="miles">500,000 steps in</p><h3>The Podium</h3><p>Gold. Unofficial. Spiritually binding.</p></div>
+          <div class="card-body"><p class="miles">Road to the Podium · 500,000 steps</p><h3>The Podium</h3><p>Gold. Unofficial. Spiritually binding.</p></div>
         </li>
       </ul>
     </div>
@@ -218,9 +218,9 @@
       <div>
         <span class="kicker">Notifications</span>
         <h2 id="roast-title">He has notes.</h2>
-        <p>Push notifications written like bangers, not reminders. Walking nudges: one a day, max. Never at night.</p>
+        <p>Push notifications written like bangers, not reminders. Never guilt. Never at 3am.</p>
       </div>
-      <div class="feed" tabindex="0" aria-label="Sample notifications. Focus to pause.">
+      <section class="feed" tabindex="0" aria-label="Sample notifications. Focus to pause.">
         <ul class="feed-track">
           <li class="notif"><img src="/assets/img/icon-80.webp" alt="" width="80" height="80" loading="lazy"><p class="app">Penguin · today, 6:12 PM</p><p class="line">Your couch called. It said you two need space.</p></li>
           <li class="notif"><img src="/assets/img/icon-80.webp" alt="" width="80" height="80" loading="lazy"><p class="app">Penguin · yesterday</p><p class="line">How many steps are we doing today? Be delulu, but realistic.</p></li>
@@ -235,7 +235,7 @@
           <li class="notif" aria-hidden="true"><img src="/assets/img/icon-80.webp" alt="" width="80" height="80" loading="lazy"><p class="app">Penguin · Saturday</p><p class="line">First full huddle. The whole waddle hit their goal. I need a minute.</p></li>
           <li class="notif" aria-hidden="true"><img src="/assets/img/icon-80.webp" alt="" width="80" height="80" loading="lazy"><p class="app">Penguin · Friday</p><p class="line">Rest day logged. Recovery department. Very official.</p></li>
         </ul>
-      </div>
+      </section>
     </div>
   </section>
 

@@ -238,6 +238,13 @@ def check_page(rel, errors, warnings, launch):
         report_weight(path, raw, page, errors, warnings)
 
 
+def check_app_yaml(errors, warnings, launch):
+    f = SITE.parent / ".do" / "app.yaml"
+    if f.exists():
+        for ph in sorted(set(PLACEHOLDER.findall(f.read_text(encoding="utf-8")))):
+            (errors if launch else warnings).append(f".do/app.yaml: unfilled {ph}")
+
+
 def check_assets(errors):
     for css in sorted(SITE.glob("assets/css/*.css")):
         text = css.read_text(encoding="utf-8")
@@ -266,6 +273,7 @@ def main():
         if p.relative_to(SITE).as_posix() not in PAGES)
     for rel in pages:
         check_page(rel, errors, warnings, args.launch)
+    check_app_yaml(errors, warnings, args.launch)
     check_assets(errors)
 
     for w in warnings:

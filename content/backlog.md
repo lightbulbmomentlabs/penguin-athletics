@@ -5,24 +5,22 @@ Pillar guides come first, then questions rotate through the pillars. Reorder fre
 questions anywhere (search Google's "People also ask" and AI answers for ideas).
 
 - [x] does-walking-lower-blood-pressure | heart | Does walking lower blood pressure?
-- [ ] walking-heart-health | heart | Walking and your heart: the complete guide
-- [ ] walking-longevity | longevity | Walking and longevity: the complete guide
-- [ ] walking-weight-loss | weight | Walking for weight loss: the complete guide
-- [ ] walking-mental-health | mind | Walking and your mind: the complete guide
-- [ ] walking-basics | basics | Walking basics: the complete beginner's guide
-- [ ] how-many-steps-a-day-do-you-need-for-heart-health | heart | How many steps a day do you need for heart health?
-- [ ] can-you-lose-weight-just-by-walking | weight | Can you lose weight just by walking?
-- [ ] how-many-steps-a-day-to-live-longer | longevity | How many steps a day to live longer?
-- [ ] how-to-start-walking-when-you-hate-exercise | basics | How to start walking when you hate exercise
-- [ ] does-walking-help-anxiety | mind | Does walking help anxiety?
-- [ ] is-walking-good-for-your-heart | heart | Is walking good for your heart?
+- [x] walking-heart-health | heart | Walking and your heart: the complete guide
+- [x] walking-longevity | longevity | Walking and longevity: the complete guide
+- [x] walking-weight-loss | weight | Walking for weight loss: the complete guide
+- [x] walking-mental-health | mind | Walking and your mind: the complete guide
+- [x] walking-basics | basics | Walking basics: the complete beginner's guide
+- [x] how-many-steps-a-day-do-you-need-for-heart-health | heart | How many steps a day do you need for heart health?
+- [x] can-you-lose-weight-just-by-walking | weight | Can you lose weight just by walking?
+- [x] how-many-steps-a-day-to-live-longer | longevity | How many steps a day to live longer?
+- [x] how-to-start-walking-when-you-hate-exercise | basics | How to start walking when you hate exercise
+- [x] does-walking-help-anxiety | mind | Does walking help anxiety?
 - [ ] how-many-calories-does-walking-burn | weight | How many calories does walking burn?
 - [ ] is-the-10000-steps-rule-real | longevity | Is the 10,000 steps rule real?
 - [ ] what-is-a-good-daily-step-goal | basics | What is a good daily step goal?
 - [ ] is-walking-good-for-depression | mind | Is walking good for depression?
 - [ ] walking-vs-running-which-is-better-for-your-heart | heart | Walking vs running: which is better for your heart?
 - [ ] how-many-steps-a-day-to-lose-weight | weight | How many steps a day to lose weight?
-- [ ] does-walking-add-years-to-your-life | longevity | Does walking add years to your life?
 - [ ] best-time-of-day-to-walk | basics | Best time of day to walk
 - [ ] how-walking-reduces-stress | mind | How walking reduces stress
 - [ ] does-walking-lower-cholesterol | heart | Does walking lower cholesterol?

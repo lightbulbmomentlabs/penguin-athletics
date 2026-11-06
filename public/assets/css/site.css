@@ -240,6 +240,13 @@ p { margin: 0 0 1em; }
 .locker-picker img { width: 56px; height: 56px; object-fit: contain; }
 .no-fit { display: grid; place-items: center; width: 56px; height: 56px; font-size: 2rem; }
 .locker-note { margin-top: 16px; }
+/* Not a try-on button: a reminder that the Locker is bigger than this sample. */
+.more-fits {
+  display: grid; place-content: center; gap: 2px; padding: 10px 6px;
+  border: 3px dashed rgba(255, 245, 224, 0.35); border-radius: var(--radius-sm);
+  font-size: 0.8rem; font-weight: 800; line-height: 1.2; text-align: center;
+}
+.more-fits strong { color: var(--orange); font-size: 1.9rem; font-weight: 900; line-height: 1; }
 .plus-tag {
   position: absolute; top: 6px; right: 6px; padding: 1px 6px; border-radius: 999px;
   background: var(--orange); color: var(--navy); font-size: 0.65rem; font-weight: 900;
@@ -481,7 +488,7 @@ p { margin: 0 0 1em; }
     overflow-x: auto; scroll-snap-type: x proximity; scroll-padding-inline: var(--gutter); scrollbar-width: none;
   }
   .locker-picker::-webkit-scrollbar { display: none; }
-  .locker-picker label { flex: 0 0 84px; scroll-snap-align: start; }
+  .locker-picker label, .more-fits { flex: 0 0 84px; scroll-snap-align: start; }
   .locker-picker label:hover { transform: none; }
 }
 

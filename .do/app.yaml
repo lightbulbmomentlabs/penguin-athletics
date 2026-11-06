@@ -1,7 +1,7 @@
 # DigitalOcean App Platform spec for the Penguin website.
-# Create the app in the control panel (Create App -> GitHub -> this repo) and paste this
-# into the App Spec editor, or run: doctl apps create --spec .do/app.yaml
-# Replace lightbulbmomentlabs/penguin-athletics with owner/name first, e.g. kevinfremon/penguin-website.
+# The site lives in public/, so in the control panel set Source directory to "public"
+# (otherwise it reports "No components detected"). Or skip the wizard entirely:
+#   doctl apps create --spec .do/app.yaml
 name: penguin-website
 static_sites:
   - name: web

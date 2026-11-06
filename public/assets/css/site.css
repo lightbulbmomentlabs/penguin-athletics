@@ -299,10 +299,12 @@ p { margin: 0 0 1em; }
 }
 
 /* ---------- Expedition strip ---------- */
-.expedition { background: var(--ice); }
+/* The strip breaks out of .wrap to the screen edges, so cards run off the right side
+   (a clear "there's more" cue) while the first card still lines up with the heading. */
+.expedition { --bleed: max(var(--gutter), (100vw - var(--max)) / 2); overflow-x: clip; background: var(--ice); }
 .trail {
-  display: flex; gap: 16px; margin: 24px calc(-1 * var(--gutter)) 0; padding: 8px var(--gutter) 24px;
-  overflow-x: auto; list-style: none; scroll-snap-type: x mandatory; scroll-padding-inline: var(--gutter);
+  display: flex; gap: 16px; margin: 24px calc(-1 * var(--bleed)) 0; padding: 8px var(--bleed) 24px;
+  overflow-x: auto; list-style: none; scroll-snap-type: x mandatory; scroll-padding-inline: var(--bleed);
 }
 .trail li {
   flex: 0 0 min(72vw, 260px); overflow: hidden; border-radius: var(--radius);

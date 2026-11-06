@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- Template for Learn share images. scripts/make_learn_og.py fills the {{...}} slots. Not served. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Learn share image</title>
+<style>
+  @font-face {
+    font-family: "Nunito";
+    src: url("../../public/assets/fonts/nunito-latin-wght.woff2") format("woff2");
+    font-weight: 200 1000;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    position: relative; font-family: "Nunito", sans-serif; color: #1c2440;
+    background: linear-gradient(180deg, #8ce0ed 0%, #ccf5f7 100%);
+  }
+  .copy { position: absolute; top: 70px; left: 72px; width: 660px; }
+  .kicker {
+    display: inline-block; padding: 10px 20px; border-radius: 999px; background: #1c2440; color: #fff5e0;
+    font-size: 24px; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase;
+  }
+  .title { margin-top: 26px; font-size: 92px; font-weight: 900; line-height: 0.95; letter-spacing: -0.03em; }
+  .sub { margin-top: 24px; font-size: 30px; font-weight: 800; line-height: 1.25; opacity: 0.85; }
+  .footer { position: absolute; left: 72px; bottom: 56px; font-size: 26px; font-weight: 900; }
+  .footer span { opacity: 0.7; font-weight: 800; }
+  .art { position: absolute; right: 50px; bottom: 40px; width: 400px; }
+  .art img { display: block; width: 100%; position: relative; }
+  .floe { position: absolute; left: 10%; right: 10%; bottom: -14px; height: 36px; border-radius: 50%; background: #fff; }
+  .speech {
+    position: absolute; top: -70px; left: 50%; transform: translateX(-50%) rotate(-3deg);
+    padding: 14px 22px; border-radius: 22px; background: #fff; white-space: nowrap;
+    font-size: 26px; font-weight: 900; box-shadow: 0 8px 0 rgba(15, 20, 41, 0.12);
+  }
+  .speech::after {
+    content: ""; position: absolute; left: 50%; bottom: -13px; margin-left: -13px;
+    border: 13px solid transparent; border-top-color: #fff; border-bottom: 0;
+  }
+</style>
+</head>
+<body>
+  <div class="copy">
+    <span class="kicker">{{KICKER}}</span>
+    <p class="title">{{TITLE}}</p>
+    <p class="sub">{{SUB}}</p>
+  </div>
+  <p class="footer">penguinathletics.com/learn <span>· cited, plain-English, no guilt trips</span></p>
+  <div class="art">
+    <div class="floe"></div>
+    <p class="speech">{{SPEECH}}</p>
+    <img src="../../public/assets/img/{{POSE}}-640.webp" alt="">
+  </div>
+</body>
+</html>

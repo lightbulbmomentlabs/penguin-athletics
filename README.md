@@ -28,6 +28,33 @@ WebPage plus breadcrumbs on the others). `public/robots.txt`, `public/sitemap.xm
   entry in its JSON-LD. `scripts/check.py` fails if they drift apart.
 - **Sitemap:** add new pages to `public/sitemap.xml` and bump `lastmod` when pages change.
 
+## Learn (walking-health articles)
+
+Articles live in `content/learn/<slug>.md` (Markdown with a short header). The builder turns
+them into pages under `public/learn/`, plus the Learn hub, five topic pages, the RSS feed
+(`/learn/feed.xml`), the sitemap, the Learn section of `llms.txt`, and the "Walking,
+explained" band on the home page. The generated HTML is committed, so hosting stays a
+plain static site.
+
+    python3 scripts/build_learn.py              # rebuild after editing anything in content/
+    python3 -m unittest scripts/test_learnlib.py
+    python3 scripts/check.py                    # fails if the build is stale or a citation is broken
+
+- **Rules:** `content/STYLE.md` (evidence, safety, voice, format). Public version:
+  `/learn/editorial-policy/`.
+- **Topics:** `content/backlog.md`, worked top to bottom. Topics: `content/pillars.json`.
+- **Daily drafts:** a scheduled Claude job follows `content/DAILY.md`: it drafts the next
+  backlog topic and opens a pull request with a claim-by-claim source table. Review it,
+  merge it, and DigitalOcean publishes it. Nothing publishes without a merge.
+- **Reviewing a draft:** read the short answer and Gary's line, spot-check two or three
+  claims against the sources table, and skim for anything that sounds like medical advice
+  or body talk.
+- **Share images:** `scripts/make_learn_og.py` renders `public/assets/og/learn*.jpg`
+  (needs Google Chrome). Rerun after changing `content/pillars.json`.
+- **Medical reviewer:** add `reviewed_by: Name, credentials` to an article once a qualified
+  person has actually reviewed it. The page then shows "Reviewed by" and the structured
+  data includes it.
+
 ## Rename the app
 
 The site calls the app "Penguin" (site name "Penguin Athletics"). If that changes, update

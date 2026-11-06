@@ -1,0 +1,152 @@
+# Learn backlog
+
+The daily job takes the first unchecked line. Format: `- [ ] <slug> | <pillar> | <question or guide title>`.
+Pillar guides come first, then questions rotate through the pillars. Reorder freely; add new
+questions anywhere (search Google's "People also ask" and AI answers for ideas).
+
+- [x] does-walking-lower-blood-pressure | heart | Does walking lower blood pressure?
+- [ ] walking-heart-health | heart | Walking and your heart: the complete guide
+- [ ] walking-longevity | longevity | Walking and longevity: the complete guide
+- [ ] walking-weight-loss | weight | Walking for weight loss: the complete guide
+- [ ] walking-mental-health | mind | Walking and your mind: the complete guide
+- [ ] walking-basics | basics | Walking basics: the complete beginner's guide
+- [ ] how-many-steps-a-day-do-you-need-for-heart-health | heart | How many steps a day do you need for heart health?
+- [ ] can-you-lose-weight-just-by-walking | weight | Can you lose weight just by walking?
+- [ ] how-many-steps-a-day-to-live-longer | longevity | How many steps a day to live longer?
+- [ ] how-to-start-walking-when-you-hate-exercise | basics | How to start walking when you hate exercise
+- [ ] does-walking-help-anxiety | mind | Does walking help anxiety?
+- [ ] is-walking-good-for-your-heart | heart | Is walking good for your heart?
+- [ ] how-many-calories-does-walking-burn | weight | How many calories does walking burn?
+- [ ] is-the-10000-steps-rule-real | longevity | Is the 10,000 steps rule real?
+- [ ] what-is-a-good-daily-step-goal | basics | What is a good daily step goal?
+- [ ] is-walking-good-for-depression | mind | Is walking good for depression?
+- [ ] walking-vs-running-which-is-better-for-your-heart | heart | Walking vs running: which is better for your heart?
+- [ ] how-many-steps-a-day-to-lose-weight | weight | How many steps a day to lose weight?
+- [ ] does-walking-add-years-to-your-life | longevity | Does walking add years to your life?
+- [ ] best-time-of-day-to-walk | basics | Best time of day to walk
+- [ ] how-walking-reduces-stress | mind | How walking reduces stress
+- [ ] does-walking-lower-cholesterol | heart | Does walking lower cholesterol?
+- [ ] does-walking-after-meals-lower-blood-sugar | weight | Does walking after meals lower blood sugar?
+- [ ] walking-speed-and-life-expectancy-what-s-the-link | longevity | Walking speed and life expectancy: what's the link?
+- [ ] how-to-walk-with-good-posture | basics | How to walk with good posture
+- [ ] does-walking-help-you-sleep-better | mind | Does walking help you sleep better?
+- [ ] can-walking-reduce-your-risk-of-stroke | heart | Can walking reduce your risk of stroke?
+- [ ] can-walking-reduce-belly-fat | weight | Can walking reduce belly fat?
+- [ ] is-it-too-late-to-start-walking-at-60 | longevity | Is it too late to start walking at 60?
+- [ ] do-you-need-special-walking-shoes | basics | Do you need special walking shoes?
+- [ ] walking-and-creativity-is-the-boost-real | mind | Walking and creativity: is the boost real?
+- [ ] is-brisk-walking-enough-cardio | heart | Is brisk walking enough cardio?
+- [ ] walking-vs-running-for-weight-loss | weight | Walking vs running for weight loss
+- [ ] does-walking-reduce-dementia-risk | longevity | Does walking reduce dementia risk?
+- [ ] how-to-build-a-walking-habit-that-sticks | basics | How to build a walking habit that sticks
+- [ ] nature-walks-vs-city-walks-for-mental-health | mind | Nature walks vs city walks for mental health
+- [ ] how-fast-should-you-walk-for-heart-health | heart | How fast should you walk for heart health?
+- [ ] incline-walking-does-it-burn-more-calories | weight | Incline walking: does it burn more calories?
+- [ ] walking-and-cancer-risk-what-the-research-says | longevity | Walking and cancer risk: what the research says
+- [ ] walking-in-cold-weather-how-to-stay-safe | basics | Walking in cold weather: how to stay safe
+- [ ] does-walking-improve-focus-and-memory | mind | Does walking improve focus and memory?
+- [ ] does-walking-lower-your-resting-heart-rate | heart | Does walking lower your resting heart rate?
+- [ ] is-walking-good-for-insulin-resistance | weight | Is walking good for insulin resistance?
+- [ ] how-much-walking-offsets-sitting-all-day | longevity | How much walking offsets sitting all day?
+- [ ] walking-in-hot-weather-how-to-stay-safe | basics | Walking in hot weather: how to stay safe
+- [ ] walking-meetings-do-they-work | mind | Walking meetings: do they work?
+- [ ] is-walking-after-a-heart-attack-safe | heart | Is walking after a heart attack safe?
+- [ ] how-long-until-walking-changes-your-weight | weight | How long until walking changes your weight?
+- [ ] does-walking-help-you-age-better | longevity | Does walking help you age better?
+- [ ] treadmill-vs-outdoor-walking | basics | Treadmill vs outdoor walking
+- [ ] mindful-walking-how-to-do-it | mind | Mindful walking: how to do it
+- [ ] can-walking-reverse-heart-disease | heart | Can walking reverse heart disease?
+- [ ] does-walking-boost-metabolism | weight | Does walking boost metabolism?
+- [ ] weekend-warriors-do-two-big-walks-a-week-count | longevity | Weekend warriors: do two big walks a week count?
+- [ ] how-to-walk-faster-without-running | basics | How to walk faster without running
+- [ ] walking-and-adhd-what-the-research-says | mind | Walking and ADHD: what the research says
+- [ ] walking-and-atrial-fibrillation-what-to-know | heart | Walking and atrial fibrillation: what to know
+- [ ] walking-for-type-2-diabetes-how-much-helps | weight | Walking for type 2 diabetes: how much helps?
+- [ ] walking-and-bone-density-does-it-help | longevity | Walking and bone density: does it help?
+- [ ] should-you-stretch-before-walking | basics | Should you stretch before walking?
+- [ ] does-a-walk-help-after-a-bad-day | mind | Does a walk help after a bad day?
+- [ ] how-long-should-you-walk-to-strengthen-your-heart | heart | How long should you walk to strengthen your heart?
+- [ ] fasted-walking-does-it-burn-more-fat | weight | Fasted walking: does it burn more fat?
+- [ ] walking-for-balance-and-fall-prevention | longevity | Walking for balance and fall prevention
+- [ ] walking-after-a-long-break-or-injury | basics | Walking after a long break or injury
+- [ ] walking-and-self-esteem | mind | Walking and self-esteem
+- [ ] does-walking-improve-circulation | heart | Does walking improve circulation?
+- [ ] does-walking-help-maintain-weight-loss | weight | Does walking help maintain weight loss?
+- [ ] does-walking-help-arthritis | longevity | Does walking help arthritis?
+- [ ] how-to-fit-more-steps-into-a-busy-day | basics | How to fit more steps into a busy day
+- [ ] walking-for-burnout-recovery | mind | Walking for burnout recovery
+- [ ] is-walking-good-for-high-cholesterol | heart | Is walking good for high cholesterol?
+- [ ] walking-with-weights-worth-it | weight | Walking with weights: worth it?
+- [ ] is-walking-enough-exercise-as-you-get-older | longevity | Is walking enough exercise as you get older?
+- [ ] are-rest-days-important-for-walkers | basics | Are rest days important for walkers?
+- [ ] does-walking-help-with-grief | mind | Does walking help with grief?
+- [ ] can-you-walk-too-much-for-your-heart | heart | Can you walk too much for your heart?
+- [ ] rucking-explained-walking-with-a-weighted-pack | weight | Rucking explained: walking with a weighted pack
+- [ ] walking-and-brain-health | longevity | Walking and brain health
+- [ ] walking-while-pregnant-what-to-know | basics | Walking while pregnant: what to know
+- [ ] walking-outdoors-and-vitamin-d | mind | Walking outdoors and vitamin D
+- [ ] interval-walking-does-it-help-your-heart-more | heart | Interval walking: does it help your heart more?
+- [ ] does-walking-help-with-bloating-and-digestion | weight | Does walking help with bloating and digestion?
+- [ ] does-walking-slow-biological-aging | longevity | Does walking slow biological aging?
+- [ ] how-accurate-are-phone-step-counters | basics | How accurate are phone step counters?
+- [ ] social-walking-does-walking-with-friends-help-more | mind | Social walking: does walking with friends help more?
+- [ ] does-walking-help-heart-failure | heart | Does walking help heart failure?
+- [ ] walking-and-appetite-does-it-make-you-hungrier | weight | Walking and appetite: does it make you hungrier?
+- [ ] steps-per-day-by-age-what-s-realistic | longevity | Steps per day by age: what's realistic?
+- [ ] walking-with-back-pain-dos-and-don-ts | basics | Walking with back pain: dos and don'ts
+- [ ] walking-and-screen-time-a-reset-for-your-brain | mind | Walking and screen time: a reset for your brain
+- [ ] morning-or-evening-walks-for-blood-pressure | heart | Morning or evening walks for blood pressure?
+- [ ] is-a-10-minute-walk-after-eating-worth-it | weight | Is a 10-minute walk after eating worth it?
+- [ ] walking-and-immune-health | longevity | Walking and immune health
+- [ ] walking-with-knee-pain-what-helps | basics | Walking with knee pain: what helps
+- [ ] morning-walks-and-mood | mind | Morning walks and mood
+- [ ] is-walking-good-for-varicose-veins | heart | Is walking good for varicose veins?
+- [ ] walking-and-pcos-what-the-research-says | weight | Walking and PCOS: what the research says
+- [ ] does-walking-reduce-the-risk-of-type-2-diabetes | longevity | Does walking reduce the risk of type 2 diabetes?
+- [ ] hydration-for-walkers | basics | Hydration for walkers
+- [ ] walking-and-seasonal-depression | mind | Walking and seasonal depression
+- [ ] does-walking-reduce-inflammation | heart | Does walking reduce inflammation?
+- [ ] does-walking-reduce-visceral-fat | weight | Does walking reduce visceral fat?
+- [ ] walking-and-lung-health | longevity | Walking and lung health
+- [ ] walking-at-night-safely | basics | Walking at night safely
+- [ ] does-walking-help-with-loneliness | mind | Does walking help with loneliness?
+- [ ] does-walking-uphill-help-your-heart | heart | Does walking uphill help your heart?
+- [ ] walking-vs-gym-workouts-for-weight | weight | Walking vs gym workouts for weight
+- [ ] can-walking-help-you-live-independently-longer | longevity | Can walking help you live independently longer?
+- [ ] how-to-avoid-blisters-when-walking | basics | How to avoid blisters when walking
+- [ ] walking-and-anger-does-it-cool-you-down | mind | Walking and anger: does it cool you down?
+- [ ] is-30-minutes-of-walking-a-day-enough-for-your-heart | heart | Is 30 minutes of walking a day enough for your heart?
+- [ ] how-walking-affects-cravings | weight | How walking affects cravings
+- [ ] grip-gait-and-longevity-why-walking-speed-matters | longevity | Grip, gait, and longevity: why walking speed matters
+- [ ] walking-with-a-desk-job | basics | Walking with a desk job
+- [ ] can-walking-help-with-insomnia | mind | Can walking help with insomnia?
+- [ ] walking-and-peripheral-artery-disease-pad | heart | Walking and peripheral artery disease (PAD)
+- [ ] does-walking-help-with-fatty-liver | weight | Does walking help with fatty liver?
+- [ ] does-walking-help-with-chronic-pain | longevity | Does walking help with chronic pain?
+- [ ] walking-in-the-rain-tips | basics | Walking in the rain: tips
+- [ ] walking-and-cognitive-decline | mind | Walking and cognitive decline
+- [ ] do-short-walks-count-for-heart-health | heart | Do short walks count for heart health?
+- [ ] steps-vs-calories-which-should-you-track | weight | Steps vs calories: which should you track?
+- [ ] walking-and-kidney-health | longevity | Walking and kidney health
+- [ ] how-to-make-walking-less-boring | basics | How to make walking less boring
+- [ ] dog-walking-and-mental-health | mind | Dog walking and mental health
+- [ ] how-walking-affects-your-blood-vessels | heart | How walking affects your blood vessels
+- [ ] why-the-scale-might-not-move-when-you-start-walking | weight | Why the scale might not move when you start walking
+- [ ] is-walking-good-for-your-joints | longevity | Is walking good for your joints?
+- [ ] walking-with-kids-building-the-habit-together | basics | Walking with kids: building the habit together
+- [ ] walking-and-postpartum-mood | mind | Walking and postpartum mood
+- [ ] walking-with-high-blood-pressure-is-it-safe | heart | Walking with high blood pressure: is it safe?
+- [ ] walking-and-muscle-does-walking-build-any | weight | Walking and muscle: does walking build any?
+- [ ] walking-and-eye-health-is-there-a-link | longevity | Walking and eye health: is there a link?
+- [ ] is-walking-or-cycling-better | basics | Is walking or cycling better?
+- [ ] silent-walking-the-trend-explained | mind | Silent walking: the trend explained
+- [ ] does-walking-lower-triglycerides | heart | Does walking lower triglycerides?
+- [ ] walking-for-weight-with-joint-pain | weight | Walking for weight with joint pain
+- [ ] does-walking-reduce-the-risk-of-early-death | longevity | Does walking reduce the risk of early death?
+- [ ] how-to-recover-after-a-long-walk | basics | How to recover after a long walk
+- [ ] walking-and-confidence | mind | Walking and confidence
+- [ ] is-walking-good-for-heart-palpitations | heart | Is walking good for heart palpitations?
+- [ ] walking-and-hormones-cortisol-insulin-and-more | weight | Walking and hormones: cortisol, insulin, and more
+- [ ] walking-and-healthy-aging-in-women | longevity | Walking and healthy aging in women
+- [ ] japanese-interval-walking-explained | basics | Japanese interval walking explained
+- [ ] how-fast-does-a-walk-improve-your-mood | mind | How fast does a walk improve your mood?

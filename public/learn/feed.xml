@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Penguin Athletics: Learn</title>
+  <link>https://penguinathletics.com/learn/</link>
+  <atom:link href="https://penguinathletics.com/learn/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>Evidence-based guides to the health benefits of walking.</description>
+  <language>en-us</language>
+  <lastBuildDate>Fri, 06 Nov 2026 12:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Does walking lower blood pressure?</title>
+    <link>https://penguinathletics.com/learn/does-walking-lower-blood-pressure/</link>
+    <guid isPermaLink="true">https://penguinathletics.com/learn/does-walking-lower-blood-pressure/</guid>
+    <pubDate>Fri, 06 Nov 2026 12:00:00 +0000</pubDate>
+    <description>Yes. A large Cochrane review of 73 trials found that regular walking lowered systolic blood pressure (the top number) by about 4 mmHg on average. Most of the walking programs in those trials averaged around 150 minutes of moderate walking a week for a few months.</description>
+  </item>
+</channel>
+</rss>

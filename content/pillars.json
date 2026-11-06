@@ -1,0 +1,42 @@
+[
+  {
+    "key": "heart",
+    "slug": "walking-heart-health",
+    "title": "Walking and your heart",
+    "short": "Heart",
+    "blurb": "Blood pressure, cholesterol, and the most underrated cardio on the planet.",
+    "pose": "waddler-hyped"
+  },
+  {
+    "key": "longevity",
+    "slug": "walking-longevity",
+    "title": "Walking and longevity",
+    "short": "Longevity",
+    "blurb": "How many steps buy you more years, and what the 10,000-step rule gets wrong.",
+    "pose": "waddler-celebrating"
+  },
+  {
+    "key": "weight",
+    "slug": "walking-weight-loss",
+    "title": "Walking for weight loss",
+    "short": "Weight",
+    "blurb": "What walking really does for weight, blood sugar, and metabolism. No shame, just science.",
+    "pose": "waddler-neutral"
+  },
+  {
+    "key": "mind",
+    "slug": "walking-mental-health",
+    "title": "Walking and your mind",
+    "short": "Mind",
+    "blurb": "Stress, mood, sleep, and focus. A walk is the cheapest reset you own.",
+    "pose": "couch-resting"
+  },
+  {
+    "key": "basics",
+    "slug": "walking-basics",
+    "title": "Walking basics",
+    "short": "Basics",
+    "blurb": "How to start, stick with it, and maybe even like it. Built for people who hate exercise.",
+    "pose": "couch-slumped"
+  }
+]

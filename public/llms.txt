@@ -18,3 +18,16 @@ Key facts:
 - [Privacy Policy](https://penguinathletics.com/privacy/): exactly what data the app uses and shares
 - [Terms of Service](https://penguinathletics.com/terms/)
 - [Support](https://penguinathletics.com/support/): troubleshooting and contact
+
+<!-- learn:start -->
+## Learn: the health benefits of walking
+Evidence-based, cited articles. Editorial policy: https://penguinathletics.com/learn/editorial-policy/
+
+- [Walking and your heart](https://penguinathletics.com/learn/walking-heart-health/): Blood pressure, cholesterol, and the most underrated cardio on the planet.
+- [Walking and longevity](https://penguinathletics.com/learn/walking-longevity/): How many steps buy you more years, and what the 10,000-step rule gets wrong.
+- [Walking for weight loss](https://penguinathletics.com/learn/walking-weight-loss/): What walking really does for weight, blood sugar, and metabolism. No shame, just science.
+- [Walking and your mind](https://penguinathletics.com/learn/walking-mental-health/): Stress, mood, sleep, and focus. A walk is the cheapest reset you own.
+- [Walking basics](https://penguinathletics.com/learn/walking-basics/): How to start, stick with it, and maybe even like it. Built for people who hate exercise.
+
+- [Does walking lower blood pressure?](https://penguinathletics.com/learn/does-walking-lower-blood-pressure/): Yes. A large Cochrane review of 73 trials found that regular walking lowered systolic blood pressure (the top number) by about 4 mmHg on average. Most of the walking programs in those trials averaged around 150 minutes of moderate walking a week for a few months.
+<!-- learn:end -->

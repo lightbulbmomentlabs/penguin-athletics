@@ -363,6 +363,27 @@ def check_app_yaml(errors, warnings, launch):
             (errors if launch else warnings).append(f".do/app.yaml: unfilled {ph}")
 
 
+def check_learn(errors):
+    """Learn sources are valid, generated pages are current, and every page is in the sitemap."""
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import build_learn
+    out, problems = build_learn.build()
+    errors += [f"content/learn: {p}" for p in problems]
+    for path, text in out.items():
+        if not path.exists() or path.read_text(encoding="utf-8") != text:
+            errors.append(f"{path.relative_to(SITE.parent)}: out of date; run python3 scripts/build_learn.py")
+    for d in build_learn.stale_dirs(out):
+        errors.append(f"{d.relative_to(SITE.parent)}: source was deleted; run python3 scripts/build_learn.py")
+    sitemap = (SITE / "sitemap.xml").read_text(encoding="utf-8") if (SITE / "sitemap.xml").exists() else ""
+    for page in sorted(SITE.glob("learn/**/index.html")):
+        loc = SITE_URL + "/" + page.parent.relative_to(SITE).as_posix() + "/"
+        if f"<loc>{loc}</loc>" not in sitemap:
+            errors.append(f"sitemap.xml: missing {loc}")
+        raw = page.read_text(encoding="utf-8")
+        if build_learn.GENERATED in raw and '<article class="learn-article">' in raw and '"@type": "Article"' not in raw:
+            errors.append(f"{page.relative_to(SITE)}: article page is missing Article structured data")
+
+
 def check_assets(errors):
     for css in sorted(SITE.glob("assets/css/*.css")):
         text = css.read_text(encoding="utf-8")
@@ -393,6 +414,7 @@ def main():
         check_page(rel, errors, warnings, args.launch)
     check_app_yaml(errors, warnings, args.launch)
     check_crawl_files(errors)
+    check_learn(errors)
     check_assets(errors)
 
     for w in warnings:

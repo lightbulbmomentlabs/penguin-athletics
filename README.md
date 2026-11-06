@@ -70,6 +70,13 @@ Art comes from the app repo. Regenerate after art changes (the script can be run
 
 Needs `brew install webp ffmpeg`. It also builds the hero's moving penguin: the app's `idle-waddler-smug-green.mp4` with the green screen removed, as `public/assets/video/hero-idle.webm` (Chrome, Firefox) and `hero-idle.mov` (Safari, HEVC with transparency). Keep the home page's first load under 600 KB (`scripts/check.py` enforces it).
 
+## Device images
+
+The homepage's device group (`public/assets/img/device-*.webp`) uses Apple's official
+Product Bezels (Apple Design Resources) with real app screens captured from the iPhone 18 Pro,
+iPhone Duo, and Apple Watch simulators (`-previewUser -todaySteps 7400`, status bar at 9:41).
+Apple's license for those bezels is in each bezel download.
+
 ## Hosting
 
 DigitalOcean App Platform, static site, free tier (up to 3 static-only apps, each with 1 GiB of outbound transfer per month; then $0.02 per GiB; checked 2026-11-05).

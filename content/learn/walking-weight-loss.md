@@ -4,6 +4,7 @@ pillar: weight
 description: Walking alone usually brings modest weight loss, about 1.3 kg over 16 weeks in trials, but it helps blood sugar and steady weight. Here's what to expect.
 answer: Walking on its own usually leads to modest weight loss. In a review of pedometer-based walking programs with no diet changes, people lost about 1.3 kg (roughly 3 pounds) over a median of 16 weeks. Walking does more when paired with changes in eating, and it helps prevent weight gain and improves blood sugar and insulin sensitivity whatever the scale says.
 published: 2026-11-06
+updated: 2026-11-07
 keywords: walking for weight loss, can walking help you lose weight, how much walking to lose weight, walking after meals blood sugar, walking and belly fat, walking and visceral fat, calories burned walking, walking to keep weight off, walking and insulin resistance, walking and type 2 diabetes risk, does walking make you hungry
 pose: waddler-neutral
 gary: Your couch called. It says you two need some space.
@@ -92,7 +93,7 @@ Grade makes a big difference. Walking uphill at a moderate-to-brisk pace on a 1%
 
 The standard MET is expressed per kilogram of body weight [7]. That means the same walk at the same pace uses more total energy for a person with a higher body weight than for a person with a lower one.
 
-Researchers also note that resting energy use differs with age, sex, height, body weight, and body makeup [7]. That's why any calorie number from an app, a treadmill, or a chart is an estimate, not an exact count. Use it as a rough guide, not a target.
+Researchers also note that resting energy use differs with age, sex, height, body weight, and body makeup [7]. That's why any calorie number from an app, a treadmill, or a chart is an estimate, not an exact count. Use it as a rough guide, not a target. For estimates by pace, body weight, and distance, see [how many calories does walking burn?](/learn/how-many-calories-does-walking-burn/)
 
 ## How does walking after meals help your blood sugar?
 

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Privacy Policy · Penguin Pedometer App</title>
-  <meta name="description" content="How the Penguin pedometer app handles your data: step counts from Apple Health stay on your iPhone. No accounts, no ads, no tracking.">
+  <meta name="description" content="How the Penguin pedometer app handles your data: step counts from Apple Health stay on your iPhone. No accounts, no ads, no cross-app tracking.">
   <meta name="keywords" content="pedometer app, step counter, step tracker, walking app, funny fitness app, iPhone pedometer, Apple Health steps, Apple Watch steps, daily step goal, walking motivation, walking game, penguin app, Penguin Athletics">
   <meta name="author" content="Lightbulb Moment Labs, Inc.">
   <meta name="robots" content="index, follow, max-image-preview:large">
@@ -17,7 +17,7 @@
   <meta property="og:site_name" content="Penguin Athletics">
   <meta property="og:locale" content="en_US">
   <meta property="og:title" content="Privacy Policy · Penguin Pedometer App">
-  <meta property="og:description" content="How the Penguin pedometer app handles your data: step counts from Apple Health stay on your iPhone. No accounts, no ads, no tracking.">
+  <meta property="og:description" content="How the Penguin pedometer app handles your data: step counts from Apple Health stay on your iPhone. No accounts, no ads, no cross-app tracking.">
   <meta property="og:url" content="https://penguinathletics.com/privacy/">
   <meta property="og:image" content="https://penguinathletics.com/assets/og-image.jpg">
   <meta property="og:image:type" content="image/jpeg">
@@ -26,7 +26,7 @@
   <meta property="og:image:alt" content="Penguin, the pedometer app for people who hate pedometers: a smug cartoon penguin in a headband and sunglasses.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Privacy Policy · Penguin Pedometer App">
-  <meta name="twitter:description" content="How the Penguin pedometer app handles your data: step counts from Apple Health stay on your iPhone. No accounts, no ads, no tracking.">
+  <meta name="twitter:description" content="How the Penguin pedometer app handles your data: step counts from Apple Health stay on your iPhone. No accounts, no ads, no cross-app tracking.">
   <meta name="twitter:image" content="https://penguinathletics.com/assets/og-image.jpg">
   <meta name="twitter:image:alt" content="Penguin, the pedometer app for people who hate pedometers: a smug cartoon penguin in a headband and sunglasses.">
   <script type="application/ld+json">
@@ -62,7 +62,7 @@
         "@id": "https://penguinathletics.com/privacy/#webpage",
         "url": "https://penguinathletics.com/privacy/",
         "name": "Privacy Policy",
-        "description": "How the Penguin pedometer app handles your data: step counts from Apple Health stay on your iPhone. No accounts, no ads, no tracking.",
+        "description": "How the Penguin pedometer app handles your data: step counts from Apple Health stay on your iPhone. No accounts, no ads, no cross-app tracking.",
         "inLanguage": "en-US",
         "isPartOf": {
           "@id": "https://penguinathletics.com/#website"
@@ -74,7 +74,7 @@
           "@type": "ImageObject",
           "url": "https://penguinathletics.com/assets/og-image.jpg"
         },
-        "dateModified": "2026-11-05"
+        "dateModified": "2026-11-07"
       },
       {
         "@type": "BreadcrumbList",
@@ -128,60 +128,125 @@
     </div>
   </div>
   <div class="wrap prose">
-    <p class="updated">Last updated: November 5, 2026</p>
+    <p class="updated">Last updated: November 7, 2026</p>
 
     <h2>Who we are</h2>
     <p>The Penguin app (“the app”) and this website are published by Lightbulb Moment Labs, Inc. (“we,” “us”). Questions about this policy: <a href="mailto:hello@penguinathletics.com">hello@penguinathletics.com</a>.</p>
 
     <h2>The short version</h2>
     <ul>
-      <li>The app doesn't use servers of ours, and it has no accounts, ads, analytics, or tracking.</li>
-      <li>The app reads your step count from Apple Health. Your step history stays on your device.</li>
-      <li>If you join a Waddle, a small progress summary (not your steps) is shared with that Waddle's members through Apple's iCloud.</li>
-      <li>We never sell your data or use it for advertising.</li>
+      <li>The app reads your step count from Apple Health. Your step count and step history stay on your device.</li>
+      <li>A few features send a small amount of information off your phone, and only what's listed below:
+        <ul>
+          <li><strong>Usage stats</strong> (on unless you turn them off): which features you use, to PostHog. Never your steps or health data.</li>
+          <li><strong>Gary's fresh lines</strong> (on unless you turn them off): rough goal progress, to Anthropic's AI.</li>
+          <li><strong>The Rookery</strong> (only if you join): your penguin's name and look, on our server.</li>
+          <li><strong>Waddles</strong> (only if you create or join one): a progress summary, through Apple's iCloud.</li>
+          <li><strong>Weather in his sky</strong> (only if you turn it on): your approximate location, to Apple Weather only.</li>
+        </ul>
+      </li>
+      <li>No accounts, no ads, and no tracking across other companies' apps or websites. We never sell your data or use it for advertising.</li>
     </ul>
 
     <h2>What the app uses, and why</h2>
     <h3>Step count from Apple Health</h3>
-    <p>With your permission, the app reads your step count from Apple Health (HealthKit). It does not read any other health data, and it never writes to Apple Health. Steps are used only to power the app: your daily goal, the penguin's mood and form, Aura, streaks, unlocks, expedition progress, and widgets. Step data stays on your device. It is never used for advertising or marketing, never sold, and never shared with third parties. The only health-derived information that can leave your device is the Waddle summary you choose to share (goal progress, Aura, form, streak, and rest-day status), described below.</p>
+    <p>With your permission, the app reads your step count from Apple Health (HealthKit). It doesn't read any other health data. Your steps power the game: your goal, the penguin's mood and form, Aura, streaks, unlocks, expedition progress, and widgets.</p>
+    <p>Your step count and history stay on your device. They are never used for advertising or marketing, never sold, never sent to analytics, and never shared with anyone. The only things worked out from your steps that can leave your phone are rough goal progress for Gary's lines (unless you turn them off) and the waddle summary (if you join one), both described below.</p>
+
+    <h3>Saving walks to Apple Health</h3>
+    <p>If you start a walk in the app and allow it, the walk is saved to Apple Health as a walking workout, with its distance and active energy, so it shows up in Fitness. This is written to Health on your device. We don't receive it.</p>
 
     <h3>Motion &amp; Fitness</h3>
-    <p>During a walk in walk mode, the app can show a live step count using your iPhone's motion sensors (Core Motion). These live counts stay on your device and are not saved to Apple Health.</p>
+    <p>During a walk, and to keep your count fresh between Health updates, the app reads your iPhone's step count from its motion sensors (Core Motion). This stays on your device.</p>
 
-    <h3>Things you enter and progress the app calculates</h3>
-    <p>Your penguin's name, daily goal, tone setting, rest days, Aura, streaks, unlocked items, expedition progress, and history are stored on your device, including in storage the app shares with its Home Screen widgets. Like other app data, this may be included in your device backups, depending on your backup settings.</p>
-
-    <h2>Waddles (optional)</h2>
-    <p>Waddles let you see how friends are doing. When you create or join a Waddle, the app stores the following in iCloud using Apple's CloudKit, where it's visible to the members of that Waddle:</p>
+    <h3>Usage stats (PostHog)</h3>
+    <p>To learn which features people use and where the app gets confusing, the app sends usage events to PostHog, an analytics service that processes the data for us. An event is something like “finished setup,” “opened the Locker,” “started a walk,” or “started a free trial.” Each event includes:</p>
     <ul>
-      <li>an ID iCloud assigns to your account for this app (not your name or email), which is the same in every Waddle you join</li>
-      <li>your penguin's name, Aura, form (stage), and current outfit</li>
-      <li>today's progress toward your goal as a percentage, plus the date</li>
-      <li>your streak and whether today is a rest day</li>
-      <li>when your summary was last updated</li>
-      <li>the Waddle's name</li>
-      <li>pokes: who sent them, who they were for, the message, and when they were sent</li>
+      <li>a random analytics ID the app creates (not your name, email, Apple ID, or your device's advertising ID);</li>
+      <li>the app version, iOS version, device model, and language;</li>
+      <li>when it happened;</li>
+      <li>your rough location (country and region), which PostHog works out from your IP address. We've set PostHog not to store the IP address itself.</li>
     </ul>
-    <p>Your step counts and step history are not shared. Waddle data lives in the iCloud accounts of the Waddle's owner and members, not on our servers, and we can't read it. iCloud sharing is provided by Apple and is also covered by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>. Depending on your iCloud settings, Apple may show your iCloud name to other members of a Waddle you join.</p>
-    <p>Anyone with your Waddle's invite link can join it, so share the link only with people you want in. The owner can remove members or close the Waddle, which deletes it for everyone. If you leave a Waddle, you stop sharing updates with it. Your last shared summary may stay visible to that Waddle until the owner removes you or closes it.</p>
+    <p>Usage stats never include your step count, step history, or any other Apple Health data, your penguin's name, waddle members or pokes, or your location beyond country and region. We don't record your screen. We use usage stats only to improve the app: not for advertising, not combined with data from other companies, and never sold. You can turn them off anytime in Settings › Share usage stats. See <a href="https://posthog.com/privacy">PostHog's privacy policy</a> for how PostHog handles data.</p>
 
-    <h2>Notifications</h2>
-    <p>Notifications are optional. Today they're used for Waddle pokes, which are delivered through iCloud and Apple's push notification service. If we add walking reminders, they'll be scheduled on your device and we'll update this policy. You can turn notifications off anytime in iOS Settings.</p>
+    <h3>Gary's fresh lines (on by default, easy to turn off)</h3>
+    <p>With <strong>Fresh lines from AI</strong> on, some of Gary's speech bubbles and notifications are written by Claude, an AI model made by Anthropic. To write a line, the app sends our line server:</p>
+    <ul>
+      <li>your penguin's name, tone setting, and outfit;</li>
+      <li>roughly how close you are to today's goal, to the nearest 10% (never your step count);</li>
+      <li>your streak, and whether today is a rest day;</li>
+      <li>the time of day and day of week;</li>
+      <li>where you are on your expedition;</li>
+      <li>the penguin names and rough goal progress of up to three waddle friends;</li>
+      <li>the last few lines he said, so he doesn't repeat himself;</li>
+      <li>if Weather in his sky is on, the kind of weather where you are (like “rain”) and whether it's very hot or cold. Never your location.</li>
+    </ul>
+    <p>Our server passes this to Anthropic to write the line and doesn't store it. Anthropic doesn't use it to train its models, and may keep it for a limited time for safety under its own policies. You can turn this off anytime in Settings › Fresh lines from AI. Gary then uses only his hand-written lines.</p>
 
-    <h2>Purchases</h2>
-    <p>If the app offers optional purchases such as Penguin Plus, Apple processes the payment. We don't receive your payment details. We only learn from Apple whether a purchase is active.</p>
+    <h3>The Rookery (optional)</h3>
+    <p>The Rookery shows every penguin that has joined on one shared sheet of ice. If you join, our server stores:</p>
+    <ul>
+      <li>your penguin's name, body, and outfit;</li>
+      <li>when it last saw you walk (a date, not your steps);</li>
+      <li>a random ID for your penguin, made from a secret kept in your iCloud Keychain so a new phone keeps the same penguin.</li>
+    </ul>
+    <p>When you walk your penguin around the ice with the joystick, other people with the Rookery open see it move in real time. To do that, the app sends our server your penguin's spot on the ice (not your real location), the way it's facing, and how fast it's walking, a few times a second, only while the Rookery is open. The server passes it on and doesn't keep it: it's gone when you close the Rookery. Others can tell from this that you're in the app right now.</p>
+    <p>Everyone using the app can see your penguin's name, body, and outfit. Names go through a filter, and some are checked by Anthropic's AI, before they're shown. Names that don't pass show as a number instead.</p>
+    <p>If you don't walk for 7 days, your penguin is hidden until you're back. Penguins that haven't been seen for 90 days are deleted. You can leave anytime in Settings, which deletes your penguin from our server.</p>
+    <p>If you report a penguin, we store the report (which penguin, when, and a random ID for your install) for up to 60 days so we can review it.</p>
+
+    <h3>Weather in his sky (optional, off until you turn it on)</h3>
+    <p>If you turn on <strong>Weather in his sky</strong>, the app uses your device's approximate location (about city level; it asks for Precise Location off) to get the current weather from Apple Weather (WeatherKit), only while the app is open. Rain, snow, or sunshine then shows up in the app and its widgets. Your location goes only to Apple to look up the weather. We never receive it, and the app doesn't store it.</p>
+    <p>The app keeps only the kind of sky (for example “rain”) and whether it's very hot or cold, for a few hours. With <strong>Fresh lines from AI</strong> on, those two words can go to our line server so Gary can talk about the weather. Never your location or the exact temperature. Turn it off anytime in Settings › Weather in his sky, or turn off location for the app in iOS Settings. Weather data is provided by Apple Weather; see Settings in the app for its data sources.</p>
+
+    <h3>Things you enter and progress the app works out</h3>
+    <p>Your penguin's name, goal, tone, rest days, Aura, streaks, unlocks, expedition progress, and history are stored on your device, including in storage shared with the app's widgets. They may be included in your device backups, depending on your settings.</p>
+
+    <h3>Waddles (optional)</h3>
+    <p>Waddles let you see how friends are doing. When you create or join a waddle, the app stores the following in iCloud using Apple's CloudKit, where the waddle's members can see it:</p>
+    <ul>
+      <li>an ID iCloud assigns to your account for this app (not your name or email);</li>
+      <li>your penguin's name, Aura, form (stage), and outfit, and its Rookery ID if you've joined the Rookery;</li>
+      <li>today's progress toward your goal, rounded to the nearest 10%, plus your streak and whether today is a rest day;</li>
+      <li>when your summary was last updated;</li>
+      <li>the waddle's name;</li>
+      <li>pokes: who sent them, who they were for, the message, and when.</li>
+    </ul>
+    <p>Your step counts and step history are not shared. Waddle data lives in the iCloud accounts of the waddle's owner and members, not on our servers, and we can't read it. iCloud sharing is provided by Apple and is also covered by <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>. Depending on your iCloud settings, Apple may show your iCloud name to other members.</p>
+    <p>Anyone with your waddle's invite link can join, so share it only with people you want in. The owner can remove members or close the waddle, which deletes it for everyone. You can report or block a member from their menu in the waddle.</p>
+
+    <h3>Apple Watch</h3>
+    <p>If you use the Apple Watch app, your steps, walks, and your penguin's state sync between your iPhone and your watch over Apple's own connection between them. Nothing extra goes to our servers. Walks you start on the watch are saved to Apple Health on your devices.</p>
+
+    <h3>Notifications</h3>
+    <p>Notifications are optional. The app uses them for goal celebrations, gentle reminders, waddle pokes, and, if you start a free trial, a reminder before it ends. Most are scheduled on your device; pokes travel through iCloud and Apple's push service. You can turn notifications off anytime in iOS Settings.</p>
+
+    <h3>A random install ID</h3>
+    <p>The app makes a random ID when it's installed and sends it with requests to our server, so we can apply daily limits and stop abuse. It isn't linked to you, your Apple ID, or your device's advertising ID.</p>
+
+    <h3>Purchases</h3>
+    <p>Penguin Plus is bought through Apple, and Apple processes the payment. We use RevenueCat to check whether your subscription is active. RevenueCat receives an anonymous app user ID and your purchase history from Apple, never your payment details. See <a href="https://www.revenuecat.com/privacy">RevenueCat's privacy policy</a> for details.</p>
+
+    <h2>Who processes data for us</h2>
+    <ul>
+      <li><strong>PostHog</strong> collects usage stats (unless you turn them off).</li>
+      <li><strong>Cloudflare</strong> hosts our server (Gary's line server and the Rookery). It may keep standard request logs, such as IP addresses, for security and operations.</li>
+      <li><strong>Anthropic</strong> writes Gary's fresh lines (unless you turn them off) and helps check Rookery names.</li>
+      <li><strong>RevenueCat</strong> manages subscriptions.</li>
+      <li><strong>Apple</strong> provides Health, iCloud, push notifications, payments, and the weather (WeatherKit).</li>
+    </ul>
 
     <h2>What we don't do</h2>
     <ul>
       <li>No account, sign-up, or email collection in the app.</li>
-      <li>No advertising, no analytics or crash-reporting SDKs, and no tracking across apps or websites.</li>
-      <li>No location data.</li>
+      <li>No advertising, and no tracking across other companies' apps or websites. PostHog is our only analytics, and it never gets your health data.</li>
+      <li>We never receive your location. If you turn on the weather, your approximate location goes only to Apple Weather. PostHog sees only your country and region.</li>
       <li>No selling or renting of personal information.</li>
     </ul>
-    <p>If you've turned on “Share with App Developers” in iOS, Apple may send us anonymous crash and usage diagnostics. That's controlled by Apple and your iOS settings.</p>
+    <p>If you've turned on “Share with App Developers” in iOS, Apple may send us anonymous crash and usage reports. That's controlled by Apple and your iOS settings.</p>
 
     <h2>This website</h2>
-    <p>This site has no cookies, no analytics, no ads, and no third-party scripts or fonts. Our hosting provider, DigitalOcean, may keep standard server logs (such as IP address, browser type, and pages requested) for security and operations.</p>
+    <p>This site has no cookies, analytics, ads, or third-party scripts or fonts. Our hosting provider, DigitalOcean, may keep standard server logs (such as IP address, browser type, and pages requested) for security and operations.</p>
 
     <h2>Children</h2>
     <p>The app is not directed at children under 13, and we don't knowingly collect personal information from children.</p>
@@ -189,11 +254,15 @@
     <h2>Your choices and deleting data</h2>
     <ul>
       <li><strong>Health access:</strong> change it anytime in iOS Settings › Privacy &amp; Security › Health › Penguin.</li>
-      <li><strong>Reset:</strong> in the app, Settings › Reset everything clears his name, Aura, unlocks, and rest days. Your Apple Health data is untouched.</li>
-      <li><strong>Waddles:</strong> leaving a Waddle stops your updates, but your last shared summary stays with that Waddle until its owner removes you or closes it. Ask the owner to remove you to clear it. Closing your own Waddle deletes it for everyone.</li>
-      <li><strong>Delete the app</strong> to remove its data from your device.</li>
+      <li><strong>Usage stats:</strong> Settings › Share usage stats. Turning it off stops all analytics events.</li>
+      <li><strong>Fresh lines from AI:</strong> Settings › Fresh lines from AI.</li>
+      <li><strong>Weather:</strong> Settings › Weather in his sky, or Location in iOS Settings › Privacy &amp; Security › Location Services › Penguin.</li>
+      <li><strong>Rookery:</strong> Settings › Show my penguin in the Rookery. Turning it off deletes your penguin from our server.</li>
+      <li><strong>Reset:</strong> Settings › Reset everything clears his progress on your phone, removes your penguin from the Rookery, and gives you a new analytics ID. Your Apple Health data is untouched.</li>
+      <li><strong>Waddles:</strong> leaving a waddle stops your updates, but your last summary stays with that waddle until its owner removes you or closes it. Closing your own waddle deletes it for everyone.</li>
+      <li><strong>Deleting the app</strong> removes its data from your device.</li>
     </ul>
-    <p>Depending on where you live, you may have rights to access, correct, or delete personal data. Because we don't hold your data on our servers, most of it is under your control through the steps above. For anything else, email us.</p>
+    <p>Depending on where you live, you may have rights to access, correct, or delete personal data. For anything not covered above, email us at <a href="mailto:hello@penguinathletics.com">hello@penguinathletics.com</a>.</p>
 
     <h2>Changes</h2>
     <p>If we change this policy, we'll update the date at the top. If the change is significant, we'll also note it in the app or on this site.</p>

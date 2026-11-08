@@ -730,3 +730,37 @@ p { margin: 0 0 1em; }
 .waddle-list .p12 { --p: 12%; }
 /* Small phones: the hero's poke tag would collide with the speech bubble; the Waddle card shows pokes anyway. */
 @media (max-width: 520px) { .poke { display: none; } }
+
+/* ---------- Pricing ---------- */
+.pricing { background: var(--peach-2); text-align: center; }
+.pricing-sub { max-width: 44ch; margin-inline: auto; font-size: 1.12rem; }
+.plans { display: grid; gap: 20px; max-width: 880px; margin: 32px auto 0; text-align: left; }
+.plan { position: relative; padding: 28px 24px; border-radius: var(--radius); background: #fff; box-shadow: var(--shadow); }
+.plan h3 { margin-bottom: 8px; font-size: 1.5rem; }
+.plan-price { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; margin: 0; }
+.plan-price strong { font-size: 2.6rem; font-weight: 900; letter-spacing: -0.03em; line-height: 1; }
+.plan-price span { font-weight: 700; opacity: 0.7; }
+.plan-alt { margin: 6px 0 0; font-size: 0.95rem; }
+.plan-pitch { margin: 14px 0 16px; font-weight: 800; }
+.plan-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.plan-list li { position: relative; padding-left: 28px; }
+.plan-list li::before {
+  content: "✓"; position: absolute; left: 0; top: 1px; display: grid; place-items: center;
+  width: 20px; height: 20px; border-radius: 50%; background: var(--blush-soft); color: var(--coral-ink);
+  font-size: 0.75rem; font-weight: 900;
+}
+.plan-plus { background: var(--navy); color: var(--cream); box-shadow: 0 24px 50px rgba(28, 36, 64, 0.28); }
+.plan-plus h3 em, .plan-plus .plan-pitch { color: var(--butter); }
+.plan-plus .plan-list li::before { background: var(--butter); color: var(--navy); }
+.plan-plus .plan-list li:first-child { font-weight: 800; }
+.save { padding: 3px 9px; border-radius: 999px; background: var(--butter); color: var(--navy); font-size: 0.75rem; font-weight: 900; }
+.plan-flag {
+  position: absolute; top: -14px; right: 20px; margin: 0; padding: 5px 12px; border-radius: 999px;
+  background: var(--coral); color: #fff; font-size: 0.8rem; font-weight: 900; transform: rotate(3deg);
+}
+.pricing-note { max-width: 52ch; margin: 28px auto 8px; font-weight: 700; }
+.pricing-fine { max-width: 62ch; margin-inline: auto; }
+@media (min-width: 760px) {
+  .plans { grid-template-columns: 1fr 1.08fr; align-items: stretch; }
+  .plan-plus { transform: rotate(-1deg); }
+}

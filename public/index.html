@@ -92,6 +92,26 @@
         "operatingSystem": "iOS",
         "applicationCategory": "HealthApplication",
         "applicationSubCategory": "Pedometer",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Penguin (free)",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "name": "Penguin Plus, yearly (7-day free trial)",
+            "price": "39.99",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "name": "Penguin Plus, monthly (7-day free trial)",
+            "price": "9.99",
+            "priceCurrency": "USD"
+          }
+        ],
         "url": "https://penguinathletics.com/",
         "image": "https://penguinathletics.com/assets/og-image.jpg",
         "screenshot": "https://penguinathletics.com/assets/og-image.jpg",
@@ -125,7 +145,7 @@
             "name": "Is it free?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Pricing's coming. He's negotiating his cut. There will be an optional Penguin Plus with extra fits. Extra drip, never extra progress."
+              "text": "Yes. The free version counts every step and includes the full glow-up, Waddles, widgets, and the first expedition. Penguin Plus opens every expedition after that plus the Plus-only fits, for $39.99 a year or $9.99 a month, with a 7-day free trial on either plan."
             }
           },
           {
@@ -429,7 +449,7 @@
               <label for="fit-daisy-crown"><img src="/assets/img/item-daisy-crown-96.webp" srcset="/assets/img/item-daisy-crown-96.webp 96w, /assets/img/item-daisy-crown-192.webp 192w" sizes="56px" width="192" height="192" loading="lazy" alt="">Daisy Crown</label>
               <div class="more-fits"><strong>+27</strong>more fits in the app</div>
             </div>
-            <p class="fine locker-note">Fits tagged Plus come with Penguin Plus. Extra drip. Never extra progress.</p>
+            <p class="fine locker-note">Fits tagged Plus come with <a href="#pricing">Penguin Plus</a>. Everything else, you earn by walking.</p>
           </div>
         </div>
       </fieldset>
@@ -510,6 +530,47 @@
     </div>
   </section>
 
+  <section class="section pricing" id="pricing" aria-labelledby="pricing-title">
+    <div class="wrap">
+      <span class="kicker">Pricing</span>
+      <h2 id="pricing-title">Free to walk. <em>Plus</em> to wander.</h2>
+      <p class="pricing-sub">Every step counts on the free version, forever. Plus opens the rest of the world tour.</p>
+      <div class="plans">
+        <article class="plan plan-free" aria-labelledby="plan-free-title">
+          <h3 id="plan-free-title">Free</h3>
+          <p class="plan-price"><strong>$0</strong> <span>forever</span></p>
+          <p class="plan-pitch">The Fridge Run is on him.</p>
+          <ul class="plan-list">
+            <li>Counts every step, from iPhone and Apple Watch</li>
+            <li>The full glow-up: couch bird to athlete</li>
+            <li>Aura, streaks, and protected rest days</li>
+            <li>Waddles with friends, plus pokes</li>
+            <li>Home Screen widgets</li>
+            <li>The first expedition, start to finish</li>
+            <li>Fits you earn by walking</li>
+          </ul>
+        </article>
+        <article class="plan plan-plus" aria-labelledby="plan-plus-title">
+          <p class="plan-flag">7 days free</p>
+          <h3 id="plan-plus-title">Penguin Plus</h3>
+          <div class="plan-prices">
+            <p class="plan-price"><strong>$39.99</strong> <span>/ year</span> <b class="save">Save 67%</b></p>
+            <p class="plan-alt">That's $3.33 a month. Or <strong>$9.99 / month</strong>.</p>
+          </div>
+          <p class="plan-pitch">7-day free trial on either plan.</p>
+          <ul class="plan-list">
+            <li>Everything in Free</li>
+            <li>11 more expeditions, then endless victory laps</li>
+            <li>15 Plus-only fits you can't earn by walking</li>
+            <li>New expeditions and fits land for Plus first</li>
+          </ul>
+        </article>
+      </div>
+      <p class="pricing-note">Your steps keep counting either way. Start Plus later and your penguin jumps straight to wherever your steps already got you.</p>
+      <p class="fine pricing-fine">Prices in USD. Subscriptions are billed by Apple and renew automatically unless cancelled at least 24 hours before the trial or billing period ends. Cancel anytime in your Apple ID settings.</p>
+    </div>
+  </section>
+
   <!-- learn-teaser:start -->
   <section class="section learn-teaser" aria-labelledby="learn-teaser-title">
     <div class="wrap">
@@ -533,7 +594,7 @@
       <h2 id="faq-title">Questions he'll <em>allow.</em></h2>
       <details>
         <summary>Is it free?</summary>
-        <p>Pricing's coming. He's negotiating his cut. There will be an optional Penguin Plus with extra fits. Extra drip, never extra progress.</p>
+        <p>Yes. The free version counts every step and includes the full glow-up, Waddles, widgets, and the first expedition. Penguin Plus opens every expedition after that plus the Plus-only fits, for $39.99 a year or $9.99 a month, with a 7-day free trial on either plan. <a href="#pricing">See pricing</a>.</p>
       </details>
       <details>
         <summary>Do I need an Apple Watch?</summary>

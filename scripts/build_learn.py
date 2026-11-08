@@ -437,7 +437,7 @@ def render_hub(articles, pillars):
       <div>
         {crumbs_html(trail)}
         <span class="kicker">Learn</span>
-        <h1>Walking, explained. Without the guilt trip.</h1>
+        <h1>Walking, explained. <em>Without the guilt trip.</em></h1>
         <p class="learn-lede">What a daily walk does for your heart, your lifespan, your weight, and your head. Every claim cited, every answer up top. He insisted.</p>
       </div>
       <figure class="gary gary-hub">
@@ -537,7 +537,7 @@ def render_teaser(current, articles, pillars):
         body = f"""  <section class="section learn-teaser" aria-labelledby="learn-teaser-title">
     <div class="wrap">
       <span class="kicker">Learn</span>
-      <h2 id="learn-teaser-title">Walking, explained. Without the guilt trip.</h2>
+      <h2 id="learn-teaser-title">Walking, explained. <em>Without the guilt trip.</em></h2>
       <p>What a daily walk actually does for your heart, your lifespan, and your head. Cited, plain-English, answer first.</p>
       {card_list(picks, pillars)}
       <p class="learn-more-links"><a href="/learn/">All articles</a></p>

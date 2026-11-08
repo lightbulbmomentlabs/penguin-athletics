@@ -6,6 +6,13 @@
   font-weight: 200 1000;
   font-display: swap;
 }
+@font-face {
+  font-family: "Instrument Serif";
+  src: url("../fonts/instrument-serif-italic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
 
 /* ---------- Tokens (from the app's Shared/Theme.swift) ---------- */
 :root {
@@ -16,9 +23,13 @@
   --coral: #ff6f61;
   --coral-ink: #c8382c; /* coral dark enough for text on white */
   --turquoise: #2ec4b5;
-  --ice: #dbf5fa;
-  --sky-1: #8ce0ed;
-  --sky-2: #ccf5f7;
+  /* Sunset palette for the site (the app's sky blues stay in the app art). */
+  --blush-soft: #fdebe4;
+  --peach: #ffc9b0;
+  --peach-2: #ffe6d6;
+  --blush: #f8c6cc;
+  --butter: #ffe7a3;
+  --serif: "Instrument Serif", "Iowan Old Style", Georgia, serif;
   --dusk-1: #fa8c7a;
   --dusk-2: #ffcc99;
   --font: ui-rounded, "SF Pro Rounded", "Nunito", system-ui, sans-serif;
@@ -50,7 +61,12 @@ a:focus-visible, summary:focus-visible, .trail:focus-visible, .feed:focus-visibl
   outline-offset: 3px;
   border-radius: 8px;
 }
-h1, h2, h3 { margin: 0 0 0.4em; font-weight: 900; line-height: 1.05; letter-spacing: -0.02em; }
+h1, h2, h3 { margin: 0 0 0.4em; font-weight: 850; line-height: 1.05; letter-spacing: -0.025em; }
+/* Editorial accent: an italic serif word or phrase inside a headline. */
+h1 em, h2 em {
+  font-family: var(--serif); font-style: italic; font-weight: 400;
+  font-size: 1.12em; letter-spacing: -0.01em; line-height: 0.9;
+}
 h2 { font-size: clamp(2rem, 6vw, 3.25rem); }
 h3 { font-size: 1.35rem; }
 p { margin: 0 0 1em; }
@@ -75,7 +91,7 @@ p { margin: 0 0 1em; }
 
 /* ---------- Header and footer ---------- */
 .site-header {
-  position: sticky; top: 0; z-index: 50; background: var(--sky-1);
+  position: sticky; top: 0; z-index: 50; background: var(--peach);
   box-shadow: 0 1px 0 rgba(15, 20, 41, 0.08);
 }
 .site-header .wrap {
@@ -112,7 +128,7 @@ p { margin: 0 0 1em; }
   box-shadow: 0 18px 30px rgba(15, 20, 41, 0.18);
 }
 .menu-panel a {
-  padding: 14px 4px; border-bottom: 2px solid var(--ice);
+  padding: 14px 4px; border-bottom: 2px solid var(--blush-soft);
   font-size: 1.3rem; font-weight: 900; text-decoration: none;
 }
 .menu-panel a:last-child { border-bottom: 0; }
@@ -164,23 +180,51 @@ p { margin: 0 0 1em; }
 @media (max-width: 799px) { .hero .socials { justify-content: center; } }
 @media (prefers-reduced-motion: reduce) { .socials a { transition: none; } .socials a:hover { transform: none; } }
 
-/* ---------- Hero ---------- */
-.hero { overflow: hidden; padding-top: 32px; background: linear-gradient(180deg, var(--sky-1), var(--sky-2)); }
-.hero .wrap { display: grid; align-items: end; gap: 24px; }
+/* ---------- Hero: the walking club ---------- */
+.hero {
+  overflow: hidden; padding-top: 32px;
+  background:
+    radial-gradient(60% 50% at 85% 20%, rgba(255, 231, 163, 0.9), transparent 70%),
+    linear-gradient(180deg, var(--peach) 0%, var(--blush) 55%, var(--peach-2) 100%);
+}
+.hero .wrap { display: grid; align-items: center; gap: 24px; }
 .hero-copy { padding-bottom: 40px; }
-.wordmark { margin: 0 0 12px; font-size: clamp(4rem, 18vw, 8.5rem); line-height: 0.85; letter-spacing: -0.05em; }
-.tagline { max-width: 18ch; font-size: clamp(1.35rem, 4.5vw, 2rem); font-weight: 900; line-height: 1.15; }
-.hero-sub { max-width: 34ch; font-size: 1.15rem; }
-.hero-art { position: relative; justify-self: center; width: min(100%, 440px); padding-top: 68px; }
+.eyebrow { margin: 0 0 14px; font-size: 0.85rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; }
+.hero-title { max-width: 15ch; font-size: clamp(2.6rem, 6.4vw, 4.1rem); line-height: 0.98; text-wrap: balance; }
+.hero-title em { color: var(--coral-ink); }
+.pal-priya .chip, .pal-jo .chip { top: -2px; bottom: auto; }
+.hero-sub { max-width: 40ch; font-size: 1.12rem; }
+
+/* The squad: Gary front and centre, four friends' penguins around him. */
+.hero-art { position: relative; }
+.squad { width: 100%; max-width: 600px; justify-self: center; aspect-ratio: 600 / 440; }
+.squad::after {
+  content: ""; position: absolute; left: 4%; right: 4%; bottom: 3%; height: 11%;
+  border-radius: 50%; background: rgba(255, 255, 255, 0.75); z-index: 0;
+}
+.pal { position: absolute; z-index: 1; margin: 0; }
+.pal img, .pal video { display: block; width: 100%; height: auto; }
+.pal-gary { z-index: 4; left: 25%; bottom: 1%; width: 50%; }
+.pal-priya { left: 0; bottom: 27%; width: 28%; }
+.pal-mads { z-index: 2; left: 10%; bottom: 3%; width: 30%; }
+.pal-sam { z-index: 2; right: 10%; bottom: 3%; width: 30%; }
+.pal-jo { right: 0; bottom: 27%; width: 28%; }
 .hero-video, .hero-still { display: block; width: 100%; height: auto; }
 /* The still only shows (and only downloads, being lazy) when motion is reduced. */
-.hero-still { display: none; }
-.hero-art::after {
-  content: ""; display: block; width: 80%; height: 28px; margin: -18px auto 0;
-  border-radius: 50%; background: #fff;
+.hero-still, .pal .hero-still { display: none; }
+.chip {
+  position: absolute; left: 50%; bottom: -6px; z-index: 5; transform: translateX(-50%);
+  display: inline-flex; gap: 5px; align-items: center; width: max-content;
+  padding: 4px 10px; border-radius: 999px; background: #fff;
+  font-size: 0.78rem; font-weight: 800; white-space: nowrap;
+  box-shadow: 0 3px 0 rgba(15, 20, 41, 0.1);
 }
+.chip span { font-weight: 700; opacity: 0.65; }
+.chip b { color: var(--coral-ink); }
+.chip-you { bottom: 4%; background: var(--navy); color: var(--cream); }
+.chip-you b { color: var(--butter); }
 .speech {
-  position: absolute; z-index: 1; top: 0; left: 50%; width: max-content; max-width: min(100%, 24ch);
+  position: absolute; z-index: 6; top: 0; left: 50%; width: max-content; max-width: min(92%, 26ch);
   margin: 0; padding: 10px 16px; border-radius: 18px; background: #fff; text-align: center;
   font-size: 0.95rem; font-weight: 800; line-height: 1.25; box-shadow: var(--shadow);
   transform: translateX(-50%) rotate(-2deg);
@@ -189,16 +233,77 @@ p { margin: 0 0 1em; }
   content: ""; position: absolute; bottom: -10px; left: 50%; margin-left: -10px;
   border: 10px solid transparent; border-top-color: #fff; border-bottom: 0;
 }
+.poke {
+  position: absolute; z-index: 6; right: 2%; bottom: 74%; margin: 0; padding: 5px 10px;
+  border-radius: 999px; background: var(--coral); color: #fff;
+  font-size: 0.75rem; font-weight: 900; transform: rotate(6deg); box-shadow: 0 3px 0 rgba(15, 20, 41, 0.12);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .pal:not(.pal-gary) > img { transform-origin: 50% 100%; animation: waddle 1.6s ease-in-out infinite; }
+  .pal-mads > img { animation-delay: -0.4s; }
+  .pal-sam > img { animation-delay: -0.9s; }
+  .pal-jo > img { animation: snooze 4s ease-in-out infinite; }
+  .poke { animation: poke 2.4s ease-in-out infinite; }
+}
+@keyframes waddle {
+  0%, 100% { transform: rotate(-3deg) translateY(0); }
+  25% { transform: rotate(0) translateY(-6px); }
+  50% { transform: rotate(3deg) translateY(0); }
+  75% { transform: rotate(0) translateY(-6px); }
+}
+@keyframes snooze {
+  0%, 100% { transform: rotate(-2deg) scaleY(1); }
+  50% { transform: rotate(2deg) scaleY(0.97); }
+}
+@keyframes poke {
+  0%, 70%, 100% { transform: rotate(6deg) translateX(0); }
+  80% { transform: rotate(6deg) translateX(-6px); }
+  90% { transform: rotate(6deg) translateX(2px); }
+}
 @media (min-width: 800px) {
-  .hero .wrap { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); }
+  .hero .wrap { grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); }
 }
 @media (max-width: 799px) {
-  .hero { padding-top: 20px; }
-  .hero .wrap { justify-items: center; gap: 4px; text-align: center; }
-  .hero-art { order: -1; width: min(80%, 300px); padding-top: 60px; }
-  .speech { font-size: 0.85rem; }
-  .tagline, .hero-sub { margin-inline: auto; }
+  .hero { padding-top: 16px; }
+  .hero .wrap { justify-items: center; gap: 8px; text-align: center; }
+  .hero-art { order: -1; }
+  .squad { max-width: 440px; }
+  .speech { font-size: 0.82rem; }
+  .chip { font-size: 0.68rem; padding: 3px 8px; }
+  .poke { font-size: 0.66rem; }
+  .hero-title, .hero-sub { margin-inline: auto; }
   .hero-copy { padding-bottom: 32px; }
+}
+
+/* ---------- Waddles: the walking club, up close ---------- */
+.waddles { background: var(--peach-2); }
+.waddles-grid { display: grid; gap: 32px; align-items: center; }
+.waddles-copy > p { max-width: 44ch; font-size: 1.1rem; }
+.rookery-note { margin-top: 24px; padding: 18px 20px; border-radius: var(--radius-sm); background: rgba(255, 255, 255, 0.6); }
+.rookery-note h3 { margin-bottom: 6px; font-size: 1.1rem; }
+.rookery-note p { margin: 0; }
+.waddle-card {
+  margin: 0; padding: 20px; border-radius: var(--radius); background: #fff;
+  box-shadow: 0 24px 50px rgba(200, 56, 44, 0.16); transform: rotate(1.5deg);
+}
+.waddle-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; margin-bottom: 14px; }
+.waddle-head strong { font-size: 1.15rem; }
+.waddle-head span { font-size: 0.85rem; opacity: 0.6; }
+.waddle-list { display: grid; gap: 10px; margin: 0 0 16px; padding: 0; list-style: none; }
+.waddle-list li { display: grid; grid-template-columns: 44px 1fr auto; grid-template-rows: auto auto; column-gap: 12px; align-items: center; }
+.waddle-list img { grid-column: 1; grid-row: 1 / 3; width: 44px; height: 44px; border-radius: 50%; background: var(--blush-soft); object-fit: cover; object-position: 50% 20%; }
+.w-name { grid-column: 2; grid-row: 1; font-weight: 800; }
+.w-name b { color: var(--coral-ink); }
+.w-pct { grid-column: 3; grid-row: 1 / 3; min-width: 3.2em; font-weight: 800; font-size: 0.9rem; text-align: right; }
+.w-bar { grid-column: 2; grid-row: 2; height: 8px; border-radius: 999px; background: var(--blush-soft); overflow: hidden; }
+.w-bar span { display: block; width: var(--p); height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--coral), var(--orange)); }
+.waddle-pokes { display: grid; gap: 8px; }
+.poke-msg { margin: 0; padding: 10px 14px; border-radius: 16px 16px 16px 4px; background: var(--blush-soft); font-size: 0.95rem; }
+.poke-msg b { display: block; font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--coral-ink); }
+.gary-msg { background: var(--navy); color: var(--cream); }
+.gary-msg b { color: var(--butter); }
+@media (min-width: 860px) {
+  .waddles-grid { grid-template-columns: 1fr 1fr; gap: 56px; }
 }
 
 /* ---------- Glow-up ---------- */
@@ -220,7 +325,7 @@ p { margin: 0 0 1em; }
 }
 
 /* ---------- How it works ---------- */
-.how { background: var(--turquoise); }
+.how { background: var(--butter); }
 .steps { display: grid; gap: 20px; margin: 32px 0 16px; padding: 0; list-style: none; counter-reset: beat; }
 .steps li { padding: 20px; border-radius: var(--radius); background: var(--cream); box-shadow: var(--shadow); counter-increment: beat; }
 .steps li::before {
@@ -239,7 +344,7 @@ p { margin: 0 0 1em; }
 .locker-grid { display: grid; align-items: center; gap: 24px; margin-top: 24px; }
 .locker-stage {
   position: relative; width: 100%; max-width: 440px; margin-inline: auto; aspect-ratio: 1 / 1;
-  background: radial-gradient(circle at 50% 60%, rgba(46, 196, 181, 0.35), transparent 65%);
+  background: radial-gradient(circle at 50% 60%, rgba(255, 153, 61, 0.28), transparent 65%);
 }
 .locker-pose {
   position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: 50% 100%;
@@ -329,7 +434,7 @@ p { margin: 0 0 1em; }
 }
 
 /* ---------- Devices (real app screens in drawn frames, no Apple product art) ---------- */
-.devices { overflow: clip; background: linear-gradient(180deg, var(--sky-2), var(--cream)); text-align: center; }
+.devices { overflow: clip; background: linear-gradient(180deg, var(--peach-2), var(--cream)); text-align: center; }
 .devices h2 { max-width: 20ch; margin-inline: auto; text-wrap: balance; }
 .devices-sub { max-width: 46ch; margin: 0 auto; font-size: 1.15rem; }
 /* Apple's official bezels with real app screens, grouped in 3D. Each device has a darkened
@@ -367,7 +472,7 @@ p { margin: 0 0 1em; }
 /* ---------- Expedition strip ---------- */
 /* The strip breaks out of .wrap to the screen edges, so cards run off the right side
    (a clear "there's more" cue) while the first card still lines up with the heading. */
-.expedition { --bleed: max(var(--gutter), (100vw - var(--max)) / 2); overflow-x: clip; background: var(--ice); }
+.expedition { --bleed: max(var(--gutter), (100vw - var(--max)) / 2); overflow-x: clip; background: var(--blush-soft); }
 .trail {
   display: flex; gap: 16px; margin: 24px calc(-1 * var(--bleed)) 0; padding: 8px var(--bleed) 24px;
   overflow-x: auto; list-style: none; scroll-snap-type: x mandatory; scroll-padding-inline: var(--bleed);
@@ -410,8 +515,6 @@ p { margin: 0 0 1em; }
 @media (min-width: 640px) {
   .never-list { grid-template-columns: repeat(2, 1fr); }
 }
-.waddles { background: var(--sky-1); text-align: center; }
-.waddles-inner { max-width: 40rem; margin-inline: auto; }
 .faq details { margin-bottom: 12px; border-radius: var(--radius-sm); background: #fff; box-shadow: var(--shadow); }
 .faq summary {
   display: flex; justify-content: space-between; gap: 12px; padding: 16px 18px;
@@ -423,7 +526,7 @@ p { margin: 0 0 1em; }
 .faq details p { margin: 0; padding: 0 18px 16px; }
 
 /* ---------- Legal pages ---------- */
-.legal-hero { padding-block: 40px; background: var(--sky-1); }
+.legal-hero { padding-block: 40px; background: var(--peach); }
 .legal-hero h1 { font-size: clamp(2.2rem, 8vw, 3.5rem); }
 .legal-hero p { margin: 0; font-size: 1.15rem; font-weight: 800; }
 .prose { max-width: 70ch; padding-block: 40px 72px; }
@@ -469,7 +572,7 @@ p { margin: 0 0 1em; }
   .feed { height: auto; -webkit-mask-image: none; mask-image: none; }
   .feed-track > [aria-hidden="true"] { display: none; }
   .hero-video { display: none; }
-  .hero-still { display: block; }
+  .hero-still, .pal .hero-still { display: block; }
 }
 
 /* ---------- Phones: shorter sections, swipe rows instead of tall stacks ---------- */
@@ -517,7 +620,7 @@ p { margin: 0 0 1em; }
 
 /* ---------- Learn (articles, pillar guides, hub) ---------- */
 .learn-narrow { max-width: 46rem; }
-.learn-hero { padding-block: 28px 40px; background: linear-gradient(180deg, var(--sky-1), var(--sky-2)); }
+.learn-hero { padding-block: 28px 40px; background: linear-gradient(180deg, var(--peach), var(--peach-2)); }
 .learn-hero .learn-narrow { margin-inline: auto; }
 .learn-hero h1 { font-size: clamp(2.1rem, 7vw, 3.4rem); text-wrap: balance; }
 .learn-lede { max-width: 40ch; margin: 0; font-size: 1.2rem; font-weight: 800; }
@@ -558,19 +661,19 @@ p { margin: 0 0 1em; }
 .sources { margin-top: 40px; font-size: 0.92rem; }
 .sources ol { padding-left: 1.4em; }
 .sources li { margin-bottom: 0.6em; overflow-wrap: anywhere; }
-.sources li:target { background: var(--ice); outline: 6px solid var(--ice); border-radius: 4px; }
-.health-note { margin: 32px 0 0; padding: 16px 18px; border-radius: var(--radius-sm); background: var(--ice); font-size: 0.92rem; }
+.sources li:target { background: var(--blush-soft); outline: 6px solid var(--blush-soft); border-radius: 4px; }
+.health-note { margin: 32px 0 0; padding: 16px 18px; border-radius: var(--radius-sm); background: var(--blush-soft); font-size: 0.92rem; }
 .learn-signoff { margin: 32px 0; font-size: 1.4rem; font-weight: 900; transform: rotate(-1deg); }
 .app-card {
   display: grid; gap: 20px; align-items: center; justify-items: start; padding: 24px;
-  border-radius: var(--radius); background: var(--sky-1); box-shadow: var(--shadow);
+  border-radius: var(--radius); background: var(--peach); box-shadow: var(--shadow);
 }
 .app-card h2 { font-size: 1.5rem; }
 .app-card a { font-weight: 900; }
 @media (min-width: 640px) {
   .app-card { grid-template-columns: 1fr auto; }
 }
-.learn-more { background: var(--ice); }
+.learn-more { background: var(--blush-soft); }
 .learn-more h2 { font-size: clamp(1.8rem, 5vw, 2.6rem); }
 .learn-cards { display: grid; gap: 16px; margin: 24px 0; padding: 0; list-style: none; }
 @media (min-width: 720px) {
@@ -611,7 +714,7 @@ p { margin: 0 0 1em; }
 .pillar-card img { flex: none; width: 88px; }
 .pillar-card strong { display: block; margin-bottom: 4px; font-size: 1.2rem; font-weight: 900; line-height: 1.15; }
 .pillar-card small { display: block; margin-top: 6px; color: var(--coral-ink); font-weight: 900; }
-.learn-teaser { background: var(--ice); }
+.learn-teaser { background: var(--blush-soft); }
 @media (max-width: 639px) {
   .short-answer p { font-size: 1.08rem; }
   .gary img { width: 84px; }
@@ -621,3 +724,9 @@ p { margin: 0 0 1em; }
   /* Let the device group run wider than the text column on phones so the screens stay readable. */
   .device-stage { width: 122vw; margin-left: calc(50% - 61vw); margin-top: 20px; }
 }
+.waddle-list .p100 { --p: 100%; }
+.waddle-list .p84 { --p: 84%; }
+.waddle-list .p61 { --p: 61%; }
+.waddle-list .p12 { --p: 12%; }
+/* Small phones: the hero's poke tag would collide with the speech bubble; the Waddle card shows pokes anyway. */
+@media (max-width: 520px) { .poke { display: none; } }

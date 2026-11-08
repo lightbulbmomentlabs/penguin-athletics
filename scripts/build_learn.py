@@ -137,7 +137,7 @@ def head(title, description, path, keywords, image, image_alt, graph, og_type="a
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="{url(path)}">
   <link rel="alternate" type="application/rss+xml" title="Penguin Athletics: Learn" href="/learn/feed.xml">
-  <meta name="theme-color" content="#8ce0ed">
+  <meta name="theme-color" content="#1c2440">
   <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/css/site.css">
@@ -530,7 +530,7 @@ def render_llms(current, articles, pillars):
 
 
 def render_teaser(current, articles, pillars):
-    picks = [a for a in articles if a["slug"] not in {p["slug"] for p in pillars.values()}][:3]
+    picks = [a for a in articles if a["slug"] not in {p["slug"] for p in pillars.values()}][:4]
     if not picks:
         body = ""
     else:

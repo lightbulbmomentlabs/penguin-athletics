@@ -91,15 +91,15 @@ p { margin: 0 0 1em; }
 
 /* ---------- Header and footer ---------- */
 .site-header {
-  position: sticky; top: 0; z-index: 50; background: var(--peach);
-  box-shadow: 0 1px 0 rgba(15, 20, 41, 0.08);
+  position: sticky; top: 0; z-index: 50; background: var(--navy); color: var(--cream);
+  box-shadow: 0 1px 0 rgba(15, 20, 41, 0.2);
 }
 .site-header .wrap {
   display: flex; flex-wrap: nowrap; align-items: center; justify-content: space-between;
   gap: 8px 16px; padding-block: 14px;
 }
 .logo { display: flex; align-items: center; gap: 10px; font-size: 1.4rem; font-weight: 900; text-decoration: none; }
-.logo img { width: 40px; height: 40px; border-radius: 10px; }
+.logo img { width: 40px; height: 40px; border-radius: 10px; box-shadow: 0 0 0 2px rgba(255, 245, 224, 0.18); }
 .site-nav { display: flex; gap: 18px; font-size: 0.95rem; font-weight: 800; }
 .site-nav a { text-decoration: none; }
 .site-nav a:hover { text-decoration: underline; }
@@ -108,12 +108,12 @@ p { margin: 0 0 1em; }
 .menu { display: none; }
 .menu summary {
   display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px;
-  background: rgba(255, 255, 255, 0.55); cursor: pointer; list-style: none;
+  background: rgba(255, 245, 224, 0.14); cursor: pointer; list-style: none;
 }
 .menu summary::-webkit-details-marker { display: none; }
 .menu-icon, .menu-icon::before, .menu-icon::after {
   display: block; width: 20px; height: 2.5px; border-radius: 2px;
-  background: var(--navy); transition: transform 0.2s, background-color 0.2s;
+  background: var(--cream); transition: transform 0.2s, background-color 0.2s;
 }
 .menu-icon { position: relative; }
 .menu-icon::before, .menu-icon::after { content: ""; position: absolute; left: 0; }
@@ -124,7 +124,7 @@ p { margin: 0 0 1em; }
 .menu[open] .menu-icon::after { transform: translateY(-7px) rotate(-45deg); }
 .menu-panel {
   position: absolute; top: 100%; right: 0; left: 0; display: grid;
-  padding: 4px var(--gutter) 12px; background: var(--cream);
+  padding: 4px var(--gutter) 12px; background: var(--cream); color: var(--navy);
   box-shadow: 0 18px 30px rgba(15, 20, 41, 0.18);
 }
 .menu-panel a {
@@ -388,48 +388,48 @@ p { margin: 0 0 1em; }
 
 /* Which pose and caption show */
 #fit-none:checked ~ .locker-grid .pose-none,
-#fit-crown:checked ~ .locker-grid .pose-crown,
+#fit-backwards-cap:checked ~ .locker-grid .pose-backwards-cap,
+#fit-silk-headscarf:checked ~ .locker-grid .pose-silk-headscarf,
 #fit-gold-chain:checked ~ .locker-grid .pose-gold-chain,
-#fit-cowboy-hat:checked ~ .locker-grid .pose-cowboy-hat,
-#fit-party-hat:checked ~ .locker-grid .pose-party-hat,
-#fit-heart-shades:checked ~ .locker-grid .pose-heart-shades,
-#fit-cape:checked ~ .locker-grid .pose-cape,
+#fit-gold-hoops:checked ~ .locker-grid .pose-gold-hoops,
+#fit-varsity:checked ~ .locker-grid .pose-varsity,
+#fit-shoulder-bag:checked ~ .locker-grid .pose-shoulder-bag,
 #fit-bucket-hat:checked ~ .locker-grid .pose-bucket-hat,
-#fit-halo:checked ~ .locker-grid .pose-halo { opacity: 1; transform: none; visibility: visible; }
+#fit-daisy-crown:checked ~ .locker-grid .pose-daisy-crown { opacity: 1; transform: none; visibility: visible; }
 
 #fit-none:checked ~ .locker-grid .cap-none,
-#fit-crown:checked ~ .locker-grid .cap-crown,
+#fit-backwards-cap:checked ~ .locker-grid .cap-backwards-cap,
+#fit-silk-headscarf:checked ~ .locker-grid .cap-silk-headscarf,
 #fit-gold-chain:checked ~ .locker-grid .cap-gold-chain,
-#fit-cowboy-hat:checked ~ .locker-grid .cap-cowboy-hat,
-#fit-party-hat:checked ~ .locker-grid .cap-party-hat,
-#fit-heart-shades:checked ~ .locker-grid .cap-heart-shades,
-#fit-cape:checked ~ .locker-grid .cap-cape,
+#fit-gold-hoops:checked ~ .locker-grid .cap-gold-hoops,
+#fit-varsity:checked ~ .locker-grid .cap-varsity,
+#fit-shoulder-bag:checked ~ .locker-grid .cap-shoulder-bag,
 #fit-bucket-hat:checked ~ .locker-grid .cap-bucket-hat,
-#fit-halo:checked ~ .locker-grid .cap-halo { opacity: 1; transform: translate(-50%, 0); visibility: visible; }
+#fit-daisy-crown:checked ~ .locker-grid .cap-daisy-crown { opacity: 1; transform: translate(-50%, 0); visibility: visible; }
 
 /* Which item button looks selected */
 #fit-none:checked ~ .locker-grid [for="fit-none"],
-#fit-crown:checked ~ .locker-grid [for="fit-crown"],
+#fit-backwards-cap:checked ~ .locker-grid [for="fit-backwards-cap"],
+#fit-silk-headscarf:checked ~ .locker-grid [for="fit-silk-headscarf"],
 #fit-gold-chain:checked ~ .locker-grid [for="fit-gold-chain"],
-#fit-cowboy-hat:checked ~ .locker-grid [for="fit-cowboy-hat"],
-#fit-party-hat:checked ~ .locker-grid [for="fit-party-hat"],
-#fit-heart-shades:checked ~ .locker-grid [for="fit-heart-shades"],
-#fit-cape:checked ~ .locker-grid [for="fit-cape"],
+#fit-gold-hoops:checked ~ .locker-grid [for="fit-gold-hoops"],
+#fit-varsity:checked ~ .locker-grid [for="fit-varsity"],
+#fit-shoulder-bag:checked ~ .locker-grid [for="fit-shoulder-bag"],
 #fit-bucket-hat:checked ~ .locker-grid [for="fit-bucket-hat"],
-#fit-halo:checked ~ .locker-grid [for="fit-halo"] {
+#fit-daisy-crown:checked ~ .locker-grid [for="fit-daisy-crown"] {
   border-color: var(--orange); background: rgba(255, 153, 61, 0.2);
 }
 
 /* Keyboard focus ring on the item button (the real radio is visually hidden) */
 #fit-none:focus-visible ~ .locker-grid [for="fit-none"],
-#fit-crown:focus-visible ~ .locker-grid [for="fit-crown"],
+#fit-backwards-cap:focus-visible ~ .locker-grid [for="fit-backwards-cap"],
+#fit-silk-headscarf:focus-visible ~ .locker-grid [for="fit-silk-headscarf"],
 #fit-gold-chain:focus-visible ~ .locker-grid [for="fit-gold-chain"],
-#fit-cowboy-hat:focus-visible ~ .locker-grid [for="fit-cowboy-hat"],
-#fit-party-hat:focus-visible ~ .locker-grid [for="fit-party-hat"],
-#fit-heart-shades:focus-visible ~ .locker-grid [for="fit-heart-shades"],
-#fit-cape:focus-visible ~ .locker-grid [for="fit-cape"],
+#fit-gold-hoops:focus-visible ~ .locker-grid [for="fit-gold-hoops"],
+#fit-varsity:focus-visible ~ .locker-grid [for="fit-varsity"],
+#fit-shoulder-bag:focus-visible ~ .locker-grid [for="fit-shoulder-bag"],
 #fit-bucket-hat:focus-visible ~ .locker-grid [for="fit-bucket-hat"],
-#fit-halo:focus-visible ~ .locker-grid [for="fit-halo"] {
+#fit-daisy-crown:focus-visible ~ .locker-grid [for="fit-daisy-crown"] {
   outline: 3px solid var(--cream); outline-offset: 3px;
 }
 

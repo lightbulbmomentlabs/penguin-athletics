@@ -6,7 +6,7 @@ answer: The 10,000 steps rule is not based on science. It traces back to a marke
 published: 2026-11-08
 keywords: is 10000 steps a day real, 10000 steps myth, where did 10000 steps come from, do you need 10000 steps a day, is 7000 steps enough, 10000 steps a day science, how many steps a day do you really need, minimum steps a day for health, step goal research, 10000 steps a day benefits, are step goals worth it
 pose: couch-shocked
-gary: The 10,000-step rule started as a pedometer ad. Your "I'll start Monday" started as a lie.
+gary: The 10,000-step rule started as an ad campaign. Your "I'll start Monday" started as a lie.
 signoff: Pick a number. Beat it. Repeat. I'll pretend I'm not impressed.
 status: published
 ---

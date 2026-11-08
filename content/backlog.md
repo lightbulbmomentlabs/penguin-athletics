@@ -16,7 +16,7 @@ questions anywhere (search Google's "People also ask" and AI answers for ideas).
 - [x] how-to-start-walking-when-you-hate-exercise | basics | How to start walking when you hate exercise
 - [x] does-walking-help-anxiety | mind | Does walking help anxiety?
 - [ ] how-many-calories-does-walking-burn | weight | How many calories does walking burn?
-- [ ] is-the-10000-steps-rule-real | longevity | Is the 10,000 steps rule real?
+- [x] is-the-10000-steps-rule-real | longevity | Is the 10,000 steps rule real?
 - [ ] what-is-a-good-daily-step-goal | basics | What is a good daily step goal?
 - [ ] is-walking-good-for-depression | mind | Is walking good for depression?
 - [ ] walking-vs-running-which-is-better-for-your-heart | heart | Walking vs running: which is better for your heart?

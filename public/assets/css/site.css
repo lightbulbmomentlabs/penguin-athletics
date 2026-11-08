@@ -192,7 +192,8 @@ p { margin: 0 0 1em; }
 .eyebrow { margin: 0 0 14px; font-size: 0.85rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; }
 .hero-title { max-width: 15ch; font-size: clamp(2.6rem, 6.4vw, 4.1rem); line-height: 0.98; text-wrap: balance; }
 .hero-title em { color: var(--coral-ink); }
-.pal-priya .chip, .pal-jo .chip { top: -2px; bottom: auto; }
+/* Back row: name tags float above their heads, never on their faces. */
+.pal-priya .chip, .pal-jo .chip { top: 0; bottom: auto; transform: translate(-50%, -95%); }
 .hero-sub { max-width: 40ch; font-size: 1.12rem; }
 
 /* The squad: Gary front and centre, four friends' penguins around him. */

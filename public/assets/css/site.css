@@ -261,7 +261,16 @@ p { margin: 0 0 1em; }
   90% { transform: rotate(6deg) translateX(2px); }
 }
 @media (min-width: 800px) {
-  .hero .wrap { grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); }
+  .hero .wrap { width: min(100% - 2 * var(--gutter), 1240px); grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.2fr); gap: 16px; }
+  .squad { max-width: 760px; aspect-ratio: 600 / 480; }
+  /* Gary is the star: bigger, and the friends tuck in around him. */
+  .pal-gary { left: 19%; width: 62%; }
+  .pal-priya { bottom: 31%; width: 26%; }
+  .pal-jo { bottom: 31%; width: 26%; }
+  .pal-mads { left: 4%; width: 28%; }
+  .pal-sam { right: 4%; width: 28%; }
+  .speech { font-size: 1.05rem; }
+  .chip { font-size: 0.85rem; }
 }
 @media (max-width: 799px) {
   .hero { padding-top: 16px; }

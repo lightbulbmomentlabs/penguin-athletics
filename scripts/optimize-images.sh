@@ -56,9 +56,9 @@ sips -z 630 630 "$ART/app-icon-source.png" --out "$tmp/og-square.png" >/dev/null
 sips -p 630 1200 --padColor 8CE0ED "$tmp/og-square.png" --out "$tmp/og-image.png" >/dev/null
 sips -s format jpeg -s formatOptions 82 "$tmp/og-image.png" --out public/assets/og-image.jpg >/dev/null
 
-# Hero idle loop: key out the green screen (same recipe as the app's scripts/key-idle-clip.sh)
+# Hero idle loop (the couch bird, stage 1): key out the green screen (same recipe as the app's scripts/key-idle-clip.sh)
 command -v ffmpeg >/dev/null || { echo "Install ffmpeg first: brew install ffmpeg"; exit 1; }
-CLIP="$APP_REPO/Art/clips/idle-waddler-smug-green.mp4"
+CLIP="$APP_REPO/Art/clips/idle-couch-smug-green.mp4"
 VID="public/assets/video"
 mkdir -p "$VID"
 KEY="chromakey=0x00FF00:0.30:0.08,despill=type=green:mix=0.6:expand=0.2,format=rgba,lutrgb=a='if(lt(val\\,24)\\,0\\,val)'"

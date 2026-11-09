@@ -5,7 +5,7 @@
 Key facts:
 - Platform: iPhone (iOS). Counts steps from Apple Health, so it works with just a phone or with an Apple Watch.
 - Reads step count only. Step history stays on the device. No accounts, ads, analytics, or tracking.
-- The penguin's form and attitude react to your steps. He stays round at every stage; progress shows up as swagger.
+- The penguin starts out pudgy (the couch bird) and gets fitter as you walk: couch bird, strong waddler, then athlete. It's framed as strength and confidence, never weight, and he never comments on the user's body.
 - Daily step goal with rest days that never cost progress ("Aura").
 - The Locker: unlockable outfits. Most are earned by walking; Penguin Plus adds Plus-only fits.
 - Expeditions: an endless map of landmarks unlocked by steps.

@@ -4,6 +4,7 @@ pillar: mind
 description: Walking can ease depression and anxiety symptoms, lift your mood, and help you sleep. What the research shows, how fast it works, and how to start.
 answer: Walking is good for your mental health. A 2024 review of 75 trials found that walking reduced symptoms of depression and anxiety in adults, and people who move more tend to have a lower risk of depression. Walking works best alongside therapy or medication when you need them, not instead of them.
 published: 2026-11-06
+updated: 2026-11-10
 keywords: walking and mental health, does walking help depression, walking for anxiety, walking for stress, walking and mood, walking and sleep, nature walk mental health, how much walking for depression, steps and depression, walking for creativity, benefits of walking for the brain
 pose: couch-resting
 gary: Your feed will still be a mess in 20 minutes. Go walk first, then doomscroll with a clearer head.
@@ -164,7 +165,7 @@ Depression is treatable, and treatment usually involves therapy, medication, or 
 
 ### Is walking good for depression?
 
-Yes, as part of a wider plan. Trials show walking reduces depressive symptoms in adults [2]. It works best alongside therapy or medication when those are needed, not instead of them [6].
+Yes, as part of a wider plan. Trials show walking reduces depressive symptoms in adults [2]. It works best alongside therapy or medication when those are needed, not instead of them [6]. Our article on whether [walking is good for depression](/learn/is-walking-good-for-depression/) goes deeper.
 
 ### How long should I walk to feel better?
 

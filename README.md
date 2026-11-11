@@ -88,7 +88,7 @@ Done: publisher, contact email, governing law, domain, and GitHub repo are fille
 `python3 scripts/check.py --launch` passes.
 
 1. Create the app in DigitalOcean App Platform from `.do/app.yaml`, then add the custom domain `penguinathletics.com` (and `www`) and point DNS at it.
-2. Set up the `hello@penguinathletics.com` mailbox or forwarding.
+2. Set up the `gary@penguinathletics.com` mailbox or forwarding.
 3. Have someone qualified review the privacy policy and terms.
 4. In App Store Connect, set the Privacy Policy URL to `https://penguinathletics.com/privacy/` and the Support URL to `https://penguinathletics.com/support/`. Keep Apple's standard EULA (our terms add to it). Link the terms from the app description or the app's Settings.
 5. Submit `https://penguinathletics.com/sitemap.xml` in Google Search Console and Bing Webmaster Tools.

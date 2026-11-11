@@ -96,7 +96,7 @@ def jsonld(graph):
 def org_nodes():
     return [
         {"@type": "Organization", "@id": ORG, "name": "Lightbulb Moment Labs, Inc.", "url": url("/"),
-         "email": "hello@penguinathletics.com",
+         "email": "gary@penguinathletics.com",
          "logo": {"@type": "ImageObject", "url": url("/assets/apple-touch-icon.png"), "width": 180, "height": 180}},
         {"@type": "WebSite", "@id": f"{SITE_URL}/#website", "name": "Penguin Athletics", "alternateName": "Penguin",
          "url": url("/"), "inLanguage": "en-US", "publisher": {"@id": ORG}},

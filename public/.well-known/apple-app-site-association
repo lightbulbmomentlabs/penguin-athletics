@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["CJ9TPK8FRF.com.kevinfremon.PenguinPedometer"],
+        "components": [
+          { "/": "/join", "comment": "Waddle invites" },
+          { "/": "/join/*", "comment": "Waddle invites" }
+        ]
+      }
+    ]
+  }
+}

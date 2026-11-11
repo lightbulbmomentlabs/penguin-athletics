@@ -774,3 +774,8 @@ p { margin: 0 0 1em; }
   display: inline-block; margin-left: 6px; padding: 1px 7px; border-radius: 999px; vertical-align: 2px;
   border: 1.5px solid currentColor; font-size: 0.65rem; font-weight: 900; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.75;
 }
+
+/* ---------- Waddle invite (/join/) ---------- */
+.join img { border-radius: 28px; box-shadow: var(--shadow); }
+.join-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 8px 0 16px; }
+.btn.alt { background: var(--cream); }

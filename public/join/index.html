@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Join my waddle · Penguin</title>
+  <meta name="description" content="Walk with friends on Penguin. Poke the slackers.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#fa8c7a">
+  <link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <meta name="apple-itunes-app" content="app-id=6831137240">
+  <meta property="og:site_name" content="Penguin Athletics">
+  <meta property="og:title" content="Join my waddle on Penguin">
+  <meta property="og:description" content="Walk with friends. Poke the slackers.">
+  <meta property="og:image" content="https://penguinathletics.com/assets/og/join.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+<main class="lost join">
+  <div class="wrap">
+    <img src="/assets/img/invite-squad-360.webp"
+         srcset="/assets/img/invite-squad-360.webp 360w, /assets/img/invite-squad-720.webp 720w"
+         sizes="(min-width: 600px) 320px, 70vw" width="720" height="720"
+         alt="Four penguins walking together across the ice.">
+    <h1 id="title">Join the waddle</h1>
+    <p>Walk with friends on Penguin. Poke the slackers.</p>
+    <div class="join-actions">
+      <a class="btn" id="open" href="penguin://home">Open in Penguin</a>
+      <a class="btn alt" href="https://apps.apple.com/app/id6831137240">Get Penguin</a>
+    </div>
+    <p class="fine">Penguin is for iPhone. New here? Get it, then tap the invite again.</p>
+  </div>
+</main>
+<script>
+  // The app makes these links: /join/?c=<invite code>&n=<waddle name>.
+  (function () {
+    var q = new URLSearchParams(location.search);
+    var code = q.get("c") || "";
+    var name = (q.get("n") || "").trim();
+    if (/^[A-Za-z0-9_-]{8,80}$/.test(code)) {
+      document.getElementById("open").href = "penguin://join?c=" + code;
+    }
+    if (/^[\p{L}\p{N} '’.\-&!]{1,40}$/u.test(name)) {
+      var title = "Join " + name;
+      document.getElementById("title").textContent = title;
+      document.title = title + " · Penguin";
+    }
+  })();
+</script>
+</body>
+</html>

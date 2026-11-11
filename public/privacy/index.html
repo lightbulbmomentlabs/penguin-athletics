@@ -132,7 +132,7 @@
     </div>
   </div>
   <div class="wrap prose">
-    <p class="updated">Last updated: November 7, 2026</p>
+    <p class="updated">Last updated: November 10, 2026</p>
 
     <h2>Who we are</h2>
     <p>The Penguin app (“the app”) and this website are published by Lightbulb Moment Labs, Inc. (“we,” “us”). Questions about this policy: <a href="mailto:hello@penguinathletics.com">hello@penguinathletics.com</a>.</p>
@@ -143,7 +143,7 @@
       <li>A few features send a small amount of information off your phone, and only what's listed below:
         <ul>
           <li><strong>Usage stats</strong> (on unless you turn them off): which features you use, to PostHog. Never your steps or health data.</li>
-          <li><strong>Gary's fresh lines</strong> (on unless you turn them off): rough goal progress, to Anthropic's AI.</li>
+          <li><strong>Gary's fresh lines</strong> (only if you say yes): rough goal progress, to Anthropic's AI.</li>
           <li><strong>The Rookery</strong> (only if you join): your penguin's name and look, on our server.</li>
           <li><strong>Waddles</strong> (only if you create or join one): a progress summary, through Apple's iCloud.</li>
           <li><strong>Weather in his sky</strong> (only if you turn it on): your approximate location, to Apple Weather only.</li>
@@ -173,8 +173,8 @@
     </ul>
     <p>Usage stats never include your step count, step history, or any other Apple Health data, your penguin's name, waddle members or pokes, or your location beyond country and region. We don't record your screen. We use usage stats only to improve the app: not for advertising, not combined with data from other companies, and never sold. You can turn them off anytime in Settings › Share usage stats. See <a href="https://posthog.com/privacy">PostHog's privacy policy</a> for how PostHog handles data.</p>
 
-    <h3>Gary's fresh lines (on by default, easy to turn off)</h3>
-    <p>With <strong>Fresh lines from AI</strong> on, some of Gary's speech bubbles and notifications are written by Claude, an AI model made by Anthropic. To write a line, the app sends our line server:</p>
+    <h3>Gary's fresh lines (only if you say yes)</h3>
+    <p>The app asks you once, after you set up your penguin, and nothing is sent unless you say yes. With <strong>Fresh lines from AI</strong> on, some of Gary's speech bubbles and notifications are written by Claude, an AI model made by Anthropic. To write a line, the app sends our line server:</p>
     <ul>
       <li>your penguin's name, tone setting, and outfit;</li>
       <li>roughly how close you are to today's goal, to the nearest 10% (never your step count);</li>
@@ -192,6 +192,8 @@
     <ul>
       <li>your penguin's name, body, and outfit;</li>
       <li>when it last saw you walk (a date, not your steps);</li>
+      <li>the stickers your penguin has found;</li>
+      <li>roasts and cheers between penguins (who sent which kind to whom, and when), kept for 7 days;</li>
       <li>a random ID for your penguin, made from a secret kept in your iCloud Keychain so a new phone keeps the same penguin.</li>
     </ul>
     <p>When you walk your penguin around the ice with the joystick, other people with the Rookery open see it move in real time. To do that, the app sends our server your penguin's spot on the ice (not your real location), the way it's facing, and how fast it's walking, a few times a second, only while the Rookery is open. The server passes it on and doesn't keep it: it's gone when you close the Rookery. Others can tell from this that you're in the app right now.</p>
@@ -223,7 +225,13 @@
     <p>If you use the Apple Watch app, your steps, walks, and your penguin's state sync between your iPhone and your watch over Apple's own connection between them. Nothing extra goes to our servers. Walks you start on the watch are saved to Apple Health on your devices.</p>
 
     <h3>Notifications</h3>
-    <p>Notifications are optional. The app uses them for goal celebrations, gentle reminders, waddle pokes, and, if you start a free trial, a reminder before it ends. Most are scheduled on your device; pokes travel through iCloud and Apple's push service. You can turn notifications off anytime in iOS Settings.</p>
+    <p>Notifications are optional. The app uses them for goal celebrations, gentle reminders, waddle pokes and new waddle members, Rookery roasts and cheers, and, if you start a free trial, a reminder before it ends. Most are scheduled on your device. A few come from outside it:</p>
+    <ul>
+      <li>When someone joins your waddle, iCloud sends you the notification.</li>
+      <li>Waddle pokes and Rookery roasts and cheers are sent by our server through Apple's push service, so they arrive even when the app is closed. For this, our server stores your device's push token, your time zone offset (so it can stay quiet at night), and the random IDs of penguins you've blocked, under a random ID made on your phone. It doesn't know who is in which waddle.</li>
+      <li>A poke's message passes through our server on its way to your friend's phone and isn't stored.</li>
+    </ul>
+    <p>Push tokens are deleted when you turn off Rookery notifications, leave the Rookery, leave all your waddles, or when Apple tells us a token no longer works. You can turn all notifications off anytime in iOS Settings.</p>
 
     <h3>A random install ID</h3>
     <p>The app makes a random ID when it's installed and sends it with requests to our server, so we can apply daily limits and stop abuse. It isn't linked to you, your Apple ID, or your device's advertising ID.</p>
@@ -234,7 +242,7 @@
     <h2>Who processes data for us</h2>
     <ul>
       <li><strong>PostHog</strong> collects usage stats (unless you turn them off).</li>
-      <li><strong>Cloudflare</strong> hosts our server (Gary's line server and the Rookery). It may keep standard request logs, such as IP addresses, for security and operations.</li>
+      <li><strong>Cloudflare</strong> hosts our server (Gary's line server, the Rookery, and push notifications). It may keep standard request logs, such as IP addresses, for security and operations.</li>
       <li><strong>Anthropic</strong> writes Gary's fresh lines (unless you turn them off) and helps check Rookery names.</li>
       <li><strong>RevenueCat</strong> manages subscriptions.</li>
       <li><strong>Apple</strong> provides Health, iCloud, push notifications, payments, and the weather (WeatherKit).</li>

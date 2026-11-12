@@ -4,6 +4,7 @@ pillar: weight
 description: Walking alone usually brings modest weight loss, about 1.3 kg over 16 weeks in trials, but it helps blood sugar and steady weight. Here's what to expect.
 answer: Walking on its own usually leads to modest weight loss. In a review of pedometer-based walking programs with no diet changes, people lost about 1.3 kg (roughly 3 pounds) over a median of 16 weeks. Walking does more when paired with changes in eating, and it helps prevent weight gain and improves blood sugar and insulin sensitivity whatever the scale says.
 published: 2026-11-06
+updated: 2026-11-12
 keywords: walking for weight loss, can walking help you lose weight, how much walking to lose weight, walking after meals blood sugar, walking and belly fat, walking and visceral fat, calories burned walking, walking to keep weight off, walking and insulin resistance, walking and type 2 diabetes risk, does walking make you hungry
 pose: waddler-neutral
 gary: Your couch called. It says you two need some space.
@@ -35,7 +36,7 @@ The same review found that longer programs led to more weight loss than shorter 
 
 A larger review of 32 randomized trials in inactive adults found a similar result. Walking programs, with walking as the only change, lowered body weight by about **1.37 kg** compared with not walking [3]. They also trimmed waist size by about 1.5 cm and body fat by about 1.2 percentage points [3]. Those same walking programs improved fitness and lowered blood pressure, too [3].
 
-Those numbers are averages. Some people lose more and some lose none. We cover this question in more depth in [Can you lose weight just by walking?](/learn/can-you-lose-weight-just-by-walking/)
+Those numbers are averages. Some people lose more and some lose none. We cover this question in more depth in [Can you lose weight just by walking?](/learn/can-you-lose-weight-just-by-walking/) For a step target, see [how many steps a day to lose weight?](/learn/how-many-steps-a-day-to-lose-weight/)
 
 ### Does more walking mean more weight loss?
 

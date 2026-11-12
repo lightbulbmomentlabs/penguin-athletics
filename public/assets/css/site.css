@@ -196,13 +196,13 @@ p { margin: 0 0 1em; }
 .pal { position: absolute; z-index: 1; margin: 0; }
 .pal img, .pal video { display: block; width: 100%; height: auto; }
 .pal-gary { z-index: 4; left: 25%; bottom: 1%; width: 50%; }
-.pal-priya { left: 0; bottom: 27%; width: 28%; }
-.pal-mads { z-index: 2; left: 10%; bottom: 3%; width: 30%; }
-.pal-sam { z-index: 2; right: 10%; bottom: 3%; width: 30%; }
-.pal-jo { right: 0; bottom: 27%; width: 28%; }
+.pal-priya { left: -3%; bottom: 26%; width: 32%; }
+.pal-mads { z-index: 2; left: 7%; bottom: 2%; width: 34%; }
+.pal-sam { z-index: 2; right: 7%; bottom: 2%; width: 34%; }
+.pal-jo { right: -3%; bottom: 26%; width: 32%; }
 .hero-video, .hero-still { display: block; width: 100%; height: auto; }
 /* The still only shows (and only downloads, being lazy) when motion is reduced. */
-.hero-still, .pal .hero-still { display: none; }
+.hero-still, .pal .hero-still, .pal .pal-still { display: none; }
 .chip {
   position: absolute; left: 50%; bottom: -6px; z-index: 5; transform: translateX(-50%);
   display: inline-flex; gap: 5px; align-items: center; width: max-content;
@@ -230,21 +230,7 @@ p { margin: 0 0 1em; }
   font-size: 0.75rem; font-weight: 900; transform: rotate(6deg); box-shadow: 0 3px 0 rgba(15, 20, 41, 0.12);
 }
 @media (prefers-reduced-motion: no-preference) {
-  .pal:not(.pal-gary) > img { transform-origin: 50% 100%; animation: waddle 1.6s ease-in-out infinite; }
-  .pal-mads > img { animation-delay: -0.4s; }
-  .pal-sam > img { animation-delay: -0.9s; }
-  .pal-jo > img { animation: snooze 4s ease-in-out infinite; }
   .poke { animation: poke 2.4s ease-in-out infinite; }
-}
-@keyframes waddle {
-  0%, 100% { transform: rotate(-3deg) translateY(0); }
-  25% { transform: rotate(0) translateY(-6px); }
-  50% { transform: rotate(3deg) translateY(0); }
-  75% { transform: rotate(0) translateY(-6px); }
-}
-@keyframes snooze {
-  0%, 100% { transform: rotate(-2deg) scaleY(1); }
-  50% { transform: rotate(2deg) scaleY(0.97); }
 }
 @keyframes poke {
   0%, 70%, 100% { transform: rotate(6deg) translateX(0); }
@@ -256,10 +242,10 @@ p { margin: 0 0 1em; }
   .squad { max-width: 760px; aspect-ratio: 600 / 480; }
   /* Gary is the star: bigger, and the friends tuck in around him. */
   .pal-gary { left: 19%; width: 62%; }
-  .pal-priya { bottom: 31%; width: 26%; }
-  .pal-jo { bottom: 31%; width: 26%; }
-  .pal-mads { left: 4%; width: 28%; }
-  .pal-sam { right: 4%; width: 28%; }
+  .pal-priya { bottom: 30%; width: 30%; }
+  .pal-jo { bottom: 30%; width: 30%; }
+  .pal-mads { left: 1%; width: 32%; }
+  .pal-sam { right: 1%; width: 32%; }
   .speech { font-size: 1.05rem; }
   .chip { font-size: 0.85rem; }
 }
@@ -570,7 +556,8 @@ p { margin: 0 0 1em; }
   .feed { height: auto; -webkit-mask-image: none; mask-image: none; }
   .feed-track > [aria-hidden="true"] { display: none; }
   .hero-video { display: none; }
-  .hero-still, .pal .hero-still { display: block; }
+  .pal-video { display: none; }
+  .hero-still, .pal .hero-still, .pal .pal-still { display: block; }
 }
 
 /* ---------- Phones: shorter sections, swipe rows instead of tall stacks ---------- */

@@ -34,11 +34,9 @@ HEALTH_NOTE = ("This article is general information, not medical advice. Talk to
                "a new exercise routine, especially if you have a heart condition, high blood pressure, diabetes, "
                "joint problems, or are pregnant. If you feel chest pain, faintness, or unusual shortness of "
                "breath while walking, stop and get medical help.")
-BADGE = ('<div class="store-badge">\n'
-         '  <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3" fill="none" '
-         'stroke="currentColor" stroke-width="2"/><circle cx="12" cy="18" r="1.2" fill="currentColor"/></svg>\n'
-         '  <span><small>Coming soon to the</small><strong>App Store</strong></span>\n'
-         '</div>')
+APP_STORE_URL = "https://apps.apple.com/us/app/penguin-step-counter-pedometer/id6831137240"
+BADGE = ('<a class="app-store-badge" href="' + APP_STORE_URL + '">'
+         '<img src="/assets/img/app-store-badge-black.svg" width="168" height="56" alt="Download on the App Store"></a>')
 NAV = [("/learn/", "Learn"), ("/privacy/", "Privacy"), ("/terms/", "Terms"), ("/support/", "Support")]
 
 
@@ -130,6 +128,7 @@ def head(title, description, path, keywords, image, image_alt, graph, og_type="a
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-itunes-app" content="app-id=6831137240">
   <title>{t}</title>
   <meta name="description" content="{d}">
   <meta name="keywords" content="{escape(keywords)}">

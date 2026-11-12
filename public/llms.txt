@@ -1,6 +1,6 @@
 # Penguin
 
-> Penguin is a funny pedometer and step counter app for iPhone, published by Lightbulb Moment Labs, Inc. Your daily steps from Apple Health power a smug, overconfident cartoon penguin. It's "the pedometer for people who hate pedometers." Coming soon to the App Store.
+> Penguin is a funny pedometer and step counter app for iPhone (on the App Store: https://apps.apple.com/us/app/penguin-step-counter-pedometer/id6831137240), published by Lightbulb Moment Labs, Inc. Your daily steps from Apple Health power a smug, overconfident cartoon penguin. It's "the pedometer for people who hate pedometers." Now on the App Store.
 
 Key facts:
 - Platform: iPhone (iOS). Counts steps from Apple Health, so it works with just a phone or with an Apple Watch.

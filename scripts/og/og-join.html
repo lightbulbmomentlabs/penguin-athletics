@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- Share image for Waddle invite links (/join/). Render with:
+     scripts/make-og-image.sh scripts/og/og-join.html public/assets/og/join.jpg
+     Not served. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Penguin invite share image</title>
+<style>
+  @font-face {
+    font-family: "Nunito";
+    src: url("../../public/assets/fonts/nunito-latin-wght.woff2") format("woff2");
+    font-weight: 200 1000;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    position: relative;
+    font-family: "Nunito", sans-serif;
+    color: #1c2440;
+    background:
+      radial-gradient(55% 60% at 88% 18%, rgba(255, 231, 163, 0.95), transparent 70%),
+      linear-gradient(180deg, #ffc9b0 0%, #f8c6cc 58%, #ffe6d6 100%);
+  }
+
+  .brand { position: absolute; top: 56px; left: 64px; display: flex; align-items: center; gap: 14px; }
+  .brand img { width: 60px; height: 60px; border-radius: 15px; box-shadow: 0 4px 0 rgba(15, 20, 41, 0.12); }
+  .brand span { font-size: 34px; font-weight: 900; letter-spacing: -0.02em; }
+
+  .copy { position: absolute; top: 160px; left: 64px; width: 520px; }
+  h1 { font-size: 74px; font-weight: 900; line-height: 0.98; letter-spacing: -0.035em; }
+  .sub { margin-top: 22px; font-size: 28px; font-weight: 700; line-height: 1.3; }
+
+  .cta { position: absolute; left: 64px; bottom: 54px; display: flex; align-items: center; gap: 20px; }
+  .cta img { height: 62px; width: auto; display: block; }
+  .free { font-size: 24px; font-weight: 800; opacity: 0.75; }
+
+  /* The squad, same art and layout as the home page hero */
+  .squad { position: absolute; right: 24px; bottom: 28px; width: 600px; height: 500px; }
+  .squad::after {
+    content: ""; position: absolute; left: 4%; right: 4%; bottom: 2%; height: 12%;
+    border-radius: 50%; background: rgba(255, 255, 255, 0.8); z-index: 0;
+  }
+  .pal { position: absolute; z-index: 1; }
+  .pal img { display: block; width: 100%; }
+  .gary { z-index: 4; left: 21%; bottom: 0; width: 58%; }
+  .priya { left: 0; bottom: 30%; width: 27%; }
+  .mads { z-index: 2; left: 6%; bottom: 2%; width: 29%; }
+  .sam { z-index: 2; right: 6%; bottom: 2%; width: 29%; }
+  .jo { right: 0; bottom: 30%; width: 27%; }
+  .chip {
+    position: absolute; left: 50%; bottom: -4px; z-index: 5; transform: translateX(-50%);
+    display: flex; gap: 7px; align-items: center; white-space: nowrap;
+    padding: 6px 14px; border-radius: 999px; background: #fff;
+    font-size: 21px; font-weight: 800; box-shadow: 0 4px 0 rgba(15, 20, 41, 0.1);
+  }
+  .chip span { font-weight: 700; opacity: 0.6; }
+  .chip b { color: #c8382c; }
+  .priya .chip, .jo .chip { top: 0; bottom: auto; transform: translate(-50%, -95%); }
+  .gary .chip { bottom: 5%; background: #1c2440; color: #fff5e0; }
+  .gary .chip b { color: #ffe7a3; }
+  .poke {
+    position: absolute; z-index: 6; right: 4px; top: 24px; padding: 10px 18px; border-radius: 999px;
+    background: #ff6f61; color: #fff; font-size: 23px; font-weight: 900;
+    transform: rotate(5deg); box-shadow: 0 5px 0 rgba(15, 20, 41, 0.14);
+  }
+</style>
+</head>
+<body>
+  <div class="brand">
+    <img src="../../public/assets/apple-touch-icon.png" alt="">
+    <span>Penguin</span>
+  </div>
+
+  <div class="copy">
+    <h1>You're invited to the waddle.</h1>
+    <p class="sub">Walk with friends. See who hit their goal. Poke the slackers.</p>
+  </div>
+
+  <div class="cta">
+    <img src="../../public/assets/img/app-store-badge-black.svg" alt="">
+    <span class="free">Free on iPhone</span>
+  </div>
+
+  <div class="squad">
+    <p class="poke">👉 Priya poked Jo</p>
+    <div class="pal priya"><img src="../../public/assets/img/squad-priya-400.webp" alt=""><p class="chip">Priya <span>100%</span> <b>✓</b></p></div>
+    <div class="pal mads"><img src="../../public/assets/img/squad-mads-400.webp" alt=""><p class="chip">Mads <span>84%</span></p></div>
+    <div class="pal gary"><img src="../../public/assets/img/hero-poster-640.webp" alt=""><p class="chip">You <span>joining…</span></p></div>
+    <div class="pal sam"><img src="../../public/assets/img/squad-sam-400.webp" alt=""><p class="chip">Sam <span>61%</span></p></div>
+    <div class="pal jo"><img src="../../public/assets/img/squad-jo-400.webp" alt=""><p class="chip">Jo <span>12%</span> <b>💤</b></p></div>
+  </div>
+</body>
+</html>

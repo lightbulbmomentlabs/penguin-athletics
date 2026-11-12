@@ -18,6 +18,8 @@ PAGES = ["index.html", "404.html", "privacy/index.html", "terms/index.html", "su
 HOME_FIRST_LOAD_BUDGET = 600 * 1024  # bytes, from the spec
 HOME_FULL_SCROLL_WARN = 1200 * 1024
 EXTERNAL = re.compile(r"^\s*(https?:)?//", re.I)
+# Pages allowed one inline script (no src): the Waddle invite page opens the app.
+SCRIPT_OK = {"join/index.html"}
 PLACEHOLDER = re.compile(r"\{\{[A-Z0-9_]+\}\}")
 CSS_URL = re.compile(r"url\(\s*['\"]?([^'\")]+)")
 SITE_URL = "https://penguinathletics.com"  # absolute URLs here must map to files in public/
@@ -229,6 +231,9 @@ def check_page(rel, errors, warnings, launch):
         errors.append(f"{rel}: <{tag}> is not allowed (no JS, no embeds)")
     graph = []
     for attrs, text in page.scripts:
+        # The Waddle invite page needs one small inline script to build the penguin:// link.
+        if rel in SCRIPT_OK and not attrs.get("src") and attrs.get("type") in (None, "", "text/javascript"):
+            continue
         if attrs.get("type") != "application/ld+json" or attrs.get("src"):
             errors.append(f"{rel}: <script> is not allowed (only inline application/ld+json)")
             continue
@@ -320,7 +325,7 @@ def check_page(rel, errors, warnings, launch):
             if len(href) > 1 and href[1:] not in page.ids:
                 errors.append(f"{rel}: broken in-page anchor {href}")
             continue
-        if href.startswith(("mailto:", "tel:")) or EXTERNAL.match(href):
+        if href.startswith(("mailto:", "tel:", "penguin:")) or EXTERNAL.match(href):
             continue
         target = resolve(href, path)
         if target and not exists_exact(target):

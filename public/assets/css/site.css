@@ -238,7 +238,12 @@ p { margin: 0 0 1em; }
   90% { transform: rotate(6deg) translateX(2px); }
 }
 @media (min-width: 800px) {
-  .hero .wrap { width: min(100% - 2 * var(--gutter), 1240px); grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.2fr); gap: 16px; }
+  /* Left edge lines up with the header logo; the extra width goes right, to the squad. */
+  .hero .wrap {
+    width: auto;
+    margin-left: max(var(--gutter), (100% - var(--max)) / 2);
+    margin-right: max(var(--gutter), (100% - var(--max)) / 2 - 160px);
+    grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.2fr); gap: 16px; }
   .squad { max-width: 760px; aspect-ratio: 600 / 480; }
   /* Gary is the star: bigger, and the friends tuck in around him. */
   .pal-gary { left: 19%; width: 62%; }

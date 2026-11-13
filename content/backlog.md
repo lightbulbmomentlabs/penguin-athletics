@@ -18,7 +18,7 @@ questions anywhere (search Google's "People also ask" and AI answers for ideas).
 - [ ] how-many-calories-does-walking-burn | weight | How many calories does walking burn?
 - [ ] is-the-10000-steps-rule-real | longevity | Is the 10,000 steps rule real?
 - [ ] what-is-a-good-daily-step-goal | basics | What is a good daily step goal?
-- [ ] is-walking-good-for-depression | mind | Is walking good for depression?
+- [x] is-walking-good-for-depression | mind | Is walking good for depression?
 - [ ] walking-vs-running-which-is-better-for-your-heart | heart | Walking vs running: which is better for your heart?
 - [ ] how-many-steps-a-day-to-lose-weight | weight | How many steps a day to lose weight?
 - [ ] best-time-of-day-to-walk | basics | Best time of day to walk

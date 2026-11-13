@@ -21,7 +21,7 @@ questions anywhere (search Google's "People also ask" and AI answers for ideas).
 - [ ] is-walking-good-for-depression | mind | Is walking good for depression?
 - [ ] walking-vs-running-which-is-better-for-your-heart | heart | Walking vs running: which is better for your heart?
 - [ ] how-many-steps-a-day-to-lose-weight | weight | How many steps a day to lose weight?
-- [ ] best-time-of-day-to-walk | basics | Best time of day to walk
+- [x] best-time-of-day-to-walk | basics | Best time of day to walk
 - [ ] how-walking-reduces-stress | mind | How walking reduces stress
 - [ ] does-walking-lower-cholesterol | heart | Does walking lower cholesterol?
 - [ ] does-walking-after-meals-lower-blood-sugar | weight | Does walking after meals lower blood sugar?

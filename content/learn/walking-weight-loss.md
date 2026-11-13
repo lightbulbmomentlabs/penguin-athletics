@@ -4,6 +4,7 @@ pillar: weight
 description: Walking alone usually brings modest weight loss, about 1.3 kg over 16 weeks in trials, but it helps blood sugar and steady weight. Here's what to expect.
 answer: Walking on its own usually leads to modest weight loss. In a review of pedometer-based walking programs with no diet changes, people lost about 1.3 kg (roughly 3 pounds) over a median of 16 weeks. Walking does more when paired with changes in eating, and it helps prevent weight gain and improves blood sugar and insulin sensitivity whatever the scale says.
 published: 2026-11-06
+updated: 2026-11-13
 keywords: walking for weight loss, can walking help you lose weight, how much walking to lose weight, walking after meals blood sugar, walking and belly fat, walking and visceral fat, calories burned walking, walking to keep weight off, walking and insulin resistance, walking and type 2 diabetes risk, does walking make you hungry
 pose: waddler-neutral
 gary: Your couch called. It says you two need some space.
@@ -181,7 +182,7 @@ The U.S. guidelines set targets in minutes, not steps: at least 150 a week of mo
 
 ### Should I walk before or after eating?
 
-For blood sugar, after meals looks helpful. A 10-minute walk after each main meal lowered after-meal blood sugar in adults with type 2 diabetes [9].
+For blood sugar, after meals looks helpful. A 10-minute walk after each main meal lowered after-meal blood sugar in adults with type 2 diabetes [9]. For more on timing, see [the best time of day to walk](/learn/best-time-of-day-to-walk/).
 
 ## Sources
 

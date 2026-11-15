@@ -4,6 +4,7 @@ pillar: heart
 description: Fewer than 10,000. In large studies, heart benefits start in the low thousands and mostly level off by about 7,000 to 9,000 steps a day.
 answer: You probably don't need 10,000. In large studies, people who took more steps had a lower risk of heart disease, with most of the benefit showing up by about 7,000 to 9,000 steps a day. In adults 60 and older, 6,000 to 9,000 steps a day was linked to a 40% to 50% lower risk of heart disease than about 2,000 steps.
 published: 2026-11-06
+updated: 2026-11-15
 keywords: how many steps a day for heart health, steps per day heart disease, 10000 steps heart health, 7000 steps a day heart, steps a day to prevent heart disease, daily steps cardiovascular risk, how many steps a day older adults heart, does walking pace matter for heart health, steps per minute brisk walking, 150 minutes a week in steps, walking steps for heart disease prevention
 pose: waddler-hyped
 gary: Your step count is lower than your screen time and we both know it.
@@ -53,7 +54,7 @@ The step studies found the clearest heart benefits in older adults. In the *Circ
 
 That doesn't mean steps don't matter for younger people. Heart disease often takes years to show up, and the studies may not have followed younger adults long enough to see it [1]. Only 4.2% of younger adults had a heart event during the study, compared with 9.5% of older adults [1].
 
-The researchers suggested that for younger and middle-aged adults, the better thing to measure may be heart disease risk factors, like high blood pressure, high cholesterol, and diabetes [1]. Walking can help with those too. (See [does walking lower blood pressure?](/learn/does-walking-lower-blood-pressure/))
+The researchers suggested that for younger and middle-aged adults, the better thing to measure may be heart disease risk factors, like high blood pressure, high cholesterol, and diabetes [1]. Walking can help with those too. (See [does walking lower blood pressure?](/learn/does-walking-lower-blood-pressure/) and [does walking lower cholesterol?](/learn/does-walking-lower-cholesterol/))
 
 ## Does walking pace matter, or just the number of steps?
 

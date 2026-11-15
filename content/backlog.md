@@ -23,7 +23,7 @@ questions anywhere (search Google's "People also ask" and AI answers for ideas).
 - [ ] how-many-steps-a-day-to-lose-weight | weight | How many steps a day to lose weight?
 - [ ] best-time-of-day-to-walk | basics | Best time of day to walk
 - [ ] how-walking-reduces-stress | mind | How walking reduces stress
-- [ ] does-walking-lower-cholesterol | heart | Does walking lower cholesterol?
+- [x] does-walking-lower-cholesterol | heart | Does walking lower cholesterol?
 - [ ] does-walking-after-meals-lower-blood-sugar | weight | Does walking after meals lower blood sugar?
 - [ ] walking-speed-and-life-expectancy-what-s-the-link | longevity | Walking speed and life expectancy: what's the link?
 - [ ] how-to-walk-with-good-posture | basics | How to walk with good posture

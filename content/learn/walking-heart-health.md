@@ -4,6 +4,7 @@ pillar: heart
 description: Walking lowers blood pressure and is linked to about 31% lower cardiovascular disease risk. How much, how fast, and how to start safely.
 answer: Walking is one of the best-studied ways to help your heart. In trials it lowered systolic blood pressure by about 4 mmHg, and in long-term studies people who walked the most had about 31% lower risk of cardiovascular disease than people who walked the least. Aim for about 150 minutes a week at a brisk pace, and start smaller if you need to.
 published: 2026-11-06
+updated: 2026-11-15
 keywords: walking for heart health, is walking good for your heart, walking and heart disease, walking to lower cholesterol, walking and blood pressure, brisk walking heart benefits, how much walking for heart health, walking after a heart attack, walking and resting heart rate, walking for circulation, walking pace and heart disease, cardiac rehab walking
 pose: waddler-hyped
 gary: Your heart has been doing cardio since before you were born. The least you can do is take it outside.
@@ -54,7 +55,7 @@ An older review of 25 walking trials found that walking lowered LDL ("bad") chol
 
 The more recent review of 37 walking trials found no significant effect on the four blood fat measures it studied [3].
 
-So what does that mean for you? Walking is good for your heart in many ways, but don't count on it alone to fix high cholesterol. If your cholesterol is high, your doctor may suggest other steps, like changes to what you eat or medicine. Walking works well alongside those, not instead of them.
+So what does that mean for you? Walking is good for your heart in many ways, but don't count on it alone to fix high cholesterol. If your cholesterol is high, your doctor may suggest other steps, like changes to what you eat or medicine. Walking works well alongside those, not instead of them. We dig into the details in [Does walking lower cholesterol?](/learn/does-walking-lower-cholesterol/)
 
 ## Does walking lower your risk of heart disease and stroke?
 

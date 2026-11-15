@@ -4,6 +4,7 @@ pillar: weight
 description: Yes, but usually not much: walking-only trials average about 1.3 kg of weight loss. It works better with eating changes and helps your health either way.
 answer: Yes, but usually only a little. In trials of walking alone, people lost about 1.4 kg (roughly 3 pounds) on average, and programs that combine walking with eating changes lead to more weight loss. Walking still improves blood pressure, blood sugar, and fitness even when the scale barely moves.
 published: 2026-11-06
+updated: 2026-11-12
 keywords: can you lose weight just by walking, walking for weight loss, does walking help you lose weight, how much walking to lose weight, walking and weight loss results, walking without dieting weight loss, walking to keep weight off, how many minutes of walking to lose weight, walking vs diet for weight loss, is walking enough to lose weight
 pose: waddler-neutral
 gary: Your sneakers have been left on read for weeks. Answer them.
@@ -108,7 +109,7 @@ Slowly. In pedometer programs, people lost about 0.05 kg a week on average, and 
 
 ### Is 10,000 steps a day enough to lose weight?
 
-There's no magic number. Having any step goal, such as 10,000 steps, helped people walk more [10]. But walking alone usually brings modest weight loss [1].
+There's no magic number. Having any step goal, such as 10,000 steps, helped people walk more [10]. But walking alone usually brings modest weight loss [1]. See [how many steps a day to lose weight](/learn/how-many-steps-a-day-to-lose-weight/).
 
 ### Is walking better than diet for weight loss?
 

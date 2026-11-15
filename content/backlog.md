@@ -15,15 +15,15 @@ questions anywhere (search Google's "People also ask" and AI answers for ideas).
 - [x] how-many-steps-a-day-to-live-longer | longevity | How many steps a day to live longer?
 - [x] how-to-start-walking-when-you-hate-exercise | basics | How to start walking when you hate exercise
 - [x] does-walking-help-anxiety | mind | Does walking help anxiety?
-- [ ] how-many-calories-does-walking-burn | weight | How many calories does walking burn?
-- [ ] is-the-10000-steps-rule-real | longevity | Is the 10,000 steps rule real?
-- [ ] what-is-a-good-daily-step-goal | basics | What is a good daily step goal?
-- [ ] is-walking-good-for-depression | mind | Is walking good for depression?
-- [ ] walking-vs-running-which-is-better-for-your-heart | heart | Walking vs running: which is better for your heart?
-- [ ] how-many-steps-a-day-to-lose-weight | weight | How many steps a day to lose weight?
-- [ ] best-time-of-day-to-walk | basics | Best time of day to walk
-- [ ] how-walking-reduces-stress | mind | How walking reduces stress
-- [ ] does-walking-lower-cholesterol | heart | Does walking lower cholesterol?
+- [x] how-many-calories-does-walking-burn | weight | How many calories does walking burn?
+- [x] is-the-10000-steps-rule-real | longevity | Is the 10,000 steps rule real?
+- [x] what-is-a-good-daily-step-goal | basics | What is a good daily step goal?
+- [x] is-walking-good-for-depression | mind | Is walking good for depression?
+- [x] walking-vs-running-which-is-better-for-your-heart | heart | Walking vs running: which is better for your heart?
+- [x] how-many-steps-a-day-to-lose-weight | weight | How many steps a day to lose weight?
+- [x] best-time-of-day-to-walk | basics | Best time of day to walk
+- [x] how-walking-reduces-stress | mind | How walking reduces stress
+- [x] does-walking-lower-cholesterol | heart | Does walking lower cholesterol?
 - [ ] does-walking-after-meals-lower-blood-sugar | weight | Does walking after meals lower blood sugar?
 - [ ] walking-speed-and-life-expectancy-what-s-the-link | longevity | Walking speed and life expectancy: what's the link?
 - [ ] how-to-walk-with-good-posture | basics | How to walk with good posture

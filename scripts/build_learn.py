@@ -121,6 +121,12 @@ def pose_img(pose, alt="", eager=False, sizes="160px"):
 
 # ---------- Page shell ----------
 
+def page_title(title):
+    """Search results cut titles past ~70 characters, so long ones get the short brand."""
+    full = f"{title} · Penguin Athletics"
+    return full if len(full) <= 70 else f"{title} · Penguin"
+
+
 def head(title, description, path, keywords, image, image_alt, graph, og_type="article"):
     t, d = escape(title), escape(description)
     return f"""<!DOCTYPE html>
@@ -323,7 +329,7 @@ def render_article(art, articles, pillars):
     pillar_slugs = {p["slug"] for p in pillars.values()}
     rel = related(art, articles, pillar_slugs)
     keep = card_list(rel, pillars) if rel else ""
-    return (head(f"{m['title']} · Penguin Athletics", m["description"], path, m["keywords"], image,
+    return (head(page_title(m["title"]), m["description"], path, m["keywords"], image,
                  f"{pillar['title']}: walking-health guides from Penguin Athletics.", graph)
             + header() + f"""
 <main>
@@ -378,7 +384,7 @@ def render_pillar(pillar, guide, articles, pillars):
     intro = (f'<div class="wrap learn-narrow learn-content">\n    {article_body(guide)}\n    '
              f'<p class="learn-signoff">{escape(guide["meta"]["signoff"])}</p>\n  </div>') if guide else ""
     lede = "" if guide else f'<p class="learn-lede">{escape(pillar["blurb"])}</p>'
-    return (head(f"{title} · Penguin Athletics", description, path, keywords, image,
+    return (head(page_title(title), description, path, keywords, image,
                  f"{pillar['title']}: walking-health guides from Penguin Athletics.", graph,
                  og_type="article" if guide else "website")
             + header() + f"""

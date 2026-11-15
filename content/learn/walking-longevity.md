@@ -4,6 +4,7 @@ pillar: longevity
 description: About 7,000 steps a day is linked to a 47% lower risk of early death than 2,000. What research says about steps, speed, the brain, and aging well.
 answer: People who walk more tend to live longer. In a 2025 review of 57 studies, 7,000 steps a day was linked to a 47% lower risk of early death compared with 2,000 steps, and the benefits started to level off around 5,000 to 7,000 steps. Most of this evidence is observational, so it shows a strong link rather than proof, but walking is also linked to lower dementia risk and better function as you age.
 published: 2026-11-06
+updated: 2026-11-08
 keywords: walking and longevity, does walking help you live longer, steps a day to live longer, walking and life expectancy, 10000 steps a day myth, walking speed and life expectancy, walking and dementia risk, walking for older adults, how many steps a day for seniors, sitting time and mortality, walking habit, daily steps and mortality
 pose: waddler-celebrating
 gary: Your future self is begging you to touch grass. Literally. Go outside.
@@ -67,7 +68,7 @@ Researchers have pointed out that the 10,000-step goal is widely believed but ha
 
 The 2025 review put it this way: 10,000 steps can still be a fine target for people who are already active, but **7,000 steps a day** is linked to meaningful health benefits and may be a more realistic goal for some [1].
 
-If you already hit 10,000, keep going. Walking more is still linked to good things, like a lower risk of type 2 diabetes and depression symptoms, which kept improving in a straight line with more steps in that review [1]. If 10,000 feels out of reach, don't let it stop you. A goal you can actually meet beats one you abandon.
+If you already hit 10,000, keep going. Walking more is still linked to good things, like a lower risk of type 2 diabetes and depression symptoms, which kept improving in a straight line with more steps in that review [1]. If 10,000 feels out of reach, don't let it stop you. A goal you can actually meet beats one you abandon. For the full story on where the number came from, read [is the 10,000 steps rule real?](/learn/is-the-10000-steps-rule-real/)
 
 ## Does walking speed matter?
 

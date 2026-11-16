@@ -4,6 +4,7 @@ pillar: basics
 description: The best time to walk is the one you'll stick with. Big studies disagree on morning vs evening, but a walk after meals helps blood sugar.
 answer: There's no single best time. Large studies disagree, linking morning, midday, and evening activity to lower risks, and walking at any time of day is linked to a longer life. If you want a tiebreaker, a 10-minute walk after each meal lowered after-meal blood sugar about 12% more than one daily 30-minute walk in a trial of adults with type 2 diabetes.
 published: 2026-11-13
+updated: 2026-11-16
 keywords: best time of day to walk, best time to walk for health, morning walk vs evening walk, is it better to walk in the morning or evening, walking after meals, walk after dinner blood sugar, does evening walking affect sleep, best time to walk to lose weight, walking in the heat, when should I go for a walk, walking before bed
 pose: waddler-neutral
 gary: The best time to walk was an hour ago. The second best is before you open another app.
@@ -55,7 +56,7 @@ Blood sugar in the three hours after meals was about 12% lower with the after-me
 
 This isn't just for people with diabetes. A meta-analysis of seven short trials, mostly in adults with higher body weight, compared long stretches of sitting with frequent short breaks [6]. Light walking breaks lowered blood sugar and insulin after meals compared with sitting the whole time [6]. They also worked better than standing breaks [6].
 
-It's a small habit with a real effect. For more on blood sugar and weight, see our guide to [walking for weight loss](/learn/walking-weight-loss/).
+It's a small habit with a real effect. For how soon and how long to walk, see [does walking after meals lower blood sugar?](/learn/does-walking-after-meals-lower-blood-sugar/) For more on blood sugar and weight, see our guide to [walking for weight loss](/learn/walking-weight-loss/).
 
 ## Will walking in the evening mess up your sleep?
 

@@ -4,7 +4,7 @@ pillar: longevity
 description: About 7,000 steps a day is linked to a 47% lower risk of early death than 2,000. What research says about steps, speed, the brain, and aging well.
 answer: People who walk more tend to live longer. In a 2025 review of 57 studies, 7,000 steps a day was linked to a 47% lower risk of early death compared with 2,000 steps, and the benefits started to level off around 5,000 to 7,000 steps. Most of this evidence is observational, so it shows a strong link rather than proof, but walking is also linked to lower dementia risk and better function as you age.
 published: 2026-11-06
-updated: 2026-11-08
+updated: 2026-11-17
 keywords: walking and longevity, does walking help you live longer, steps a day to live longer, walking and life expectancy, 10000 steps a day myth, walking speed and life expectancy, walking and dementia risk, walking for older adults, how many steps a day for seniors, sitting time and mortality, walking habit, daily steps and mortality
 pose: waddler-celebrating
 gary: Your future self is begging you to touch grass. Literally. Go outside.
@@ -80,7 +80,7 @@ How fast you naturally walk turns out to be a strong signal of overall health as
 
 Each 0.1 meter-per-second increase in walking speed (a small difference) was linked to a 12% lower risk of death [6]. At age 75, predicted 10-year survival ranged from 19% to 87% in men and from 35% to 91% in women, depending on walking speed [6].
 
-That doesn't mean slow walking *causes* a shorter life. Walking speed reflects many things at once, like heart and lung fitness, muscle strength, balance, and nerve health. That's why doctors sometimes use it as a quick check on how someone is aging.
+That doesn't mean slow walking *causes* a shorter life. Walking speed reflects many things at once, like heart and lung fitness, muscle strength, balance, and nerve health. That's why doctors sometimes use it as a quick check on how someone is aging. (We dig into this in [walking speed and life expectancy](/learn/walking-speed-and-life-expectancy-what-s-the-link/).)
 
 ### Does picking up the pace help?
 

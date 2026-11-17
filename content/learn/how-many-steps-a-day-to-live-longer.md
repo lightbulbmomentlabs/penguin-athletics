@@ -4,6 +4,7 @@ pillar: longevity
 description: Large studies link about 6,000–8,000 steps a day (adults 60+) or 8,000–10,000 (under 60) to the lowest risk of early death. Every 1,000 counts.
 answer: In a pooled analysis of 15 studies, the risk of dying early kept falling as steps rose, then leveled off at about 6,000 to 8,000 steps a day for adults 60 and older and 8,000 to 10,000 for younger adults. You don't need 10,000 to benefit: a 2025 review linked 7,000 steps a day to a 47% lower risk of death than 2,000 steps.
 published: 2026-11-06
+updated: 2026-11-17
 keywords: how many steps a day to live longer, steps per day and mortality, do you really need 10000 steps, 7000 steps a day, steps a day for older adults, where did 10000 steps come from, does walking speed matter for longevity, daily steps and life expectancy, how many steps a day is healthy, walking to live longer
 pose: waddler-celebrating
 gary: You don't need 10,000 steps. You need to stop treating the couch like a long-term lease.
@@ -71,7 +72,7 @@ Researchers measure speed as *cadence*, or steps per minute. In a large U.S. stu
 
 The 2022 meta-analysis found that people whose fastest 30 minutes of the day were quicker had a lower risk, even after accounting for total steps [1]. But time spent walking at 100 steps a minute or faster wasn't clearly linked to lower risk [1]. The UK study found that a faster peak 30-minute pace was linked to lower risk beyond total steps [5].
 
-The takeaway: **getting your steps in matters most.** Adding some brisk walking may offer a little extra, and it's a good way to fit more steps into less time. But a slow step still counts.
+The takeaway: **getting your steps in matters most.** Adding some brisk walking may offer a little extra, and it's a good way to fit more steps into less time. But a slow step still counts. (For what your natural walking speed says about your health, see [walking speed and life expectancy](/learn/walking-speed-and-life-expectancy-what-s-the-link/).)
 
 ## What if you're starting from a low step count?
 

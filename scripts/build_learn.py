@@ -180,7 +180,7 @@ def header(current="/learn/"):
     menu = "\n        ".join(link(p, n) for p, n in [("/", "Home")] + NAV)
     return f"""<header class="site-header">
   <div class="wrap">
-    <a class="logo" href="/"><img src="/assets/img/icon-80.webp" alt="" width="80" height="80"><img class="logo-word" src="/assets/logo/penguin-wordmark.svg" alt="Penguin" width="1608" height="712"></a>
+    <a class="logo" href="/"><img src="/assets/img/icon-80.webp" alt="" width="80" height="80"><img class="logo-word" src="/assets/logo/penguin-wordmark.svg?v=2" alt="Penguin" width="1608" height="712"></a>
     <nav class="site-nav" aria-label="Site">
       {desktop}
     </nav>
@@ -202,7 +202,7 @@ def header(current="/learn/"):
 def footer(sign_off="Now go touch grass. Or ice."):
     return f"""<footer class="site-footer">
   <div class="wrap">
-    <a class="footer-logo" href="/"><img src="/assets/logo/penguin-wordmark.svg" alt="Penguin home" width="1608" height="712"></a>
+    <a class="footer-logo" href="/"><img src="/assets/logo/penguin-wordmark.svg?v=2" alt="Penguin home" width="1608" height="712"></a>
     <p class="sign-off">{escape(sign_off)}</p>
     <nav aria-label="Footer">
       <a href="/learn/">Learn</a>

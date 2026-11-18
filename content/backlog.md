@@ -24,9 +24,9 @@ questions anywhere (search Google's "People also ask" and AI answers for ideas).
 - [x] best-time-of-day-to-walk | basics | Best time of day to walk
 - [x] how-walking-reduces-stress | mind | How walking reduces stress
 - [x] does-walking-lower-cholesterol | heart | Does walking lower cholesterol?
-- [ ] does-walking-after-meals-lower-blood-sugar | weight | Does walking after meals lower blood sugar?
-- [ ] walking-speed-and-life-expectancy-what-s-the-link | longevity | Walking speed and life expectancy: what's the link?
-- [ ] how-to-walk-with-good-posture | basics | How to walk with good posture
+- [x] does-walking-after-meals-lower-blood-sugar | weight | Does walking after meals lower blood sugar?
+- [x] walking-speed-and-life-expectancy-what-s-the-link | longevity | Walking speed and life expectancy: what's the link?
+- [x] how-to-walk-with-good-posture | basics | How to walk with good posture
 - [ ] does-walking-help-you-sleep-better | mind | Does walking help you sleep better?
 - [ ] can-walking-reduce-your-risk-of-stroke | heart | Can walking reduce your risk of stroke?
 - [ ] can-walking-reduce-belly-fat | weight | Can walking reduce belly fat?

@@ -4,7 +4,7 @@ pillar: weight
 description: Walking alone usually brings modest weight loss, about 1.3 kg over 16 weeks in trials, but it helps blood sugar and steady weight. Here's what to expect.
 answer: Walking on its own usually leads to modest weight loss. In a review of pedometer-based walking programs with no diet changes, people lost about 1.3 kg (roughly 3 pounds) over a median of 16 weeks. Walking does more when paired with changes in eating, and it helps prevent weight gain and improves blood sugar and insulin sensitivity whatever the scale says.
 published: 2026-11-06
-updated: 2026-11-13
+updated: 2026-11-16
 keywords: walking for weight loss, can walking help you lose weight, how much walking to lose weight, walking after meals blood sugar, walking and belly fat, walking and visceral fat, calories burned walking, walking to keep weight off, walking and insulin resistance, walking and type 2 diabetes risk, does walking make you hungry
 pose: waddler-neutral
 gary: Your couch called. It says you two need some space.
@@ -103,7 +103,7 @@ In one randomized crossover trial, 41 adults with type 2 diabetes tried two kind
 
 Blood sugar after meals was about **12% lower** with the after-meal walks [9]. The effect was biggest after the evening meal, when people tended to eat the most carbohydrate and sit the most [9]. That's one trial, so it's a promising result rather than a final word.
 
-A meta-analysis of short, one-day trials looked at breaking up long periods of sitting [10]. Short, light walking breaks lowered blood sugar and insulin after meals compared with sitting the whole time [10]. Light walking breaks also worked better than standing breaks [10].
+A meta-analysis of short, one-day trials looked at breaking up long periods of sitting [10]. Short, light walking breaks lowered blood sugar and insulin after meals compared with sitting the whole time [10]. Light walking breaks also worked better than standing breaks [10]. For the details on timing and how long to walk, see [does walking after meals lower blood sugar?](/learn/does-walking-after-meals-lower-blood-sugar/)
 
 The appeal here is that it doesn't take much. A gentle stroll after dinner counts. You don't have to be sweaty or out of breath.
 

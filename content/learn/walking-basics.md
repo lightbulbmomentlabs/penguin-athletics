@@ -4,7 +4,7 @@ pillar: basics
 description: Adults need 150 minutes of moderate activity a week. Brisk walking counts. Here's how fast to walk, how many steps to aim for, and how to start.
 answer: Adults need at least 150 minutes of moderate activity a week, and brisk walking counts. That's about 30 minutes a day, five days a week, at a pace where you can talk but not sing. If you're starting from zero, any amount helps, so begin small and build up gradually.
 published: 2026-11-06
-updated: 2026-11-09
+updated: 2026-11-18
 keywords: walking for beginners, how to start walking for exercise, how much should I walk a day, what is brisk walking, how many steps a day should I walk, walking plan for beginners, walking 30 minutes a day, how to build a walking habit, are step counters accurate, walking safety tips, best shoes for walking, rest days walking
 pose: couch-slumped
 gary: Step one: stand up. Step two: keep doing that, but forward.
@@ -120,7 +120,7 @@ Guidance from the National Institute of Diabetes and Digestive and Kidney Diseas
 - Let your **heel touch the ground first**, then roll your weight forward.
 - **Swing your arms** naturally.
 
-If you're walking while looking at your phone, you're probably breaking at least two of these. Save the scrolling for later.
+If you're walking while looking at your phone, you're probably breaking at least two of these. Save the scrolling for later. For the full checklist and the research behind it, see [how to walk with good posture](/learn/how-to-walk-with-good-posture/).
 
 ### Choosing shoes
 

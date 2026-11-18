@@ -89,7 +89,9 @@ p { margin: 0 0 1em; }
   gap: 8px 16px; padding-block: 14px;
 }
 .logo { display: flex; align-items: center; gap: 10px; font-size: 1.4rem; font-weight: 900; text-decoration: none; }
-.logo img { width: 40px; height: 40px; border-radius: 10px; box-shadow: 0 0 0 2px rgba(255, 245, 224, 0.18); }
+.logo img:first-child { width: 40px; height: 40px; border-radius: 10px; box-shadow: 0 0 0 2px rgba(255, 245, 224, 0.18); }
+/* Script wordmark beside the app icon. Its swoosh sits low, so nudge it down to line up with the icon. */
+.logo .logo-word { width: auto; height: 46px; margin: 6px 0 -6px; }
 .site-nav { display: flex; gap: 18px; font-size: 0.95rem; font-weight: 800; }
 .site-nav a { text-decoration: none; }
 .site-nav a:hover { text-decoration: underline; }
@@ -142,6 +144,8 @@ p { margin: 0 0 1em; }
 .site-footer { padding-block: 48px; background: var(--navy-deep); color: var(--cream); text-align: center; }
 .site-footer nav a { padding: 8px 4px; }
 .site-footer nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 20px; margin: 20px 0; font-weight: 800; }
+.footer-logo { display: inline-block; margin-bottom: 16px; }
+.footer-logo img { width: auto; height: 64px; }
 .sign-off { font-size: 1.4rem; font-weight: 900; }
 .footer-badge { display: flex; justify-content: center; margin-bottom: 24px; }
 

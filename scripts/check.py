@@ -166,6 +166,9 @@ def css_urls(text):
     return [u for u in out if u and not u.startswith(("#", "data:"))]
 
 
+ITALIC_TAGS = re.compile(r"<(em|i|cite|var|dfn|address)\b|font-style:\s*italic", re.I)
+
+
 def report_weight(path, raw, page, errors, warnings):
     first = len(raw.encode("utf-8"))
     sheets, assets = set(), set()
@@ -175,8 +178,17 @@ def report_weight(path, raw, page, errors, warnings):
             if f and f not in sheets:
                 sheets.add(f)
                 first += f.stat().st_size
-                for u in css_urls(f.read_text(encoding="utf-8")):
+                css = f.read_text(encoding="utf-8")
+                # Browsers only fetch an italic face when italic text renders, so skip those on pages without any.
+                skip = set()
+                if not ITALIC_TAGS.search(raw):
+                    for face in re.findall(r"@font-face\s*\{[^}]*\}", css):
+                        if re.search(r"font-style:\s*italic", face):
+                            skip.update(css_urls(face))
+                for u in css_urls(css):
                     a = file_key(u, f)
+                    if u in skip:
+                        continue
                     if a and a not in assets:
                         assets.add(a)
                         first += a.stat().st_size
@@ -202,8 +214,8 @@ def report_weight(path, raw, page, errors, warnings):
             lazy += f.stat().st_size
     full = first + lazy
     print(f"Home page: first load {first / 1024:.0f} KB, full scroll {full / 1024:.0f} KB "
-          "(worst case: largest image of every srcset, the larger hero video, and the woff2 "
-          "font, which Safari skips in favor of the system rounded font)")
+          "(worst case: largest image of every srcset, the larger hero video, and the fonts "
+          "it uses; italic faces count only where the page has italic text)")
     if first > HOME_FIRST_LOAD_BUDGET:
         errors.append(f"index.html: first load {first // 1024} KB is over the 600 KB budget")
     if full > HOME_FULL_SCROLL_WARN:

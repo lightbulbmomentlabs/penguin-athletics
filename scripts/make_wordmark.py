@@ -4,7 +4,7 @@
 The original (penguin-script-white.svg, from VTracer) is ~22 KB, which pushed the home page past its
 600 KB first-load budget. This keeps the same shapes and 1608x712 coordinate box, but rounds points to
 whole units, bakes in each path's translate, and writes curves as relative offsets: ~6.5 KB.
-Rerun after replacing the original. Expects VTracer-style paths (M/C/Z with a translate on each).
+Also writes a navy copy for the share-image templates. Rerun after replacing the original. Expects VTracer-style paths (M/C/Z with a translate on each).
 """
 import re
 from pathlib import Path
@@ -12,6 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "public/assets/logo/penguin-script-white.svg"
 OUT = ROOT / "public/assets/logo/penguin-wordmark.svg"
+NAVY = ROOT / "scripts/og/wordmark-navy.svg"  # share images sit on light sunset, so they need it dark. Not served.
 
 src = SRC.read_text(encoding="utf-8")
 box = re.search(r'viewBox="([^"]+)"', src).group(1)
@@ -45,4 +46,5 @@ for d, tx, ty in paths:
 svg = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{box}" fill="#fff">'
        + "".join(f'<path d="{s}"/>' for s in shapes) + "</svg>\n")
 OUT.write_text(svg, encoding="utf-8")
-print(f"wrote {OUT.relative_to(ROOT)}: {len(src)} -> {len(svg)} bytes")
+NAVY.write_text(svg.replace('fill="#fff"', 'fill="#1c2440"', 1), encoding="utf-8")
+print(f"wrote {OUT.relative_to(ROOT)}: {len(src)} -> {len(svg)} bytes, and {NAVY.relative_to(ROOT)}")

@@ -21,9 +21,10 @@
   }
 
   .brand { position: absolute; top: 56px; left: 64px; display: flex; align-items: center; gap: 14px; }
-  .brand img { width: 60px; height: 60px; border-radius: 15px; box-shadow: 0 4px 0 rgba(15, 20, 41, 0.12); }
-  .brand span { font-size: 34px; font-weight: 900; letter-spacing: -0.02em; }
-  .brand small { font-size: 34px; font-weight: 700; opacity: 0.55; }
+  .brand .icon { width: 60px; height: 60px; border-radius: 15px; box-shadow: 0 4px 0 rgba(15, 20, 41, 0.12); }
+  /* Script wordmark; its swoosh dips low, so drop it a touch to sit level with the icon. */
+  .brand .word { height: 62px; width: auto; margin-top: 8px; }
+  .brand small { margin-left: 4px; font-size: 34px; font-weight: 800; opacity: 0.55; }
 
   .copy { position: absolute; top: 168px; left: 64px; width: 640px; }
   .title { font-size: 80px; font-weight: 900; line-height: 0.98; letter-spacing: -0.035em; }
@@ -49,8 +50,8 @@
 </head>
 <body>
   <div class="brand">
-    <img src="../../public/assets/apple-touch-icon.png" alt="">
-    <span>Penguin</span> <small>· {{KICKER}}</small>
+    <img class="icon" src="../../public/assets/apple-touch-icon.png" alt="">
+    <img class="word" src="wordmark-navy.svg" alt="Penguin"> <small>· {{KICKER}}</small>
   </div>
   <div class="copy">
     <p class="title">{{TITLE}}</p>

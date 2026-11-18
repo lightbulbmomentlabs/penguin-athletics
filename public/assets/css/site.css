@@ -768,5 +768,10 @@ p { margin: 0 0 1em; }
 
 /* ---------- Waddle invite (/join/) ---------- */
 .join .wrap > img { border-radius: 28px; box-shadow: var(--shadow); }
+/* Brand lockup above the squad: app icon + navy script wordmark (the page is light, no header). */
+.join-brand { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 20px; text-decoration: none; }
+.join-brand img { width: 44px; height: 44px; margin: 0; border-radius: 11px; box-shadow: 0 3px 0 rgba(15, 20, 41, 0.12); }
+.join-brand .join-word { width: auto; height: 50px; margin-top: 6px; border-radius: 0; box-shadow: none; }
+.join-brand img:hover { animation: none; }
 .join-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: center; margin: 8px 0 16px; }
 .btn.alt { background: var(--cream); }

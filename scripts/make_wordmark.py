@@ -4,7 +4,7 @@
 The original (penguin-script-white.svg, from VTracer) is ~22 KB, which pushed the home page past its
 600 KB first-load budget. This keeps the same shapes and 1608x712 coordinate box, but rounds points to
 whole units, bakes in each path's translate, and writes curves as relative offsets: ~6.5 KB.
-Also writes a navy copy for the share-image templates. Rerun after replacing the original. Expects VTracer-style paths (M/C/Z with a translate on each).
+Also writes a navy copy for light backgrounds (the join page and share images). Rerun after replacing the original. Expects VTracer-style paths (M/C/Z with a translate on each).
 """
 import re
 from pathlib import Path
@@ -12,7 +12,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SRC = ROOT / "public/assets/logo/penguin-script-white.svg"
 OUT = ROOT / "public/assets/logo/penguin-wordmark.svg"
-NAVY = ROOT / "scripts/og/wordmark-navy.svg"  # share images sit on light sunset, so they need it dark. Not served.
+NAVY = ROOT / "public/assets/logo/penguin-wordmark-navy.svg"  # for light backgrounds: join page, share images
 
 src = SRC.read_text(encoding="utf-8")
 box = re.search(r'viewBox="([^"]+)"', src).group(1)

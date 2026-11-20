@@ -4,7 +4,7 @@ pillar: heart
 description: Walking lowers blood pressure and is linked to about 31% lower cardiovascular disease risk. How much, how fast, and how to start safely.
 answer: Walking is one of the best-studied ways to help your heart. In trials it lowered systolic blood pressure by about 4 mmHg, and in long-term studies people who walked the most had about 31% lower risk of cardiovascular disease than people who walked the least. Aim for about 150 minutes a week at a brisk pace, and start smaller if you need to.
 published: 2026-11-06
-updated: 2026-11-15
+updated: 2026-11-20
 keywords: walking for heart health, is walking good for your heart, walking and heart disease, walking to lower cholesterol, walking and blood pressure, brisk walking heart benefits, how much walking for heart health, walking after a heart attack, walking and resting heart rate, walking for circulation, walking pace and heart disease, cardiac rehab walking
 pose: waddler-hyped
 gary: Your heart has been doing cardio since before you were born. The least you can do is take it outside.
@@ -76,6 +76,8 @@ A 2023 analysis of 8 studies tracked more than 20,000 adults for about 6 years [
 Another 2023 review of 17 studies and nearly 227,000 people found that every extra 500 steps a day was linked to a **7% lower risk** of dying from cardiovascular disease [7].
 
 Want the numbers by step count? See [How many steps a day do you need for heart health?](/learn/how-many-steps-a-day-do-you-need-for-heart-health/)
+
+Curious about stroke specifically? See [Can walking reduce your risk of stroke?](/learn/can-walking-reduce-your-risk-of-stroke/)
 
 ## Does walking lower your resting heart rate?
 

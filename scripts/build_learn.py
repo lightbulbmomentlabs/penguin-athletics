@@ -210,6 +210,7 @@ def footer(sign_off="Now go touch grass. Or ice."):
       <a href="/privacy/">Privacy Policy</a>
       <a href="/terms/">Terms of Service</a>
       <a href="/support/">Support</a>
+      <a href="/creators/">Creators</a>
     </nav>
     <p class="fine">© 2026 Lightbulb Moment Labs, Inc. Not affiliated with any actual penguins.</p>
   </div>

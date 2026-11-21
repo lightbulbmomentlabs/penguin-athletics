@@ -20,6 +20,8 @@ HOME_FULL_SCROLL_WARN = 1200 * 1024
 EXTERNAL = re.compile(r"^\s*(https?:)?//", re.I)
 # Pages allowed one inline script (no src): the Waddle invite page opens the app.
 SCRIPT_OK = {"join/index.html"}
+# The creators page embeds one Instagram Reel (Instagram's embed frame, lazy-loaded). Disclosed in the privacy policy.
+EMBED_OK = {"creators/index.html": "https://www.instagram.com/"}
 PLACEHOLDER = re.compile(r"\{\{[A-Z0-9_]+\}\}")
 CSS_URL = re.compile(r"url\(\s*['\"]?([^'\")]+)")
 SITE_URL = "https://penguinathletics.com"  # absolute URLs here must map to files in public/
@@ -54,7 +56,7 @@ class Page(HTMLParser):
             self.ids.add(a["id"])
         self.handlers += [f"<{tag} {k}>" for k in a if k.startswith("on")]
         if tag in BANNED_TAGS:
-            self.banned.append(tag)
+            self.banned.append((tag, a))
         if tag == "script":
             self._in_script = [a, ""]
         if tag == "summary":
@@ -239,7 +241,10 @@ def check_page(rel, errors, warnings, launch):
         errors.append(f"{rel}: missing meta description")
     if page.h1 != 1:
         errors.append(f"{rel}: needs exactly one <h1>, found {page.h1}")
-    for tag in page.banned:
+    for tag, attrs in page.banned:
+        ok_src = EMBED_OK.get(rel)
+        if tag == "iframe" and ok_src and attrs.get("src", "").startswith(ok_src) and attrs.get("loading") == "lazy":
+            continue
         errors.append(f"{rel}: <{tag}> is not allowed (no JS, no embeds)")
     graph = []
     for attrs, text in page.scripts:

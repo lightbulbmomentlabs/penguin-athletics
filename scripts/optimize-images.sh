@@ -86,6 +86,14 @@ for pair in "priya:idle-waddler-neutral-matching-set-green" "mads:idle-waddler-n
 done
 echo "Friend videos: $(du -ch "$VID"/friend-*.mov | tail -1 | cut -f1) mov total"
 
+# Creators page hero: the hyped waddler, flapping. 480px is plenty for a ~380px slot.
+CREATOR="$APP_REPO/Art/clips/idle-waddler-hyped-green.mp4"
+ffmpeg -v error -y -i "$CREATOR" -vf "$KEY,scale=480:480:flags=lanczos" -c:v libvpx-vp9 -pix_fmt yuva420p -b:v 0 -crf 42 -row-mt 1 -an "$VID/creator-hyped.webm"
+ffmpeg -v error -y -i "$CREATOR" -vf "$KEY,scale=480:480:flags=lanczos,premultiply=inplace=1,format=bgra" \
+  -c:v hevc_videotoolbox -alpha_quality 0.4 -q:v 45 -tag:v hvc1 -an "$VID/creator-hyped.mov"
+ffmpeg -v error -y -i "$CREATOR" -vf "$KEY" -frames:v 1 "$tmp/creator-poster.png"
+cwebp -quiet -q 78 -alpha_q 80 -m 6 "$tmp/creator-poster.png" -o "$OUT/creator-hyped-poster-640.webp"
+
 echo "Generated $(ls "$OUT" | wc -l | tr -d ' ') WebP files:"
 du -ch "$OUT"/*.webp | tail -1
 echo "Largest:"

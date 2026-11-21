@@ -38,7 +38,7 @@ HEALTH_NOTE = ("This article is general information, not medical advice. Talk to
 APP_STORE_URL = "https://apps.apple.com/us/app/penguin-step-counter-pedometer/id6831137240"
 BADGE = ('<a class="app-store-badge" href="' + APP_STORE_URL + '">'
          '<img src="/assets/img/app-store-badge-black.svg" width="168" height="56" alt="Download on the App Store"></a>')
-NAV = [("/learn/", "Learn"), ("/creators/", "Creators"), ("/privacy/", "Privacy"), ("/terms/", "Terms"), ("/support/", "Support")]
+NAV = [("/learn/", "Learn"), ("/creators/", "Creators"), ("/support/", "Support")]
 
 
 # ---------- Loading ----------

@@ -863,3 +863,16 @@ p { margin: 0 0 1em; }
   .creator-steps { grid-template-columns: repeat(4, minmax(0, 1fr)); }
   .creator-reel .wrap { grid-template-columns: minmax(0, 1fr) minmax(0, 400px); gap: 56px; }
 }
+
+/* ---------- Home: call for creators (links to /creators/) ---------- */
+.creator-call { background: var(--navy); color: var(--cream); }
+.creator-call-inner { display: grid; gap: 24px; justify-items: center; text-align: center; }
+.creator-call-art { width: min(48vw, 200px); height: auto; }
+.creator-call-copy { width: 100%; max-width: 34rem; }
+.creator-call .eyebrow { margin-bottom: 8px; color: var(--butter); font-size: 0.9rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.creator-call h2 { margin-bottom: 16px; }
+.creator-call .btn { margin-top: 8px; }
+@media (min-width: 800px) {
+  .creator-call-inner { grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: 56px; justify-items: start; align-items: center; text-align: left; }
+  .creator-call-art { width: 100%; }
+}

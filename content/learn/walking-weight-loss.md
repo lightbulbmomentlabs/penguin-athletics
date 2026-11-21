@@ -4,7 +4,7 @@ pillar: weight
 description: Walking alone usually brings modest weight loss, about 1.3 kg over 16 weeks in trials, but it helps blood sugar and steady weight. Here's what to expect.
 answer: Walking on its own usually leads to modest weight loss. In a review of pedometer-based walking programs with no diet changes, people lost about 1.3 kg (roughly 3 pounds) over a median of 16 weeks. Walking does more when paired with changes in eating, and it helps prevent weight gain and improves blood sugar and insulin sensitivity whatever the scale says.
 published: 2026-11-06
-updated: 2026-11-16
+updated: 2026-11-21
 keywords: walking for weight loss, can walking help you lose weight, how much walking to lose weight, walking after meals blood sugar, walking and belly fat, walking and visceral fat, calories burned walking, walking to keep weight off, walking and insulin resistance, walking and type 2 diabetes risk, does walking make you hungry
 pose: waddler-neutral
 gary: Your couch called. It says you two need some space.
@@ -142,7 +142,7 @@ A meta-analysis of 35 randomized trials measured visceral fat with CT or MRI sca
 
 Those trials looked at aerobic exercise in general, not walking alone. Still, walking is the most common form of aerobic exercise, and the U.S. guidelines note that physical activity helps reduce abdominal fat and preserve muscle during weight loss [1].
 
-This is a good example of why the scale doesn't tell the whole story. Changes in the fat around your organs can matter for your health even when your total weight barely moves.
+This is a good example of why the scale doesn't tell the whole story. Changes in the fat around your organs can matter for your health even when your total weight barely moves. For more, see [can walking reduce belly fat?](/learn/can-walking-reduce-belly-fat/)
 
 ## Does walking make you hungrier?
 

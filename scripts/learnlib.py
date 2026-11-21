@@ -97,7 +97,9 @@ def inline(text):
     text = LINK.sub(stash, text)
     text = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", text)
     text = re.sub(r"(?<![\w*])\*(?!\s)(.+?)(?<!\s)\*(?![\w*])", r"<em>\1</em>", text)
-    text = CITE.sub(lambda m: f'<sup class="cite"><a href="#source-{m.group(1)}">[{m.group(1)}]</a></sup>', text)
+    # [n] markers stay in the Markdown for fact-checking but aren't shown: readers get one plain
+    # source list at the bottom, not a link after every sentence.
+    text = re.sub(r"\s*\[\d+\](?!\()", "", text)
     return re.sub(r"\x00(\d+)\x00", lambda m: saved[int(m.group(1))], text)
 
 

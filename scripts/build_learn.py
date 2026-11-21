@@ -263,10 +263,9 @@ def article_body(art):
         faq = f'<section class="faq article-faq" aria-labelledby="faq-title">\n<h2 id="faq-title">FAQ</h2>\n{items}\n</section>'
     sources = ""
     if art["sources"]:
-        items = "\n".join(f'<li id="source-{s["n"]}">{learnlib.inline(s["text"])} '
-                          f'<a href="{escape(s["url"])}" rel="noopener">{escape(s["url"].split("//", 1)[1].split("/", 1)[0])}</a></li>'
-                          for s in art["sources"])
-        sources = f'<section class="sources" aria-labelledby="sources-title">\n<h2 id="sources-title">Sources</h2>\n<ol>\n{items}\n</ol>\n</section>'
+        # Plain text, no links: a quiet reference list, like a magazine's. URLs stay in the JSON-LD.
+        items = "\n".join(f'<li>{learnlib.inline(s["text"])}</li>' for s in art["sources"])
+        sources = f'<section class="sources" aria-labelledby="sources-title">\n<h2 id="sources-title">Sources</h2>\n<ul>\n{items}\n</ul>\n</section>'
     return f"""<p class="byline">
       <span>By <a href="{POLICY_PATH}">the Penguin Athletics editorial team</a></span>
       <span>Published <time datetime="{m['published']}">{nice_date(m['published'])}</time></span>
@@ -282,12 +281,22 @@ def article_body(art):
       {pose_img(m['pose'], eager=True)}
       <figcaption><span class="gary-name">Gary's take</span> {escape(m['gary'])}</figcaption>
     </figure>
+    {app_strip()}
     <div class="article-body">
 {learnlib.render_markdown(art['main'])}
     </div>
     {faq}
     {sources}
     <p class="health-note"><strong>Health note:</strong> {escape(HEALTH_NOTE)}</p>"""
+
+
+def app_strip():
+    """A short plug near the top of every article; the full app card stays at the bottom."""
+    return f"""<aside class="app-strip" aria-label="Get the Penguin app">
+      <img src="/assets/img/icon-80.webp" alt="" width="80" height="80">
+      <p><strong>Penguin for iPhone</strong> Every step makes your penguin fitter and smugger. Free to download.</p>
+      {BADGE.replace("badge-black", "badge-white")}
+    </aside>"""
 
 
 def app_card():

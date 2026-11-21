@@ -12,6 +12,10 @@ smile. The facts make people trust us. Never trade the second for the first.
 ## Evidence rules (non-negotiable)
 
 1. **Every health claim and every number is cited** with `[n]` right after the claim.
+   Readers never see these markers: the site hides them and shows one plain, unlinked source
+   list at the bottom (the markers are for fact-checking). So the prose must read naturally
+   on its own: say who found it where it helps ("a review of 25 trials found"), and never
+   write "see [3]" or "source 2". Don't link to sources in the prose either.
 2. **Source quality, best first:** systematic reviews and meta-analyses (Cochrane, PubMed);
    large cohort studies; randomized trials; public health guidance (CDC, NIH/NHLBI/NIA,
    WHO, NHS, AHA, ACSM, the U.S. Physical Activity Guidelines). Avoid blogs, brands,
@@ -85,8 +89,10 @@ status: published
   They must be different from the `##` headings.
 - `## Sources`: numbered `1.`, `2.`… in order of first use:
   `Author AB, et al. Title. *Journal*. Year. https://...` (PubMed URLs preferred for studies).
+  The URL is required for checking and structured data; the page shows the source without it.
 - Markdown allowed: `##`, `###`, paragraphs, `- ` lists, `1. ` lists, `**bold**`,
-  `*italic*`, `[text](https://...)` or `[text](/learn/<slug>/)`, `> ` quotes. No HTML,
+  `*italic*`, `[text](/learn/<slug>/)` for links to other Learn articles (no outside links in
+  the prose), `> ` quotes. No HTML,
   tables, or images.
 - Length: clusters 900–1,800 words of body; pillar guides 2,000–3,500.
 

@@ -689,16 +689,13 @@ p { margin: 0 0 1em; }
 .article-body ul, .article-body ol { padding-left: 1.3em; }
 .article-body li { margin-bottom: 0.5em; }
 .article-body blockquote { margin: 1.4em 0; padding: 4px 0 4px 18px; border-left: 4px solid var(--orange); font-weight: 500; }
-.article-body a, .sources a { color: var(--coral-ink); }
-.cite { font-size: 0.7em; line-height: 0; }
-.cite a { padding-inline: 1px; text-decoration: none; color: var(--coral-ink); font-weight: 600; }
+.article-body a { color: var(--coral-ink); }
 .article-faq { margin-top: 40px; }
 .article-faq h2, .sources h2 { font-size: 1.6rem; }
 .article-faq details > :not(summary) { margin: 0; padding: 0 18px 16px; }
 .sources { margin-top: 40px; font-size: 0.92rem; }
-.sources ol { padding-left: 1.4em; }
+.sources ul { padding-left: 1.2em; }
 .sources li { margin-bottom: 0.6em; overflow-wrap: anywhere; }
-.sources li:target { background: var(--blush-soft); outline: 6px solid var(--blush-soft); border-radius: 4px; }
 .health-note { margin: 32px 0 0; padding: 16px 18px; border-radius: var(--radius-sm); background: var(--blush-soft); font-size: 0.92rem; }
 .learn-signoff { margin: 32px 0; font-size: 1.4rem; font-weight: 700; transform: rotate(-1deg); }
 .app-card {
@@ -880,4 +877,19 @@ p { margin: 0 0 1em; }
 @media (min-width: 800px) {
   .creator-call-inner { grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: 56px; justify-items: start; align-items: center; text-align: left; }
   .creator-call-art { width: 100%; }
+}
+
+/* Learn: short app plug under Gary's take (the full app card stays at the bottom). */
+.app-strip {
+  display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 12px 14px;
+  margin: 0 0 32px; padding: 14px 16px; border-radius: var(--radius); background: var(--navy); color: var(--cream);
+}
+.app-strip img:first-child { width: 48px; height: 48px; border-radius: 12px; }
+.app-strip p { margin: 0; font-size: 0.95rem; line-height: 1.4; }
+.app-strip strong { display: block; font-size: 1.05rem; }
+.app-strip .app-store-badge { grid-column: 1 / -1; justify-self: start; }
+.app-strip .app-store-badge img { width: 135px; height: auto; }
+@media (min-width: 640px) {
+  .app-strip { grid-template-columns: auto 1fr auto; }
+  .app-strip .app-store-badge { grid-column: auto; }
 }

@@ -81,7 +81,8 @@ class Markdown(unittest.TestCase):
         self.assertIn("<em>it</em>", html)
         self.assertIn('<a href="https://cdc.gov/a_b*c" rel="noopener">CDC</a>', html)
         self.assertIn('<a href="/learn/">home</a>', html)
-        self.assertIn('<sup class="cite"><a href="#source-1">[1]</a></sup><sup class="cite"><a href="#source-2">[2]</a></sup>', html)
+        self.assertTrue(html.endswith(" x"), html)  # citation markers are hidden from readers
+        self.assertNotIn("[1]", html)
 
     def test_escapes_html(self):
         html = L.render_markdown('<script>alert("x")</script> & 5 < 6')

@@ -30,7 +30,7 @@ questions anywhere (search Google's "People also ask" and AI answers for ideas).
 - [x] does-walking-help-you-sleep-better | mind | Does walking help you sleep better?
 - [x] can-walking-reduce-your-risk-of-stroke | heart | Can walking reduce your risk of stroke?
 - [x] can-walking-reduce-belly-fat | weight | Can walking reduce belly fat?
-- [ ] is-it-too-late-to-start-walking-at-60 | longevity | Is it too late to start walking at 60?
+- [x] is-it-too-late-to-start-walking-at-60 | longevity | Is it too late to start walking at 60?
 - [ ] do-you-need-special-walking-shoes | basics | Do you need special walking shoes?
 - [ ] walking-and-creativity-is-the-boost-real | mind | Walking and creativity: is the boost real?
 - [ ] is-brisk-walking-enough-cardio | heart | Is brisk walking enough cardio?

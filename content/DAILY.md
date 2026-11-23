@@ -8,7 +8,7 @@ yourself.
 ## Steps
 
 1. Start from the latest `main`. Create a branch `learn/<slug>`.
-2. Read `content/STYLE.md` fully. It is the rulebook.
+2. Read `content/STYLE.md` fully. It is the rulebook. Write for the reader in "Who we write for": women 20–40.
 3. Open `content/backlog.md` and take the **first unchecked** topic (`- [ ]`). Each line is
    `- [ ] <slug> | <pillar> | <question or guide title>`. If the slug already exists in
    `content/learn/`, check it off and take the next one.

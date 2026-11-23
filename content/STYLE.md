@@ -9,6 +9,22 @@ Answer one question people actually type or ask an AI, better than anyone else o
 internet: accurate, cited, plain-English, and useful today. The penguin makes people
 smile. The facts make people trust us. Never trade the second for the first.
 
+## Who we write for
+
+Women aged 20 to 40. Busy, phone-first, often at a desk, juggling work, friends, and
+sometimes pregnancy or a new baby. Write every article for her:
+
+- Lead with the research that fits her age range. If the best evidence is from older
+  adults, say so plainly instead of stretching it.
+- When women-specific findings exist (cycle, pregnancy, postpartum, PCOS, bone health,
+  breast cancer risk, heart disease in women), include them, cited like everything else.
+- Examples come from her week: the commute, a desk job, a walking pad, a lunch walk,
+  a walk with friends, a stroller, a hot girl walk.
+- Speak to "you". No "ladies", no "girlboss", no assumptions about a partner or kids.
+- No body goals, bikini bodies, "bounce back", or shrinking talk. Weight topics stay
+  factual and kind. Pregnancy and postpartum advice always says to check with your doctor
+  or midwife first.
+
 ## Evidence rules (non-negotiable)
 
 1. **Every health claim and every number is cited** with `[n]` right after the claim.

@@ -950,3 +950,8 @@ body:has(.tone-float) .site-footer { padding-bottom: 96px; }
 /* Small phones: keep the bubble between Priya's and Jo's name tags (longer Spicy lines wrap to 3). */
 @media (max-width: 419px) { .speech { max-width: 60%; padding: 8px 12px; } }
 @media (max-width: 359px) { .speech { max-width: 54%; font-size: 0.72rem; } }
+/* No one-word last lines when the tone swaps copy in. */
+p, li, figcaption { text-wrap: pretty; }
+.speech, .locker-caption, .tone-blurb { text-wrap: balance; }
+/* Floating pill: no grey track, so only the picked tone reads as selected. */
+.tone-float .tone-seg { background: transparent; }

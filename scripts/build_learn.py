@@ -555,8 +555,8 @@ def render_teaser(current, articles, pillars):
     else:
         body = f"""  <section class="section learn-teaser" aria-labelledby="learn-teaser-title">
     <div class="wrap">
-      <h2 id="learn-teaser-title">Walking, explained. Without the guilt trip.</h2>
-      <p>What a daily walk actually does for your heart, your lifespan, and your head. Cited, plain-English, answer first.</p>
+      <h2 id="learn-teaser-title"><span class="t t-chill">Walking, explained. Without the guilt trip.</span><span class="t t-unfiltered" data-nosnippet>Walking, explained. No guilt, no gatekeeping.</span><span class="t t-spicy" data-nosnippet>Walking, explained. No guilt-trip bullshit.</span></h2>
+      <p><span class="t t-chill">What a daily walk actually does for your heart, your lifespan, and your head. Cited, plain-English, answer first.</span><span class="t t-unfiltered" data-nosnippet>What a daily walk actually does for your heart, your lifespan, and your head. Cited, plain-English, answer first. No influencer nonsense.</span><span class="t t-spicy" data-nosnippet>What a daily walk actually does for your heart, your lifespan, and your head. Cited, plain-English, answer first. No wellness bullshit.</span></p>
       {card_list(picks, pillars)}
       <p class="learn-more-links"><a href="/learn/">All articles</a></p>
     </div>

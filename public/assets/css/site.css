@@ -919,3 +919,21 @@ body:has(#tone-spicy:checked) .roasts label[for="tone-spicy"] { background: var(
 .never-note { margin: -4px 0 0; font-weight: 700; color: var(--coral-ink); }
 @supports not selector(:has(*)) { .tone-pick, .tone-radios { display: none; } }
 @media (prefers-reduced-motion: reduce) { body:has(#tone-unfiltered:checked) .t-unfiltered, body:has(#tone-spicy:checked) .t-spicy { animation: none; } }
+
+/* Floating tone switch: always in reach so you can flip it and watch the section you're on change.
+   Fades in once you scroll past the hero (scroll-driven where supported, otherwise always shown). */
+.tone-float {
+  position: fixed; left: 50%; bottom: max(14px, env(safe-area-inset-bottom)); z-index: 40; transform: translateX(-50%);
+  display: flex; align-items: center; gap: 10px; padding: 6px 6px 6px 16px; border-radius: 999px;
+  background: var(--cream); color: var(--navy); box-shadow: 0 10px 30px rgba(15, 20, 41, 0.25); white-space: nowrap;
+}
+.tone-float-q { font-size: 0.85rem; font-weight: 700; }
+.tone-float .tone-seg { padding: 3px; }
+.tone-float .tone-seg label { padding: 7px 12px; font-size: 0.88rem; }
+@supports (animation-timeline: scroll()) {
+  .tone-float { animation: tone-float-in linear both; animation-timeline: scroll(root); animation-range: 300px 600px; }
+  @keyframes tone-float-in { from { opacity: 0; visibility: hidden; transform: translate(-50%, 16px); } to { opacity: 1; visibility: visible; transform: translateX(-50%); } }
+}
+@media (max-width: 379px) { .tone-float-q { display: none; } .tone-float { padding-left: 6px; } }
+@supports not selector(:has(*)) { .tone-float { display: none; } }
+body:has(.tone-float) .site-footer { padding-bottom: 96px; }

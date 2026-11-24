@@ -893,3 +893,29 @@ p { margin: 0 0 1em; }
   .app-strip { grid-template-columns: auto 1fr auto; }
   .app-strip .app-store-badge { grid-column: auto; }
 }
+
+/* ---------- Home: tone switcher (Chill / Unfiltered / Spicy), no JavaScript ----------
+   One radio group (fixed, visually hidden so a label click never scrolls the page) drives every
+   .t-* line through :has(). Two visual pickers (hero and "He has notes") are labels for the same
+   radios. Chill is the default and what search engines snippet; the others are data-nosnippet. */
+.tone-radios { position: fixed; top: 0; left: 0; width: 1px; height: 1px; margin: 0; padding: 0; border: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.t-unfiltered, .t-spicy { display: none; }
+body:has(#tone-unfiltered:checked) .t-chill, body:has(#tone-spicy:checked) .t-chill { display: none; }
+body:has(#tone-unfiltered:checked) .t-unfiltered, body:has(#tone-spicy:checked) .t-spicy { display: inline; animation: tone-pop 0.28s ease-out; }
+@keyframes tone-pop { from { opacity: 0; transform: translateY(3px); } to { opacity: 1; transform: none; } }
+.tone-pick { margin-top: 22px; }
+.tone-q { margin: 0 0 8px; font-weight: 700; font-size: 0.95rem; }
+.tone-seg { display: inline-flex; gap: 4px; padding: 4px; border-radius: 999px; background: rgba(28, 36, 64, 0.08); }
+.tone-seg label { padding: 9px 16px; border-radius: 999px; font-weight: 700; font-size: 0.95rem; cursor: pointer; user-select: none; transition: background 0.15s, color 0.15s; }
+.tone-seg label:hover { background: rgba(28, 36, 64, 0.08); }
+body:has(#tone-chill:checked) label[for="tone-chill"],
+body:has(#tone-unfiltered:checked) label[for="tone-unfiltered"] { background: var(--navy); color: var(--cream); }
+body:has(#tone-spicy:checked) label[for="tone-spicy"] { background: var(--coral-ink); color: #fff; }
+body:has(#tone-chill:focus-visible) label[for="tone-chill"],
+body:has(#tone-unfiltered:focus-visible) label[for="tone-unfiltered"],
+body:has(#tone-spicy:focus-visible) label[for="tone-spicy"] { outline: 3px solid var(--orange); outline-offset: 2px; }
+.tone-blurb { margin: 8px 0 0; font-size: 0.9rem; opacity: 0.8; }
+body:has(#tone-spicy:checked) .roasts label[for="tone-spicy"] { background: var(--navy); color: var(--cream); }
+.never-note { margin: -4px 0 0; font-weight: 700; color: var(--coral-ink); }
+@supports not selector(:has(*)) { .tone-pick, .tone-radios { display: none; } }
+@media (prefers-reduced-motion: reduce) { body:has(#tone-unfiltered:checked) .t-unfiltered, body:has(#tone-spicy:checked) .t-spicy { animation: none; } }

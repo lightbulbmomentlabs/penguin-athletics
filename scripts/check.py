@@ -8,6 +8,7 @@
 import argparse
 import json
 import os
+import gzip
 import re
 import sys
 from html.parser import HTMLParser
@@ -171,15 +172,21 @@ def css_urls(text):
 ITALIC_TAGS = re.compile(r"<(em|i|cite|var|dfn|address)\b|font-style:\s*italic", re.I)
 
 
+def wire(data):
+    """Bytes on the wire for text files: the host serves HTML and CSS compressed (brotli), so count
+    them gzipped, a slightly pessimistic stand-in. Images, video, and woff2 are already compressed."""
+    return len(gzip.compress(data, 9))
+
+
 def report_weight(path, raw, page, errors, warnings):
-    first = len(raw.encode("utf-8"))
+    first = wire(raw.encode("utf-8"))
     sheets, assets = set(), set()
     for link in page.links:
         if "stylesheet" in link.get("rel", ""):
             f = file_key(link.get("href", ""), path)
             if f and f not in sheets:
                 sheets.add(f)
-                first += f.stat().st_size
+                first += wire(f.read_bytes())
                 css = f.read_text(encoding="utf-8")
                 # Browsers only fetch an italic face when italic text renders, so skip those on pages without any.
                 skip = set()

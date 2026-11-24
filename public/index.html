@@ -225,15 +225,26 @@
 </header>
 
 <main>
+  <fieldset class="tone-radios">
+    <legend>Penguin's tone on this page</legend>
+    <input type="radio" name="tone" id="tone-chill" value="chill" checked aria-label="Chill: still funny, keeps it PG">
+    <input type="radio" name="tone" id="tone-unfiltered" value="unfiltered" aria-label="Unfiltered: sarcastic, chronically online, no swears">
+    <input type="radio" name="tone" id="tone-spicy" value="spicy" aria-label="Spicy: actual swearing">
+  </fieldset>
   <section class="hero">
     <div class="wrap">
       <div class="hero-copy">
         <h1 class="hero-title display">Walk more,<br> with friends<br> who keep<br> you honest.</h1>
         <p class="hero-sub">Penguin is a step counter with a pudgy, extremely confident penguin. Every walk makes him fitter, faster, and more insufferable, from couch bird to athlete. Bring your friends, see who hit their goal (never their steps), and poke whoever's still on the couch.</p>
         <a class="app-store-badge" href="https://apps.apple.com/us/app/penguin-step-counter-pedometer/id6831137240"><img src="/assets/img/app-store-badge-black.svg" width="168" height="56" alt="Download on the App Store"></a>
+        <div class="tone-pick tone-hero" aria-hidden="true">
+          <p class="tone-q">How mean should he be?</p>
+          <div class="tone-seg"><label for="tone-chill">Chill</label><label for="tone-unfiltered">Unfiltered</label><label for="tone-spicy">Spicy 🌶️</label></div>
+          <p class="tone-blurb"><span class="t t-chill">Still funny. Keeps it PG.</span><span class="t t-unfiltered">Sarcastic, chronically online, no swears.</span><span class="t t-spicy">Actual swearing. You were warned.</span></p>
+        </div>
       </div>
       <div class="hero-art squad">
-        <p class="speech">Jo has been “about to leave” for 40 minutes.</p>
+        <p class="speech"><span class="t t-chill">Jo has been “about to leave” for 40 minutes.</span><span class="t t-unfiltered" data-nosnippet>Jo has been “about to leave” for 40 minutes. Jo is lying.</span><span class="t t-spicy" data-nosnippet>Jo. It's been 40 minutes. Get your ass outside.</span></p>
         <figure class="pal pal-priya">
           <!-- [html-validate-disable-next no-autoplay -- muted, silent idle loop; swapped for a still when motion is reduced] -->
           <video class="pal-video" autoplay muted loop playsinline disablepictureinpicture
@@ -311,9 +322,9 @@
             <li class="p12"><img src="/assets/img/friend-jo-360.webp" width="44" height="44" alt="" loading="lazy"><span class="w-name">Jo <b>💤</b></span><span class="w-bar"><span></span></span><span class="w-pct">12%</span></li>
         </ul>
         <div class="waddle-pokes">
-          <p class="poke-msg"><b>Priya poked Jo</b> The couch is not a walking club, babe.</p>
-          <p class="poke-msg"><b>Mads poked Sam</b> Sunset loop. 7pm. Bring the trench.</p>
-          <p class="poke-msg gary-msg"><b>Penguin</b> Two of you are carrying this group. You know who you are.</p>
+          <p class="poke-msg"><b>Priya poked Jo</b> <span class="t t-chill">The couch is not a walking club, babe.</span><span class="t t-unfiltered" data-nosnippet>Babe. The couch isn't a personality.</span><span class="t t-spicy" data-nosnippet>Babe. Get off your ass. The sunset's free.</span></p>
+          <p class="poke-msg"><b>Mads poked Sam</b> <span class="t t-chill">Sunset loop. 7pm. Bring the trench.</span><span class="t t-unfiltered" data-nosnippet>Sunset loop at 7. Your screen time is concerning.</span><span class="t t-spicy" data-nosnippet>Sunset loop. 7pm. Just show the hell up.</span></p>
+          <p class="poke-msg gary-msg"><b>Penguin</b> <span class="t t-chill">Two of you are carrying this group. You know who you are.</span><span class="t t-unfiltered" data-nosnippet>Two of you are carrying this group. The rest of you are NPCs.</span><span class="t t-spicy" data-nosnippet>Two of you are carrying this whole damn group. The rest of you, I see you.</span></p>
         </div>
       </figure>
     </div>
@@ -330,7 +341,7 @@
                sizes="(min-width: 720px) 240px, 70vw" width="640" height="640" loading="lazy"
                alt="The penguin slumped low, fully melted into couch mode.">
           <h3>Stage 1: Couch bird</h3>
-          <p>Pudgy, proud, and fully committed to the couch. Bed-rot era.</p>
+          <p><span class="t t-chill">Pudgy, proud, and fully committed to the couch. Bed-rot era.</span><span class="t t-unfiltered" data-nosnippet>Pudgy, proud, and in a situationship with the couch.</span><span class="t t-spicy" data-nosnippet>Pudgy, proud, and absolutely married to the damn couch.</span></p>
         </li>
         <li class="stage reveal">
           <img src="/assets/img/waddler-hyped-320.webp"
@@ -338,7 +349,7 @@
                sizes="(min-width: 720px) 240px, 70vw" width="640" height="640" loading="lazy"
                alt="The penguin standing tall and hyped, flippers up.">
           <h3>Stage 2: Strong waddler</h3>
-          <p>Fitter, stronger, chest out. Posts every walk. Thinks he invented walking.</p>
+          <p><span class="t t-chill">Fitter, stronger, chest out. Posts every walk. Thinks he invented walking.</span><span class="t t-unfiltered" data-nosnippet>Fitter, chest out, posts every walk. Main character syndrome, fully diagnosed.</span><span class="t t-spicy" data-nosnippet>Fitter, chest out, insufferable as hell. Thinks he invented walking.</span></p>
         </li>
         <li class="stage classified reveal">
           <img src="/assets/img/waddler-smug-480.webp"
@@ -347,7 +358,7 @@
                alt="A blacked-out penguin silhouette. The final form is a secret.">
           <span class="stamp" aria-hidden="true">Classified</span>
           <h3>Stage 3: Athlete</h3>
-          <p>Peak penguin. What he looks like is classified until your steps get him there.</p>
+          <p><span class="t t-chill">Peak penguin. What he looks like is classified until your steps get him there.</span><span class="t t-unfiltered" data-nosnippet>Peak penguin. Classified. You have to earn the reveal, bestie.</span><span class="t t-spicy" data-nosnippet>Peak penguin. Classified. Walk your ass there and find out.</span></p>
         </li>
       </ol>
       <p class="fine">Every stage is a good look. He just keeps getting fitter, and he will never comment on your body.</p>
@@ -370,7 +381,7 @@
                srcset="/assets/img/couch-shocked-320.webp 320w, /assets/img/couch-shocked-640.webp 640w"
                sizes="(min-width: 720px) 180px, 55vw" width="640" height="640" loading="lazy" alt="">
           <h3>He reacts. Loudly.</h3>
-          <p>Hyped when you move. Shocked you went outside. Asleep on the couch when you are.</p>
+          <p><span class="t t-chill">Hyped when you move. Shocked you went outside. Asleep on the couch when you are.</span><span class="t t-unfiltered" data-nosnippet>Hyped when you move. Genuinely shocked you touched grass. Asleep when you are, out of solidarity.</span><span class="t t-spicy" data-nosnippet>Hyped as hell when you move. Shook you went outside. Asleep on the couch when you are, because same.</span></p>
         </li>
         <li class="reveal">
           <img src="/assets/img/waddler-celebrating-320.webp"
@@ -433,15 +444,15 @@
             <img class="locker-pose pose-shoulder-bag" src="/assets/img/fit-shoulder-bag-360.webp" srcset="/assets/img/fit-shoulder-bag-360.webp 360w, /assets/img/fit-shoulder-bag-720.webp 720w" sizes="(min-width: 800px) 440px, 90vw" width="720" height="720" loading="lazy" alt="The penguin wearing a pink shoulder bag.">
             <img class="locker-pose pose-bucket-hat" src="/assets/img/fit-bucket-hat-360.webp" srcset="/assets/img/fit-bucket-hat-360.webp 360w, /assets/img/fit-bucket-hat-720.webp 720w" sizes="(min-width: 800px) 440px, 90vw" width="720" height="720" loading="lazy" alt="The penguin wearing a bucket hat.">
             <img class="locker-pose pose-daisy-crown" src="/assets/img/fit-daisy-crown-360.webp" srcset="/assets/img/fit-daisy-crown-360.webp 360w, /assets/img/fit-daisy-crown-720.webp 720w" sizes="(min-width: 800px) 440px, 90vw" width="720" height="720" loading="lazy" alt="The penguin wearing a daisy crown.">
-            <p class="locker-caption cap-none">Just vibes. And a headband.</p>
-            <p class="locker-caption cap-backwards-cap">Doing it for the plot.</p>
-            <p class="locker-caption cap-silk-headscarf">Riviera, 1962. Allegedly.</p>
-            <p class="locker-caption cap-gold-chain">Commute complete. Drip acquired.</p>
-            <p class="locker-caption cap-gold-hoops">Hoops this big need a permit.</p>
-            <p class="locker-caption cap-varsity">Lettered in napping.</p>
-            <p class="locker-caption cap-shoulder-bag">The bag costs more than the walk.</p>
-            <p class="locker-caption cap-bucket-hat">Festival energy. Tundra location.</p>
-            <p class="locker-caption cap-daisy-crown">Touched grass. It touched back.</p>
+            <p class="locker-caption cap-none"><span class="t t-chill">Just vibes. And a headband.</span><span class="t t-unfiltered" data-nosnippet>Just vibes. And a headband he won't stop talking about.</span><span class="t t-spicy" data-nosnippet>Just vibes and a headband. Don't f*cking touch it.</span></p>
+            <p class="locker-caption cap-backwards-cap"><span class="t t-chill">Doing it for the plot.</span><span class="t t-unfiltered" data-nosnippet>Backwards cap. Emotionally unavailable.</span><span class="t t-spicy" data-nosnippet>Backwards cap. Zero thoughts. Hell yes.</span></p>
+            <p class="locker-caption cap-silk-headscarf"><span class="t t-chill">Riviera, 1962. Allegedly.</span><span class="t t-unfiltered" data-nosnippet>Riviera, 1962. Has never left the tundra.</span><span class="t t-spicy" data-nosnippet>Riviera, 1962. Allegedly. Mind your damn business.</span></p>
+            <p class="locker-caption cap-gold-chain"><span class="t t-chill">Commute complete. Drip acquired.</span><span class="t t-unfiltered" data-nosnippet>Gold chain. Insufferable now. Fully aware.</span><span class="t t-spicy" data-nosnippet>Gold chain on. Ego off the f*cking charts.</span></p>
+            <p class="locker-caption cap-gold-hoops"><span class="t t-chill">Hoops this big need a permit.</span><span class="t t-unfiltered" data-nosnippet>Hoops this big come with an attitude.</span><span class="t t-spicy" data-nosnippet>Hoops this big mean he's not taking any shit today.</span></p>
+            <p class="locker-caption cap-varsity"><span class="t t-chill">Lettered in napping.</span><span class="t t-unfiltered" data-nosnippet>Lettered in napping. Peaked in a sport that doesn't exist.</span><span class="t t-spicy" data-nosnippet>Lettered in napping. Still a damn legend.</span></p>
+            <p class="locker-caption cap-shoulder-bag"><span class="t t-chill">The bag costs more than the walk.</span><span class="t t-unfiltered" data-nosnippet>The bag costs more than his rent. He doesn't pay rent.</span><span class="t t-spicy" data-nosnippet>The bag costs more than the walk. Worth every damn step.</span></p>
+            <p class="locker-caption cap-bucket-hat"><span class="t t-chill">Festival energy. Tundra location.</span><span class="t t-unfiltered" data-nosnippet>Festival energy. Has never been to a festival.</span><span class="t t-spicy" data-nosnippet>Festival energy. Hasn't slept. Feels f*cking amazing.</span></p>
+            <p class="locker-caption cap-daisy-crown"><span class="t t-chill">Touched grass. It touched back.</span><span class="t t-unfiltered" data-nosnippet>Touched grass. Made it his whole personality.</span><span class="t t-spicy" data-nosnippet>Touched grass. Won't shut the hell up about it.</span></p>
           </div>
           <div>
             <div class="locker-picker">
@@ -470,27 +481,27 @@
       <ul class="trail" tabindex="0" aria-label="Landmarks on the expedition. Scrolls sideways.">
         <li>
           <img src="/assets/img/landmark-couch-border-320.webp" srcset="/assets/img/landmark-couch-border-320.webp 320w, /assets/img/landmark-couch-border-640.webp 640w" sizes="260px" width="640" height="640" loading="lazy" alt="">
-          <div class="card-body"><h3>Couch Customs</h3><p class="miles">The Fridge Run · 2,500 steps</p><p>Declared nothing. Smuggled out three crumbs and my dignity.</p></div>
+          <div class="card-body"><h3>Couch Customs</h3><p class="miles">The Fridge Run · 2,500 steps</p><p><span class="t t-chill">Declared nothing. Smuggled out three crumbs and my dignity.</span><span class="t t-unfiltered" data-nosnippet>Declared nothing. Customs found three crumbs and a lot of excuses.</span><span class="t t-spicy" data-nosnippet>Declared nothing. Smuggled out three crumbs and zero shame.</span></p></div>
         </li>
         <li>
           <img src="/assets/img/landmark-fridge-320.webp" srcset="/assets/img/landmark-fridge-320.webp 320w, /assets/img/landmark-fridge-640.webp 640w" sizes="260px" width="640" height="640" loading="lazy" alt="">
-          <div class="card-body"><h3>The Fridge (Final Boss)</h3><p class="miles">The Fridge Run · 15,000 steps</p><p>Opened the fridge. Stared for 40 seconds. Closed it. Growth.</p></div>
+          <div class="card-body"><h3>The Fridge (Final Boss)</h3><p class="miles">The Fridge Run · 15,000 steps</p><p><span class="t t-chill">Opened the fridge. Stared for 40 seconds. Closed it. Growth.</span><span class="t t-unfiltered" data-nosnippet>Opened the fridge. Stared for 40 seconds. Closed it. Character development.</span><span class="t t-spicy" data-nosnippet>Opened the fridge. Stared for 40 seconds. Closed it. Hell yeah, growth.</span></p></div>
         </li>
         <li>
           <img src="/assets/img/landmark-krill-shack-320.webp" srcset="/assets/img/landmark-krill-shack-320.webp 320w, /assets/img/landmark-krill-shack-640.webp 640w" sizes="260px" width="640" height="640" loading="lazy" alt="">
-          <div class="card-body"><h3>The Krill Shack</h3><p class="miles">Hot Bird Summer · 25,000 steps</p><p>One star on Yelp. Would waddle here again.</p></div>
+          <div class="card-body"><h3>The Krill Shack</h3><p class="miles">Hot Bird Summer · 25,000 steps</p><p><span class="t t-chill">One star on Yelp. Would waddle here again.</span><span class="t t-unfiltered" data-nosnippet>One star on Yelp. He left a 900-word review.</span><span class="t t-spicy" data-nosnippet>One star on Yelp. Ate there anyway. Damn good krill.</span></p></div>
         </li>
         <li>
           <img src="/assets/img/landmark-runway-320.webp" srcset="/assets/img/landmark-runway-320.webp 320w, /assets/img/landmark-runway-640.webp 640w" sizes="260px" width="640" height="640" loading="lazy" alt="">
-          <div class="card-body"><h3>The Runway (It's Ice)</h3><p class="miles">Penguin Fashion Week · 140,000 steps</p><p>Ate it on the runway. Called it avant-garde. They clapped.</p></div>
+          <div class="card-body"><h3>The Runway (It's Ice)</h3><p class="miles">Penguin Fashion Week · 140,000 steps</p><p><span class="t t-chill">Ate it on the runway. Called it avant-garde. They clapped.</span><span class="t t-unfiltered" data-nosnippet>Ate it on the runway. Called it avant-garde. Nobody questioned it.</span><span class="t t-spicy" data-nosnippet>Ate shit on the runway. Called it avant-garde. They clapped.</span></p></div>
         </li>
         <li>
           <img src="/assets/img/landmark-afterparty-320.webp" srcset="/assets/img/landmark-afterparty-320.webp 320w, /assets/img/landmark-afterparty-640.webp 640w" sizes="260px" width="640" height="640" loading="lazy" alt="">
-          <div class="card-body"><h3>Afterparty Glacier</h3><p class="miles">Penguin Fashion Week · 200,000 steps</p><p>Left the afterparty at 9pm. Elite recovery. No regrets.</p></div>
+          <div class="card-body"><h3>Afterparty Glacier</h3><p class="miles">Penguin Fashion Week · 200,000 steps</p><p><span class="t t-chill">Left the afterparty at 9pm. Elite recovery. No regrets.</span><span class="t t-unfiltered" data-nosnippet>Left the afterparty at 9pm. Irish goodbye. Elite recovery.</span><span class="t t-spicy" data-nosnippet>Left the afterparty at 9pm. Zero f*cks given. Elite recovery.</span></p></div>
         </li>
         <li>
           <img src="/assets/img/landmark-podium-320.webp" srcset="/assets/img/landmark-podium-320.webp 320w, /assets/img/landmark-podium-640.webp 640w" sizes="260px" width="640" height="640" loading="lazy" alt="">
-          <div class="card-body"><h3>The Podium</h3><p class="miles">Road to the Podium · 500,000 steps</p><p>Gold. Unofficial. Spiritually binding.</p></div>
+          <div class="card-body"><h3>The Podium</h3><p class="miles">Road to the Podium · 500,000 steps</p><p><span class="t t-chill">Gold. Unofficial. Spiritually binding.</span><span class="t t-unfiltered" data-nosnippet>Gold. Unofficial. Already in his bio.</span><span class="t t-spicy" data-nosnippet>Gold. Unofficial. Spiritually binding as hell.</span></p></div>
         </li>
       </ul>
     </div>
@@ -500,22 +511,27 @@
     <div class="wrap roast-grid">
       <div>
         <h2 id="roast-title" class="display">He has notes.</h2>
-        <p>Push notifications written like bangers, not reminders. Never guilt. Never at 3am.</p>
+        <p><span class="t t-chill">Push notifications written like bangers, not reminders. Never guilt. Never at 3am.</span><span class="t t-unfiltered" data-nosnippet>Push notifications with zero chill. Never guilt. Never at 3am.</span><span class="t t-spicy" data-nosnippet>Push notifications with a mouth on them. Never guilt. Never at 3am.</span></p>
+        <div class="tone-pick tone-notes" aria-hidden="true">
+          <p class="tone-q">How mean should he be?</p>
+          <div class="tone-seg"><label for="tone-chill">Chill</label><label for="tone-unfiltered">Unfiltered</label><label for="tone-spicy">Spicy 🌶️</label></div>
+          <p class="tone-blurb"><span class="t t-chill">Still funny. Keeps it PG.</span><span class="t t-unfiltered">Sarcastic, chronically online, no swears.</span><span class="t t-spicy">Actual swearing. You were warned.</span></p>
+        </div>
       </div>
       <section class="feed" tabindex="0" aria-label="Sample notifications. Focus to pause.">
         <ul class="feed-track">
-          <li class="notif"><img src="/assets/img/icon-80.webp" alt="" width="80" height="80" loading="lazy"><p class="app">Penguin · today, 6:12 PM</p><p class="line">Your couch called. It said you two need space.</p></li>
-          <li class="notif"><img src="/assets/img/icon-80.webp" alt="" width="80" height="80" loading="lazy"><p class="app">Penguin · yesterday</p><p class="line">How many steps are we doing today? Be delulu, but realistic.</p></li>
-          <li class="notif"><img src="/assets/img/icon-80.webp" alt="" width="80" height="80" loading="lazy"><p class="app">Penguin · Monday</p><p class="line">Oh, we have material. This is going to be fun.</p></li>
-          <li class="notif"><img src="/assets/img/icon-80.webp" alt="" width="80" height="80" loading="lazy"><p class="app">Penguin · Sunday</p><p class="line">Opened the fridge. Stared for 40 seconds. Closed it. Growth.</p></li>
-          <li class="notif"><img src="/assets/img/icon-80.webp" alt="" width="80" height="80" loading="lazy"><p class="app">Penguin · Saturday</p><p class="line">First full huddle. The whole waddle hit their goal. I need a minute.</p></li>
-          <li class="notif"><img src="/assets/img/icon-80.webp" alt="" width="80" height="80" loading="lazy"><p class="app">Penguin · Friday</p><p class="line">Rest day logged. Recovery department. Very official.</p></li>
-          <li class="notif" aria-hidden="true"><img src="/assets/img/icon-80.webp" alt="" width="80" height="80" loading="lazy"><p class="app">Penguin · today, 6:12 PM</p><p class="line">Your couch called. It said you two need space.</p></li>
-          <li class="notif" aria-hidden="true"><img src="/assets/img/icon-80.webp" alt="" width="80" height="80" loading="lazy"><p class="app">Penguin · yesterday</p><p class="line">How many steps are we doing today? Be delulu, but realistic.</p></li>
-          <li class="notif" aria-hidden="true"><img src="/assets/img/icon-80.webp" alt="" width="80" height="80" loading="lazy"><p class="app">Penguin · Monday</p><p class="line">Oh, we have material. This is going to be fun.</p></li>
-          <li class="notif" aria-hidden="true"><img src="/assets/img/icon-80.webp" alt="" width="80" height="80" loading="lazy"><p class="app">Penguin · Sunday</p><p class="line">Opened the fridge. Stared for 40 seconds. Closed it. Growth.</p></li>
-          <li class="notif" aria-hidden="true"><img src="/assets/img/icon-80.webp" alt="" width="80" height="80" loading="lazy"><p class="app">Penguin · Saturday</p><p class="line">First full huddle. The whole waddle hit their goal. I need a minute.</p></li>
-          <li class="notif" aria-hidden="true"><img src="/assets/img/icon-80.webp" alt="" width="80" height="80" loading="lazy"><p class="app">Penguin · Friday</p><p class="line">Rest day logged. Recovery department. Very official.</p></li>
+          <li class="notif"><img src="/assets/img/icon-80.webp" alt="" width="80" height="80" loading="lazy"><p class="app">Penguin · today, 6:12 PM</p><p class="line"><span class="t t-chill">Your couch called. It said you two need space.</span><span class="t t-unfiltered" data-nosnippet>Your couch called. It wants you to stop texting it.</span><span class="t t-spicy" data-nosnippet>Your couch called. It said get your ass outside.</span></p></li>
+          <li class="notif"><img src="/assets/img/icon-80.webp" alt="" width="80" height="80" loading="lazy"><p class="app">Penguin · yesterday</p><p class="line"><span class="t t-chill">How many steps are we doing today? Be delulu, but realistic.</span><span class="t t-unfiltered" data-nosnippet>Zero steps by noon. Very NPC of us.</span><span class="t t-spicy" data-nosnippet>Zero steps. Bold. Stupid, but bold.</span></p></li>
+          <li class="notif"><img src="/assets/img/icon-80.webp" alt="" width="80" height="80" loading="lazy"><p class="app">Penguin · Monday</p><p class="line"><span class="t t-chill">Oh, we have material. This is going to be fun.</span><span class="t t-unfiltered" data-nosnippet>If we don't walk today we're cooked. Fully cooked.</span><span class="t t-spicy" data-nosnippet>What the hell is your screen time right now.</span></p></li>
+          <li class="notif"><img src="/assets/img/icon-80.webp" alt="" width="80" height="80" loading="lazy"><p class="app">Penguin · Sunday</p><p class="line"><span class="t t-chill">Opened the fridge. Stared for 40 seconds. Closed it. Growth.</span><span class="t t-unfiltered" data-nosnippet>Opened the fridge. Stared for 40 seconds. Closed it. Character development.</span><span class="t t-spicy" data-nosnippet>Opened the fridge. Stared for 40 seconds. Closed it. Hell yeah, growth.</span></p></li>
+          <li class="notif"><img src="/assets/img/icon-80.webp" alt="" width="80" height="80" loading="lazy"><p class="app">Penguin · Saturday</p><p class="line"><span class="t t-chill">First full huddle. The whole waddle hit their goal. I need a minute.</span><span class="t t-unfiltered" data-nosnippet>Whole waddle hit their goal. We ate. Left no crumbs.</span><span class="t t-spicy" data-nosnippet>The whole damn waddle hit their goal. I'm crying. You're crying.</span></p></li>
+          <li class="notif"><img src="/assets/img/icon-80.webp" alt="" width="80" height="80" loading="lazy"><p class="app">Penguin · Friday</p><p class="line"><span class="t t-chill">Rest day logged. Recovery department. Very official.</span><span class="t t-unfiltered" data-nosnippet>Rest day logged. Recovery is a sport and he's varsity.</span><span class="t t-spicy" data-nosnippet>Rest day? Hell yeah. Recovery is a sport.</span></p></li>
+          <li class="notif" aria-hidden="true"><img src="/assets/img/icon-80.webp" alt="" width="80" height="80" loading="lazy"><p class="app">Penguin · today, 6:12 PM</p><p class="line"><span class="t t-chill">Your couch called. It said you two need space.</span><span class="t t-unfiltered" data-nosnippet>Your couch called. It wants you to stop texting it.</span><span class="t t-spicy" data-nosnippet>Your couch called. It said get your ass outside.</span></p></li>
+          <li class="notif" aria-hidden="true"><img src="/assets/img/icon-80.webp" alt="" width="80" height="80" loading="lazy"><p class="app">Penguin · yesterday</p><p class="line"><span class="t t-chill">How many steps are we doing today? Be delulu, but realistic.</span><span class="t t-unfiltered" data-nosnippet>Zero steps by noon. Very NPC of us.</span><span class="t t-spicy" data-nosnippet>Zero steps. Bold. Stupid, but bold.</span></p></li>
+          <li class="notif" aria-hidden="true"><img src="/assets/img/icon-80.webp" alt="" width="80" height="80" loading="lazy"><p class="app">Penguin · Monday</p><p class="line"><span class="t t-chill">Oh, we have material. This is going to be fun.</span><span class="t t-unfiltered" data-nosnippet>If we don't walk today we're cooked. Fully cooked.</span><span class="t t-spicy" data-nosnippet>What the hell is your screen time right now.</span></p></li>
+          <li class="notif" aria-hidden="true"><img src="/assets/img/icon-80.webp" alt="" width="80" height="80" loading="lazy"><p class="app">Penguin · Sunday</p><p class="line"><span class="t t-chill">Opened the fridge. Stared for 40 seconds. Closed it. Growth.</span><span class="t t-unfiltered" data-nosnippet>Opened the fridge. Stared for 40 seconds. Closed it. Character development.</span><span class="t t-spicy" data-nosnippet>Opened the fridge. Stared for 40 seconds. Closed it. Hell yeah, growth.</span></p></li>
+          <li class="notif" aria-hidden="true"><img src="/assets/img/icon-80.webp" alt="" width="80" height="80" loading="lazy"><p class="app">Penguin · Saturday</p><p class="line"><span class="t t-chill">First full huddle. The whole waddle hit their goal. I need a minute.</span><span class="t t-unfiltered" data-nosnippet>Whole waddle hit their goal. We ate. Left no crumbs.</span><span class="t t-spicy" data-nosnippet>The whole damn waddle hit their goal. I'm crying. You're crying.</span></p></li>
+          <li class="notif" aria-hidden="true"><img src="/assets/img/icon-80.webp" alt="" width="80" height="80" loading="lazy"><p class="app">Penguin · Friday</p><p class="line"><span class="t t-chill">Rest day logged. Recovery department. Very official.</span><span class="t t-unfiltered" data-nosnippet>Rest day logged. Recovery is a sport and he's varsity.</span><span class="t t-spicy" data-nosnippet>Rest day? Hell yeah. Recovery is a sport.</span></p></li>
         </ul>
       </section>
     </div>
@@ -524,6 +540,7 @@
   <section class="section never" aria-labelledby="never-title">
     <div class="wrap">
       <h2 id="never-title">Stuff he'll never roast.</h2>
+      <p class="never-note">Not even on Spicy.</p>
       <ul class="never-list">
         <li>Your body. He started pudgy. He gets it.</li>
         <li>Your rest days. Rest never costs Aura.</li>

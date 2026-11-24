@@ -216,7 +216,7 @@ p { margin: 0 0 1em; }
 
 /* ---------- Hero: the walking club ---------- */
 .hero {
-  overflow: hidden; padding-top: 32px;
+  overflow: hidden; overflow: clip; padding-top: 32px; /* clip, not a scroll container, so the tone switch's view timeline tracks the page */
   background:
     radial-gradient(60% 50% at 85% 20%, rgba(255, 231, 163, 0.9), transparent 70%),
     linear-gradient(180deg, var(--peach) 0%, var(--blush) 55%, var(--peach-2) 100%);
@@ -309,6 +309,9 @@ p { margin: 0 0 1em; }
   .poke { font-size: 0.66rem; }
   .hero-title, .hero-sub { margin-inline: auto; }
   .hero-copy { padding-bottom: 32px; }
+  /* Phones: the mood switch sits right under the squad, above the headline, so it's on the first screen. */
+  .hero-copy { display: flex; flex-direction: column; align-items: center; }
+  .tone-hero { order: -1; margin: 4px 0 18px; }
 }
 
 /* ---------- Waddles: the walking club, up close ---------- */
@@ -930,10 +933,20 @@ body:has(#tone-spicy:checked) .roasts label[for="tone-spicy"] { background: var(
 .tone-float-q { font-size: 0.85rem; font-weight: 700; }
 .tone-float .tone-seg { padding: 3px; }
 .tone-float .tone-seg label { padding: 7px 12px; font-size: 0.88rem; }
-@supports (animation-timeline: scroll()) {
-  .tone-float { animation: tone-float-in linear both; animation-timeline: scroll(root); animation-range: 300px 600px; }
-  @keyframes tone-float-in { from { opacity: 0; visibility: hidden; transform: translate(-50%, 16px); } to { opacity: 1; visibility: visible; transform: translateX(-50%); } }
+/* Hidden only while the hero's own switch is on screen: on phones (switch below the fold) it shows
+   from the first paint; on desktop it appears once you scroll past the hero switch. */
+@supports (animation-timeline: view()) and (timeline-scope: --a) {
+  body { timeline-scope: --tone-hero; }
+  .tone-hero { view-timeline: --tone-hero block; }
+  .tone-float { animation: tone-float-hide linear both; animation-timeline: --tone-hero; }
+  @keyframes tone-float-hide {
+    0%, 100% { opacity: 1; visibility: visible; transform: translateX(-50%); }
+    6%, 85% { opacity: 0; visibility: hidden; transform: translate(-50%, 16px); }
+  }
 }
 @media (max-width: 379px) { .tone-float-q { display: none; } .tone-float { padding-left: 6px; } }
 @supports not selector(:has(*)) { .tone-float { display: none; } }
 body:has(.tone-float) .site-footer { padding-bottom: 96px; }
+/* Small phones: keep the bubble between Priya's and Jo's name tags (longer Spicy lines wrap to 3). */
+@media (max-width: 419px) { .speech { max-width: 60%; padding: 8px 12px; } }
+@media (max-width: 359px) { .speech { max-width: 54%; font-size: 0.72rem; } }

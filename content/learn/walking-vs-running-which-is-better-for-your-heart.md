@@ -4,6 +4,7 @@ pillar: heart
 description: For your heart, it's closer to a tie than you'd think. When walkers and runners burned the same energy, their heart risk dropped by similar amounts.
 answer: Both are good for your heart, and neither clearly wins. In a study of about 49,000 walkers and runners, burning the same amount of energy by walking or running led to similar drops in the risk of high blood pressure, high cholesterol, diabetes, and possibly heart disease. Running gets you there in less time, while walking takes longer but is easier to start and stick with.
 published: 2026-11-11
+updated: 2026-11-26
 keywords: walking vs running for heart health, is walking as good as running, walking or running for your heart, running vs walking heart disease, is running better than walking, walking vs jogging cardiovascular, brisk walking vs running, how much running for heart health, running heart benefits, walking heart benefits, is walking enough exercise for your heart
 pose: waddler-neutral
 gary: Walking vs running is a great debate to have while doing neither.
@@ -93,7 +94,7 @@ You can also mix them. The guidelines count a combination of moderate and vigoro
 4. **Go easy as a new runner.** New runners get hurt more often [9]. Add a little at a time and take rest days.
 5. **Keep going.** People who kept running for years had the strongest results [2]. The same idea applies to walking: consistency beats intensity.
 
-If exercise has never been your thing, start with [how to start walking when you hate exercise](/learn/how-to-start-walking-when-you-hate-exercise/).
+If exercise has never been your thing, start with [how to start walking when you hate exercise](/learn/how-to-start-walking-when-you-hate-exercise/). If weight is your main goal, see [walking vs running for weight loss](/learn/walking-vs-running-for-weight-loss/).
 
 ## When should you talk to your doctor?
 

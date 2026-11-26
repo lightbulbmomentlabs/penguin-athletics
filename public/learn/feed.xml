@@ -6,7 +6,14 @@
   <atom:link href="https://penguinathletics.com/learn/feed.xml" rel="self" type="application/rss+xml"/>
   <description>Evidence-based guides to the health benefits of walking.</description>
   <language>en-us</language>
-  <lastBuildDate>Wed, 25 Nov 2026 12:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Thu, 26 Nov 2026 12:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Walking vs running for weight loss: which works better?</title>
+    <link>https://penguinathletics.com/learn/walking-vs-running-for-weight-loss/</link>
+    <guid isPermaLink="true">https://penguinathletics.com/learn/walking-vs-running-for-weight-loss/</guid>
+    <pubDate>Thu, 26 Nov 2026 12:00:00 +0000</pubDate>
+    <description>Running usually has the edge for weight loss, mostly because it uses about twice as much energy per minute as brisk walking. In a study of about 47,000 walkers and runners, the same amount of exercise energy was linked to more weight loss from running, but walkers were better at keeping their habit going. The best choice is the one you&#x27;ll do most weeks, ideally alongside changes in eating.</description>
+  </item>
   <item>
     <title>Is brisk walking enough cardio?</title>
     <link>https://penguinathletics.com/learn/is-brisk-walking-enough-cardio/</link>
@@ -209,13 +216,6 @@
     <guid isPermaLink="true">https://penguinathletics.com/learn/does-walking-help-anxiety/</guid>
     <pubDate>Fri, 06 Nov 2026 12:00:00 +0000</pubDate>
     <description>Yes, for many people it helps. A 2024 review of 26 trials in adults found that regular walking reduced anxiety symptoms compared with doing nothing, and a single bout of exercise can bring a small short-term drop too. Walking works best alongside therapy or medication when you need them, not instead of them.</description>
-  </item>
-  <item>
-    <title>Can you lose weight just by walking?</title>
-    <link>https://penguinathletics.com/learn/can-you-lose-weight-just-by-walking/</link>
-    <guid isPermaLink="true">https://penguinathletics.com/learn/can-you-lose-weight-just-by-walking/</guid>
-    <pubDate>Fri, 06 Nov 2026 12:00:00 +0000</pubDate>
-    <description>Yes, but usually only a little. In trials of walking alone, people lost about 1.4 kg (roughly 3 pounds) on average, and programs that combine walking with eating changes lead to more weight loss. Walking still improves blood pressure, blood sugar, and fitness even when the scale barely moves.</description>
   </item>
 </channel>
 </rss>

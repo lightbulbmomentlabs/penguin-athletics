@@ -36,7 +36,7 @@ mainly at older adults or late-life conditions was dropped on 2026-11-23.
 - [x] do-you-need-special-walking-shoes | basics | Do you need special walking shoes?
 - [x] hot-girl-walks-does-the-trend-actually-help-your-mood | mind | Hot girl walks: does the trend actually help your mood?
 - [x] is-brisk-walking-enough-cardio | heart | Is brisk walking enough cardio?
-- [ ] walking-vs-running-for-weight-loss | weight | Walking vs running for weight loss
+- [x] walking-vs-running-for-weight-loss | weight | Walking vs running for weight loss
 - [ ] does-walking-in-your-20s-and-30s-pay-off-later | longevity | Does walking in your 20s and 30s pay off later?
 - [ ] how-to-build-a-walking-habit-that-sticks | basics | How to build a walking habit that sticks
 - [ ] can-walking-ease-pms-mood-swings | mind | Can walking ease PMS mood swings?

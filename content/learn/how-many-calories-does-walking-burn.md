@@ -4,6 +4,7 @@ pillar: weight
 description: A 30-minute brisk walk uses roughly 140 to 240 calories, depending mostly on your body weight, pace, and hills. Every number is an estimate.
 answer: A 30-minute brisk walk uses roughly 140 to 240 calories for most adults, and in one study, walking a mile used about 90 to 110 calories. The biggest factors are your body weight, your pace, and whether you're going uphill. Every calorie number, including the one on your watch, is an estimate, so treat it as a rough guide.
 published: 2026-11-07
+updated: 2026-11-26
 keywords: how many calories does walking burn, calories burned walking, calories burned walking 30 minutes, calories burned walking a mile, calories burned walking per hour, brisk walking calories, walking uphill calories, incline walking calories, walking calories calculator, are fitness tracker calories accurate, walking vs running calories, METs walking
 pose: waddler-hyped
 gary: Your smartwatch is guessing your calories. Your couch is guessing you won't get up. Only one of them is right so far.
@@ -77,7 +78,7 @@ Distance is a handy way to think about it, because walking faster also means fin
 - **Including the 30 minutes after,** when the body is still recovering, the walk totaled **463.34 kilojoules**, roughly 111 calories [4].
 - **The run** used more: **664.00 kilojoules** in total, roughly 159 calories [4].
 
-So running the same distance used more energy, but walking still counted. The researchers concluded that both walking and running are good ways to raise energy use above rest [4].
+So running the same distance used more energy, but walking still counted. The researchers concluded that both walking and running are good ways to raise energy use above rest [4]. For how the two compare on weight, see [walking vs running for weight loss](/learn/walking-vs-running-for-weight-loss/).
 
 ## Can you trust these numbers?
 

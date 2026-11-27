@@ -4,7 +4,7 @@ pillar: longevity
 description: About 7,000 steps a day is linked to a 47% lower risk of early death than 2,000. What research says about steps, speed, the brain, and aging well.
 answer: People who walk more tend to live longer. In a 2025 review of 57 studies, 7,000 steps a day was linked to a 47% lower risk of early death compared with 2,000 steps, and the benefits started to level off around 5,000 to 7,000 steps. Most of this evidence is observational, so it shows a strong link rather than proof, but walking is also linked to lower dementia risk and better function as you age.
 published: 2026-11-06
-updated: 2026-11-22
+updated: 2026-11-27
 keywords: walking and longevity, does walking help you live longer, steps a day to live longer, walking and life expectancy, 10000 steps a day myth, walking speed and life expectancy, walking and dementia risk, walking for older adults, how many steps a day for seniors, sitting time and mortality, walking habit, daily steps and mortality
 pose: waddler-celebrating
 gary: Your future self is begging you to touch grass. Literally. Go outside.
@@ -169,7 +169,7 @@ Your doctor or a physical therapist can help you set a safe starting point, sugg
 
 ### Is it ever too late to start walking?
 
-The research suggests no. Older adults saw lower risk with more steps, and the curve flattened at a lower step count for adults 60 and older [2]. Even small increases from a low starting point were linked to benefits [2][3]. (More in [is it too late to start walking at 60?](/learn/is-it-too-late-to-start-walking-at-60/))
+The research suggests no. Older adults saw lower risk with more steps, and the curve flattened at a lower step count for adults 60 and older [2]. Even small increases from a low starting point were linked to benefits [2][3]. (More in [is it too late to start walking at 60?](/learn/is-it-too-late-to-start-walking-at-60/)) And if you're younger, the habits you build now count too: see [does walking in your 20s and 30s pay off later?](/learn/does-walking-in-your-20s-and-30s-pay-off-later/)
 
 ### Can you walk too much?
 

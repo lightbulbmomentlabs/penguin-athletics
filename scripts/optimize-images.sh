@@ -21,7 +21,7 @@ webp() {
   [[ -n "$srcw" ]] || { echo "Can't read width of $src"; exit 1; }
   for w in "$@"; do
     (( w <= srcw )) || { echo "Refusing to upscale $src ($srcw px) to $w px"; exit 1; }
-    cwebp -quiet -q 78 -alpha_q 80 -m 6 -resize "$w" 0 "$src" -o "$OUT/$name-$w.webp"
+    cwebp -quiet -q 68 -alpha_q 70 -m 6 -resize "$w" 0 "$src" -o "$OUT/$name-$w.webp"
   done
 }
 
@@ -78,7 +78,7 @@ FRIEND_CROP="crop=628:628:6:5,scale=360:360:flags=lanczos"
 for pair in "priya:idle-waddler-neutral-matching-set-green" "mads:idle-waddler-neutral-pa-tote-green" \
             "sam:idle-waddler-neutral-varsity-green" "jo:idle-waddler-sleepy-green"; do
   name=${pair%%:*}; src="$APP_REPO/Art/clips/${pair##*:}.mp4"
-  ffmpeg -v error -y -i "$src" -vf "$KEY,$FRIEND_CROP" -c:v libvpx-vp9 -pix_fmt yuva420p -b:v 0 -crf 42 -row-mt 1 -an "$VID/friend-$name.webm"
+  ffmpeg -v error -y -i "$src" -vf "$KEY,$FRIEND_CROP" -c:v libvpx-vp9 -pix_fmt yuva420p -b:v 0 -crf 46 -row-mt 1 -an "$VID/friend-$name.webm"
   ffmpeg -v error -y -i "$src" -vf "$KEY,$FRIEND_CROP,premultiply=inplace=1,format=bgra" \
     -c:v hevc_videotoolbox -alpha_quality 0.3 -q:v 30 -tag:v hvc1 -an "$VID/friend-$name.mov"
   ffmpeg -v error -y -i "$src" -vf "$KEY,$FRIEND_CROP" -frames:v 1 "$tmp/friend-$name.png"
